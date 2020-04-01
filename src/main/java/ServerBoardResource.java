@@ -1,14 +1,15 @@
 import com.google.gson.Gson;
+import javax.json.JsonArray;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
-@ApplicationPath("/")
-public class ServerBoard extends Application {
+@Path("/")
+public class ServerBoardResource {
 	private BoardSlot[][] boardSlots;
 	
-	public ServerBoard() {
+	public ServerBoardResource() {
 		int size = 800;
 		boardSlots = new BoardSlot[size][size];
 		for (int i = 0; i < size; i++) {
@@ -19,8 +20,10 @@ public class ServerBoard extends Application {
 		//For testing
 		addZombie();
 	}
+	
 	//This may work.
 	@GET
+	@Produces(MediaType.APPLICATION_JSON)
 	public String getBoard() {
 		return (new Gson()).toJson(this.boardSlots);
 	}
