@@ -1,9 +1,6 @@
-
-import javafx.scene.paint.Color;
-
 public class Sprite {
 	private boolean isAlive;
-	private Color color;
+	private String color;
 	private int x;
 	private int y;
 	
@@ -20,11 +17,11 @@ public class Sprite {
 		return this.isAlive;
 	}
 
-	public Color getColor() {
+	public String getColor() {
 		return color;
 	}
 
-	public void setColor(Color color) {
+	public void setColor(String color) {
 		this.color = color;
 	}
 
