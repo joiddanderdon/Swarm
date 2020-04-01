@@ -8,7 +8,8 @@ import javax.ws.rs.core.Application;
 public class ServerBoard extends Application {
 	private BoardSlot[][] boardSlots;
 	
-	public ServerBoard(int size) {
+	public ServerBoard() {
+		int size = 800;
 		boardSlots = new BoardSlot[size][size];
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
