@@ -14,8 +14,8 @@
 	<version.maven-failsafe-plugin>2.22.2</version.maven-failsafe-plugin>
 	<version.maven-war-plugin>3.2.3</version.maven-war-plugin>
 	<!-- Liberty Config -->
-	<liberty.var.default.http.port>9080</liberty.var.default.http.port>
-	<liberty.var.default.https.port>9443</liberty.var.default.https.port>
+	<liberty.var.default.http.port>9081</liberty.var.default.http.port>
+	<liberty.var.default.https.port>9445</liberty.var.default.https.port>
 	<liberty.var.app.context.root>${project.artifactId}</liberty.var.app.context.root>
   </properties>
   <packaging>war</packaging>
@@ -85,6 +85,10 @@
 	<version>${version.liberty-maven-plugin}</version>
 	<configuration>
 		<serverName>LibertySwarmText</serverName>
+                <bootstrapProperties>
+                      <default.http.port>${liberty.var.default.http.port}</default.http.port>
+                      <default.https.port>${liberty.var.default.https.port}</default.https.port>
+                </bootstrapProperties>
 	</configuration>
       </plugin>
 
