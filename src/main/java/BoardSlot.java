@@ -1,4 +1,4 @@
-
+//I'm a bit concerned about casting the Sprite objects to Player Objects..
 
 import java.util.LinkedList;
 public class BoardSlot {
@@ -14,7 +14,7 @@ public class BoardSlot {
 	
 	public Sprite getSprite(String name) {
 		for (Sprite s: slot) {
-			if (s.name.equals(name)){
+			if (((Player) s).name.equals(name)){
 				return s;
 			}
 		}
@@ -35,7 +35,7 @@ public class BoardSlot {
 	}
 	public boolean isPresent(String name) {
 		for (Sprite s: slot) {
-			if (s.name == name) {
+			if (((Player) s).name == name) {
 				return true;
 			}
 		}
