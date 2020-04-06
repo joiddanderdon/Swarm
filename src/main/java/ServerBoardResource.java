@@ -1,6 +1,7 @@
 import com.google.gson.Gson;
 import javax.json.JsonArray;
 import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -31,5 +32,21 @@ public class ServerBoardResource {
 	public boolean addZombie() {
 		boardSlots[0][0].addToSlot(new Zombie());
 		return true;
+	}
+	
+	@PUT
+	@Produces(MediaType.APPLICATION_JSON)
+	public String updatePlayerPos(String name, int startX, int startY, int finishX, int finishY) {
+		if (boardSlots[startX][startY].isPresent(name)) {
+			//Get a reference to the sprite to be moved
+			Sprite movedSprite = boardSlots[startX][startY].getSprite(name);
+			//Remove sprite from current slot
+			boardSlots[startX][startY].removeSprite(movedSprite);
+			//Place sprite into new slot.
+			boardSlots[finishX][finishY].addToSlot(movedSprite);
+		}
+		
+		
+		return getBoard();
 	}
 }

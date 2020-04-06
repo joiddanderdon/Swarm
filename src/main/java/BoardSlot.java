@@ -12,6 +12,14 @@ public class BoardSlot {
 		return this.slot;
 	}
 	
+	public Sprite getSprite(String name) {
+		for (Sprite s: slot) {
+			if (s.name.equals(name)){
+				return s;
+			}
+		}
+		return null;
+	}
 	public void addToSlot(Sprite toAdd) {
 		this.slot.push(toAdd);
 	}
@@ -24,5 +32,13 @@ public class BoardSlot {
 			}
 		}
 		return null;
+	}
+	public boolean isPresent(String name) {
+		for (Sprite s: slot) {
+			if (s.name == name) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
