@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for LibertySwarmText generated on 2020.04.09 at 09:15:46 EDT-->
-<Config ASDisableNagle="false" AcceptAllContent="false" AppServerPortPreference="HostHeader" ChunkedResponse="false" ConfigHash="800967441" FIPSEnable="false" IISDisableNagle="false" IISPluginPriority="High" IgnoreDNSFailures="false" RefreshInterval="60" ResponseChunkSize="64" SSLConsolidate="false" TrustedProxyEnable="false" VHostMatchingCompat="false">
+<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for LibertySwarmText generated on 2020.04.09 at 09:21:15 EDT-->
+<Config ASDisableNagle="false" AcceptAllContent="false" AppServerPortPreference="HostHeader" ChunkedResponse="false" ConfigHash="-1891138877" FIPSEnable="false" IISDisableNagle="false" IISPluginPriority="High" IgnoreDNSFailures="false" RefreshInterval="60" ResponseChunkSize="64" SSLConsolidate="false" TrustedProxyEnable="false" VHostMatchingCompat="false">
        
     <Log LogLevel="Error" Name="/opt/IBM/WebSphere/Plugins/logs/webserver1/http_plugin.log"/>
        
@@ -30,9 +30,9 @@
               
         <Server CloneID="c8848c1e-00d0-47c8-ae74-9cc84aa20f34" ConnectTimeout="5" ExtendedHandshake="false" LoadBalanceWeight="20" MaxConnections="-1" Name="default_node_LibertySwarmText" ServerIOTimeout="900" WaitForContinue="false">
                      
-            <Transport Hostname="localhost" Port="9081" Protocol="http"/>
+            <Transport Hostname="desktop-r2di832.home" Port="9081" Protocol="http"/>
                      
-            <Transport Hostname="localhost" Port="9445" Protocol="https">
+            <Transport Hostname="desktop-r2di832.home" Port="9445" Protocol="https">
                             
                 <Property Name="keyring" Value="/opt/IBM/WebSphere/Plugins/config/webserver1/plugin-key.kdb"/>
                             

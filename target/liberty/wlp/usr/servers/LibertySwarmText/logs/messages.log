@@ -5,112 +5,133 @@ java.home = C:\Program Files\AdoptOpenJDK\jdk-11.0.6.10-openj9
 java.version = 11.0.6
 java.runtime = OpenJDK Runtime Environment (11.0.6+10)
 os = Windows 10 (10.0; amd64) (en_US)
-process = 900@DESKTOP-R2DI832
+process = 1016@DESKTOP-R2DI832
 ********************************************************************************
-[4/9/20, 9:00:04:332 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server LibertySwarmText has been launched.
-[4/9/20, 9:00:06:841 EDT] 0000001e com.ibm.ws.config.xml.internal.ServerXMLConfiguration        A CWWKG0093A: Processing configuration drop-ins resource: C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\configDropins\overrides\liberty-plugin-variable-config.xml
-[4/9/20, 9:00:07:362 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 3.547 seconds
-[4/9/20, 9:00:07:562 EDT] 00000028 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
-[4/9/20, 9:00:14:066 EDT] 0000001f .apache.cxf.cxf.core.3.2:1.0.39.cl200420200401-1714(id=175)] I Aries Blueprint packages not available. So namespaces will not be registered
-[4/9/20, 9:00:14:074 EDT] 0000001f .apache.cxf.cxf.core.3.2:1.0.39.cl200420200401-1714(id=175)] I Aries Blueprint packages not available. So namespaces will not be registered
-[4/9/20, 9:00:14:221 EDT] 0000001c com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: The security service is starting...
-[4/9/20, 9:00:14:717 EDT] 0000001e com.ibm.ws.annocache.service                                 I OSGi Work Path [ C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\workarea\org.eclipse.osgi\41\data ]
-[4/9/20, 9:00:14:741 EDT] 0000001d com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
-[4/9/20, 9:00:15:297 EDT] 0000001f com.ibm.ws.cache.ServerCache                                 I DYNA1001I: WebSphere Dynamic Cache instance named baseCache initialized successfully.
-[4/9/20, 9:00:15:306 EDT] 0000001f com.ibm.ws.cache.ServerCache                                 I DYNA1071I: The cache provider default is being used.
-[4/9/20, 9:00:15:309 EDT] 0000001f com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
-[4/9/20, 9:00:15:882 EDT] 00000024 com.ibm.ws.ssl.config.WSKeyStore                             A CWPKI0820A: The default keystore has been created using the 'keystore_password' environment variable.
-[4/9/20, 9:00:15:893 EDT] 00000024 com.ibm.ws.ssl.config.WSKeyStore                             I CWPKI0802I: Creating the SSL certificate. This may take a few seconds.
-[4/9/20, 9:00:15:938 EDT] 00000031 com.ibm.ws.security.token.ltpa.internal.LTPAKeyInfoManager   I CWWKS4103I: Creating the LTPA keys. This may take a few seconds.
-[4/9/20, 9:00:16:062 EDT] 0000001c ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been activated. 
-[4/9/20, 9:00:16:698 EDT] 0000001c com.ibm.ws.security.jwt.internal.ConsumerImpl                I CWWKS6012I: The JSON Web Token (JWT) consumer service is available.
-[4/9/20, 9:00:16:727 EDT] 0000001c com.ibm.ws.security.jwt.web.JwtEndpointServices              I CWWKS6002I: The JSON Web Token (JWT) endpoint service is available.
-[4/9/20, 9:00:16:766 EDT] 0000001c .ws.security.mp.jwt.v11.config.impl.MpConfigProxyServiceImpl I CWWKS5775I: The MicroProfile JWT version 1.1 mpConfigProxy processed successfully.
-[4/9/20, 9:00:16:785 EDT] 0000001c com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtConfigImpl    I CWWKS5500I: The MicroProfile JWT configuration [defaultMpJwt] was successfully processed.
-[4/9/20, 9:00:16:790 EDT] 0000001c com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtServiceImpl   I CWWKS5500I: The MicroProfile JWT configuration [MicroProfileJwtService] was successfully processed.
-[4/9/20, 9:00:16:949 EDT] 00000031 com.ibm.ws.security.token.ltpa.internal.LTPAKeyInfoManager   A CWWKS4104A: LTPA keys created in 1.011 seconds. LTPA key file: C:/Users/Steve/Documents/git/Swarm/target/liberty/wlp/usr/servers/LibertySwarmText/resources/security/ltpa.keys
-[4/9/20, 9:00:16:962 EDT] 00000031 com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: LTPA configuration is ready after 1.028 seconds.
-[4/9/20, 9:00:17:060 EDT] 0000001c com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
-[4/9/20, 9:00:18:251 EDT] 00000031 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: health.
-[4/9/20, 9:00:18:272 EDT] 00000031 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module health has been bound to default_host.
-[4/9/20, 9:00:18:275 EDT] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/health/
-[4/9/20, 9:00:18:280 EDT] 00000033 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: OpenAPIUI.
-[4/9/20, 9:00:18:283 EDT] 00000033 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module OpenAPIUI has been bound to default_host.
-[4/9/20, 9:00:18:284 EDT] 00000033 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/openapi/ui/
-[4/9/20, 9:00:18:293 EDT] 00000029 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: com.ibm.ws.security.jwt.
-[4/9/20, 9:00:18:294 EDT] 00000029 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module com.ibm.ws.security.jwt has been bound to default_host.
-[4/9/20, 9:00:18:295 EDT] 00000029 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/jwt/
-[4/9/20, 9:00:18:319 EDT] 0000002f com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: ibm/api.
-[4/9/20, 9:00:18:320 EDT] 0000002f com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module ibm/api has been bound to default_host.
-[4/9/20, 9:00:18:321 EDT] 0000002f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/ibm/api/
-[4/9/20, 9:00:18:332 EDT] 0000002d com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: PrivateMicroProfileMetrics.
-[4/9/20, 9:00:18:333 EDT] 0000002d com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module PrivateMicroProfileMetrics has been bound to default_host.
-[4/9/20, 9:00:18:334 EDT] 0000002d com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/metrics/
-[4/9/20, 9:00:18:362 EDT] 0000002e com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: MicroProfileOpenAPI.
-[4/9/20, 9:00:18:362 EDT] 00000031 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
-[4/9/20, 9:00:18:363 EDT] 0000002e com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module MicroProfileOpenAPI has been bound to default_host.
-[4/9/20, 9:00:18:363 EDT] 0000002e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/openapi/
-[4/9/20, 9:00:18:364 EDT] 00000031 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
-[4/9/20, 9:00:18:471 EDT] 0000002e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/metrics
-[4/9/20, 9:00:18:471 EDT] 00000029 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/openapi/ui
-[4/9/20, 9:00:18:471 EDT] 00000033 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/health
-[4/9/20, 9:00:18:472 EDT] 0000002f com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/jwt
-[4/9/20, 9:00:18:472 EDT] 0000002d com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/api
-[4/9/20, 9:00:18:487 EDT] 0000002e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:00:18:500 EDT] 0000002d com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:00:18:502 EDT] 0000002f com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:00:18:503 EDT] 00000033 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:00:18:505 EDT] 00000029 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:00:18:532 EDT] 00000029 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
-[4/9/20, 9:00:18:678 EDT] 00000029 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/openapi
-[4/9/20, 9:00:18:678 EDT] 00000029 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:00:18:769 EDT] 00000033 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckReadinessServlet]: Initialization successful.
-[4/9/20, 9:00:18:775 EDT] 0000002e com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.metrics.private] [/metrics] [PrivateMetricsRESTProxyServlet]: Initialization successful.
-[4/9/20, 9:00:18:782 EDT] 00000033 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckServlet]: Initialization successful.
-[4/9/20, 9:00:18:802 EDT] 00000033 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckLivenessServlet]: Initialization successful.
-[4/9/20, 9:00:18:805 EDT] 00000029 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.openapi] [/openapi] [OpenAPIServlet]: Initialization successful.
-[4/9/20, 9:00:19:126 EDT] 00000031 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@31da7261 and com.ibm.ws.jaxrs20.metadata.EndpointInfo@497eb45e, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_20.04.09_09.00.18.0.log
-[4/9/20, 9:00:19:152 EDT] 0000002f com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:00:19:283 EDT] 00000024 com.ibm.ws.ssl.config.WSKeyStore                             A CWPKI0803A: SSL certificate created in 3.390 seconds. SSL key file: C:/Users/Steve/Documents/git/Swarm/target/liberty/wlp/usr/servers/LibertySwarmText/resources/security/key.p12
-[4/9/20, 9:00:19:285 EDT] 00000024 com.ibm.ws.ssl.config.WSKeyStore                             I Successfully loaded default keystore: C:/Users/Steve/Documents/git/Swarm/target/liberty/wlp/usr/servers/LibertySwarmText/resources/security/key.p12 of type: PKCS12
-[4/9/20, 9:00:19:551 EDT] 00000031 com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
-[4/9/20, 9:00:19:618 EDT] 00000031 org.jboss.weld.Version                                       I WELD-000900: 3.1.1 (Final)
-[4/9/20, 9:00:20:166 EDT] 00000031 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
-[4/9/20, 9:00:20:166 EDT] 00000031 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
-[4/9/20, 9:00:20:166 EDT] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:00:20:171 EDT] 00000031 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application Swarm started in 1.809 seconds.
-[4/9/20, 9:00:20:175 EDT] 0000002f com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
-[4/9/20, 9:00:20:175 EDT] 0000002f com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:00:20:206 EDT] 00000028 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 9081.
-[4/9/20, 9:00:20:208 EDT] 00000028 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 9445.
-[4/9/20, 9:00:20:248 EDT] 0000002d com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:00:20:285 EDT] 00000028 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [appSecurity-2.0, cdi-2.0, concurrent-1.0, distributedMap-1.0, jaxrs-2.1, jaxrsClient-2.1, jndi-1.0, json-1.0, jsonb-1.0, jsonp-1.1, jwt-1.0, microProfile-3.2, mpConfig-1.3, mpFaultTolerance-2.0, mpHealth-2.1, mpJwt-1.1, mpMetrics-2.2, mpOpenAPI-1.1, mpOpenTracing-1.3, mpRestClient-1.3, opentracing-1.3, servlet-4.0, ssl-1.0].
-[4/9/20, 9:00:20:286 EDT] 00000028 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 12.932 seconds.
-[4/9/20, 9:00:20:289 EDT] 00000028 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The LibertySwarmText server is ready to run a smarter planet. The LibertySwarmText server started in 16.476 seconds.
-[4/9/20, 9:01:20:097 EDT] 00000061 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:01:20:112 EDT] 00000061 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
-[4/9/20, 9:01:20:126 EDT] 00000061 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
-[4/9/20, 9:01:20:126 EDT] 00000061 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
-[4/9/20, 9:01:20:184 EDT] 00000033 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:01:20:327 EDT] 00000061 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@7d0fc901 and com.ibm.ws.jaxrs20.metadata.EndpointInfo@19faf594, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_20.04.09_09.01.20.0.log
-[4/9/20, 9:01:20:378 EDT] 00000061 com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
-[4/9/20, 9:01:20:473 EDT] 00000061 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
-[4/9/20, 9:01:20:473 EDT] 00000061 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
-[4/9/20, 9:01:20:473 EDT] 00000061 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:01:20:476 EDT] 00000061 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application Swarm updated in 0.350 seconds.
-[4/9/20, 9:01:20:477 EDT] 00000045 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
-[4/9/20, 9:01:20:477 EDT] 00000045 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:01:20:522 EDT] 00000053 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:01:40:486 EDT] 00000048 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "javax.servlet.ServletException: No valid constructor found for ServerBoard com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean 288" at ffdc_20.04.09_09.01.40.0.log
-[4/9/20, 9:01:40:666 EDT] 00000048 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "javax.servlet.ServletException: No valid constructor found for ServerBoard com.ibm.ws.webcontainer.servlet.ServletWrapper.init 172" at ffdc_20.04.09_09.01.40.1.log
-[4/9/20, 9:01:40:666 EDT] 00000048 com.ibm.ws.webcontainer.servlet                              E SRVE0271E: Uncaught init() exception created by servlet [ServerBoard] in application [Swarm]: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
+[4/9/20, 9:20:34:700 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server LibertySwarmText has been launched.
+[4/9/20, 9:20:36:095 EDT] 0000001d com.ibm.ws.config.xml.internal.ServerXMLConfiguration        A CWWKG0093A: Processing configuration drop-ins resource: C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\configDropins\overrides\liberty-plugin-variable-config.xml
+[4/9/20, 9:20:36:379 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 2.219 seconds
+[4/9/20, 9:20:36:454 EDT] 00000028 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[4/9/20, 9:20:37:005 EDT] 0000001d .apache.cxf.cxf.core.3.2:1.0.39.cl200420200401-1714(id=175)] I Aries Blueprint packages not available. So namespaces will not be registered
+[4/9/20, 9:20:37:009 EDT] 0000001d .apache.cxf.cxf.core.3.2:1.0.39.cl200420200401-1714(id=175)] I Aries Blueprint packages not available. So namespaces will not be registered
+[4/9/20, 9:20:37:075 EDT] 0000001c com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: The security service is starting...
+[4/9/20, 9:20:37:677 EDT] 0000001f com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[4/9/20, 9:20:38:226 EDT] 00000020 com.ibm.ws.annocache.service                                 I OSGi Work Path [ C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\workarea\org.eclipse.osgi\41\data ]
+[4/9/20, 9:20:38:393 EDT] 0000001d com.ibm.ws.cache.ServerCache                                 I DYNA1001I: WebSphere Dynamic Cache instance named baseCache initialized successfully.
+[4/9/20, 9:20:38:397 EDT] 0000001d com.ibm.ws.cache.ServerCache                                 I DYNA1071I: The cache provider default is being used.
+[4/9/20, 9:20:38:399 EDT] 0000001d com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[4/9/20, 9:20:39:502 EDT] 00000024 com.ibm.ws.ssl.config.WSKeyStore                             A CWPKI0820A: The default keystore has been created using the 'keystore_password' environment variable.
+[4/9/20, 9:20:39:600 EDT] 00000030 com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: LTPA configuration is ready after 0.050 seconds.
+[4/9/20, 9:20:39:627 EDT] 0000001c ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been activated. 
+[4/9/20, 9:20:39:987 EDT] 00000024 com.ibm.ws.ssl.config.WSKeyStore                             I Successfully loaded default keystore: C:/Users/Steve/Documents/git/Swarm/target/liberty/wlp/usr/servers/LibertySwarmText/resources/security/key.p12 of type: PKCS12
+[4/9/20, 9:20:40:095 EDT] 0000001c com.ibm.ws.security.jwt.internal.ConsumerImpl                I CWWKS6012I: The JSON Web Token (JWT) consumer service is available.
+[4/9/20, 9:20:40:118 EDT] 0000001c com.ibm.ws.security.jwt.web.JwtEndpointServices              I CWWKS6002I: The JSON Web Token (JWT) endpoint service is available.
+[4/9/20, 9:20:40:159 EDT] 0000001c .ws.security.mp.jwt.v11.config.impl.MpConfigProxyServiceImpl I CWWKS5775I: The MicroProfile JWT version 1.1 mpConfigProxy processed successfully.
+[4/9/20, 9:20:40:191 EDT] 0000001c com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtConfigImpl    I CWWKS5500I: The MicroProfile JWT configuration [defaultMpJwt] was successfully processed.
+[4/9/20, 9:20:40:195 EDT] 0000001c com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtServiceImpl   I CWWKS5500I: The MicroProfile JWT configuration [MicroProfileJwtService] was successfully processed.
+[4/9/20, 9:20:40:415 EDT] 0000001c com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[4/9/20, 9:20:41:435 EDT] 00000030 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: OpenAPIUI.
+[4/9/20, 9:20:41:439 EDT] 00000030 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module OpenAPIUI has been bound to default_host.
+[4/9/20, 9:20:41:442 EDT] 00000030 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-r2di832.home:9081/openapi/ui/
+[4/9/20, 9:20:41:488 EDT] 0000002b com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: ibm/api.
+[4/9/20, 9:20:41:489 EDT] 0000002b com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module ibm/api has been bound to default_host.
+[4/9/20, 9:20:41:490 EDT] 0000002b com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-r2di832.home:9081/ibm/api/
+[4/9/20, 9:20:41:516 EDT] 00000031 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: com.ibm.ws.security.jwt.
+[4/9/20, 9:20:41:517 EDT] 00000031 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module com.ibm.ws.security.jwt has been bound to default_host.
+[4/9/20, 9:20:41:517 EDT] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-r2di832.home:9081/jwt/
+[4/9/20, 9:20:41:524 EDT] 0000002c com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: PrivateMicroProfileMetrics.
+[4/9/20, 9:20:41:525 EDT] 0000002c com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module PrivateMicroProfileMetrics has been bound to default_host.
+[4/9/20, 9:20:41:525 EDT] 0000002c com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-r2di832.home:9081/metrics/
+[4/9/20, 9:20:41:542 EDT] 0000002e com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: health.
+[4/9/20, 9:20:41:542 EDT] 0000002e com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module health has been bound to default_host.
+[4/9/20, 9:20:41:543 EDT] 0000002e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-r2di832.home:9081/health/
+[4/9/20, 9:20:41:587 EDT] 00000030 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
+[4/9/20, 9:20:41:589 EDT] 00000030 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
+[4/9/20, 9:20:41:602 EDT] 00000029 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: MicroProfileOpenAPI.
+[4/9/20, 9:20:41:603 EDT] 00000029 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module MicroProfileOpenAPI has been bound to default_host.
+[4/9/20, 9:20:41:603 EDT] 00000029 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-r2di832.home:9081/openapi/
+[4/9/20, 9:20:41:700 EDT] 00000031 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/api
+[4/9/20, 9:20:41:700 EDT] 0000002a com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/health
+[4/9/20, 9:20:41:701 EDT] 0000002e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/metrics
+[4/9/20, 9:20:41:700 EDT] 0000002b com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/openapi/ui
+[4/9/20, 9:20:41:700 EDT] 0000002c com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/jwt
+[4/9/20, 9:20:41:727 EDT] 00000031 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/9/20, 9:20:41:739 EDT] 0000002a com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/9/20, 9:20:41:741 EDT] 0000002b com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/9/20, 9:20:41:741 EDT] 0000002c com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/9/20, 9:20:41:745 EDT] 0000002e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/9/20, 9:20:41:763 EDT] 0000002b com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[4/9/20, 9:20:41:878 EDT] 0000002b com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/openapi
+[4/9/20, 9:20:41:878 EDT] 0000002b com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/9/20, 9:20:41:976 EDT] 0000002a com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckReadinessServlet]: Initialization successful.
+[4/9/20, 9:20:41:980 EDT] 0000002a com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckServlet]: Initialization successful.
+[4/9/20, 9:20:41:983 EDT] 0000002a com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckLivenessServlet]: Initialization successful.
+[4/9/20, 9:20:42:001 EDT] 0000002e com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.metrics.private] [/metrics] [PrivateMetricsRESTProxyServlet]: Initialization successful.
+[4/9/20, 9:20:42:043 EDT] 0000002b com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.openapi] [/openapi] [OpenAPIServlet]: Initialization successful.
+[4/9/20, 9:20:42:748 EDT] 00000030 com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
+[4/9/20, 9:20:42:815 EDT] 00000030 org.jboss.weld.Version                                       I WELD-000900: 3.1.1 (Final)
+[4/9/20, 9:20:42:836 EDT] 00000029 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
+[4/9/20, 9:20:43:601 EDT] 00000030 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
+[4/9/20, 9:20:43:602 EDT] 00000030 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
+[4/9/20, 9:20:43:603 EDT] 00000030 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-r2di832.home:9081/Swarm/
+[4/9/20, 9:20:43:608 EDT] 00000030 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application Swarm started in 2.022 seconds.
+[4/9/20, 9:20:43:608 EDT] 00000029 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
+[4/9/20, 9:20:43:609 EDT] 00000029 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/9/20, 9:20:43:643 EDT] 00000028 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host *  (IPv6) port 9081.
+[4/9/20, 9:20:43:649 EDT] 00000028 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host *  (IPv6) port 9445.
+[4/9/20, 9:20:43:667 EDT] 00000028 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [appSecurity-2.0, cdi-2.0, concurrent-1.0, distributedMap-1.0, jaxrs-2.1, jaxrsClient-2.1, jndi-1.0, json-1.0, jsonb-1.0, jsonp-1.1, jwt-1.0, microProfile-3.2, mpConfig-1.3, mpFaultTolerance-2.0, mpHealth-2.1, mpJwt-1.1, mpMetrics-2.2, mpOpenAPI-1.1, mpOpenTracing-1.3, mpRestClient-1.3, opentracing-1.3, servlet-4.0, ssl-1.0].
+[4/9/20, 9:20:43:669 EDT] 00000028 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 7.290 seconds.
+[4/9/20, 9:20:43:669 EDT] 00000028 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The LibertySwarmText server is ready to run a smarter planet. The LibertySwarmText server started in 9.511 seconds.
+[4/9/20, 9:20:43:831 EDT] 00000031 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
+[4/9/20, 9:20:54:864 EDT] 0000003e .apache.cxf.cxf.core.3.2:1.0.39.cl200420200401-1714(id=175)] I Setting the server's publish address to be /
+[4/9/20, 9:20:54:956 EDT] 0000003e com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [Swarm] [/Swarm] [ServerBoardApplication]: Initialization successful.
+[4/9/20, 9:20:55:212 EDT] 0000003e com.ibm.ws.opentracing.OpentracingUserFeatureAccessService   W CWMOT0010W: OpenTracing cannot track JAX-RS requests because an OpentracingTracerFactory class was not provided or client libraries for tracing backend are not in the class path.
+[4/9/20, 9:21:02:624 EDT] 0000003e com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.io.IOException: An established connection was aborted by the software in your host machine org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor 273" at ffdc_20.04.09_09.21.02.0.log
+[4/9/20, 9:21:02:634 EDT] 0000003e org.apache.cxf.jaxrs.utils.JAXRSUtils                        E Problem with writing the data, class java.lang.String, ContentType: application/json
+[4/9/20, 9:21:02:634 EDT] 0000003e com.ibm.ws.opentracing.OpentracingContainerFilter            W CWMOT0009W: The OpenTracing exception mapper detected and is handling an unhandled exception from the JAX-RS application. 
+                                                                                                               java.io.IOException: An established connection was aborted by the software in your host machine
+	at java.base/sun.nio.ch.SocketDispatcher.writev0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:55)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:182)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:130)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:496)
+	at java.base/java.nio.channels.SocketChannel.write(SocketChannel.java:507)
+	at com.ibm.ws.tcpchannel.internal.NioSocketIOChannel.write(NioSocketIOChannel.java:205)
+	at com.ibm.ws.tcpchannel.internal.NioSocketIOChannel.attemptWriteToSocketUsingNIO(NioSocketIOChannel.java:169)
+	at com.ibm.ws.tcpchannel.internal.SocketIOChannel.attemptWriteToSocket(SocketIOChannel.java:198)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:595)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.processWork(WorkQueueManager.java:304)
+	at com.ibm.ws.tcpchannel.internal.NioTCPWriteRequestContextImpl.processSyncWriteRequest(NioTCPWriteRequestContextImpl.java:65)
+	at com.ibm.ws.tcpchannel.internal.TCPWriteRequestContextImpl.write(TCPWriteRequestContextImpl.java:96)
+	at com.ibm.ws.http.channel.internal.HttpServiceContextImpl.synchWrite(HttpServiceContextImpl.java:3118)
+	at com.ibm.ws.http.channel.internal.HttpServiceContextImpl.sendOutgoing(HttpServiceContextImpl.java:2765)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundServiceContextImpl.sendResponseBody(HttpInboundServiceContextImpl.java:701)
+	at com.ibm.ws.http.channel.internal.outbound.HttpOutputStreamImpl.flushBuffers(HttpOutputStreamImpl.java:524)
+	at com.ibm.ws.http.channel.internal.outbound.HttpOutputStreamImpl.writeToBuffers(HttpOutputStreamImpl.java:312)
+	at com.ibm.ws.http.channel.internal.outbound.HttpOutputStreamImpl.write(HttpOutputStreamImpl.java:665)
+	at com.ibm.ws.webcontainer.osgi.response.WCOutputStream.write(WCOutputStream.java:250)
+	at com.ibm.ws.webcontainer31.osgi.response.WCOutputStream31.write(WCOutputStream31.java:217)
+	at org.apache.cxf.io.AbstractWrappedOutputStream.write(AbstractWrappedOutputStream.java:51)
+	at org.apache.cxf.jaxrs.provider.StringTextProvider.writeTo(StringTextProvider.java:69)
+	at org.apache.cxf.jaxrs.provider.StringTextProvider.writeTo(StringTextProvider.java:36)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils$3.run(JAXRSUtils.java:1486)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils$3.run(JAXRSUtils.java:1483)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:734)
+	at org.apache.cxf.jaxrs.utils.JAXRSUtils.writeMessageBody(JAXRSUtils.java:1483)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.serializeMessage(JAXRSOutInterceptor.java:249)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.processResponse(JAXRSOutInterceptor.java:124)
+	at org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor.handleMessage(JAXRSOutInterceptor.java:85)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.interceptor.OutgoingChainInterceptor.handleMessage(OutgoingChainInterceptor.java:90)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:274)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:136)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:112)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1230)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:729)
 	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
 	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
 	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
@@ -135,605 +156,76 @@ process = 900@DESKTOP-R2DI832
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 
-[4/9/20, 9:01:40:800 EDT] 00000048 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "javax.servlet.ServletException: No valid constructor found for ServerBoard com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters 1064" at ffdc_20.04.09_09.01.40.2.log
-[4/9/20, 9:01:40:801 EDT] 00000048 com.ibm.ws.webcontainer.webapp                               E SRVE0315E: An exception occurred: java.lang.Throwable: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5079)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	... 20 more
-
-[4/9/20, 9:02:37:307 EDT] 00000098 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:02:37:315 EDT] 00000098 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
-[4/9/20, 9:02:37:329 EDT] 00000098 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
-[4/9/20, 9:02:37:330 EDT] 00000098 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
-[4/9/20, 9:02:37:373 EDT] 00000085 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:02:37:530 EDT] 00000098 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@8d54ea7 and com.ibm.ws.jaxrs20.metadata.EndpointInfo@4c804204, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_20.04.09_09.02.37.0.log
-[4/9/20, 9:02:37:573 EDT] 00000098 com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
-[4/9/20, 9:02:37:674 EDT] 00000098 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
-[4/9/20, 9:02:37:675 EDT] 00000098 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
-[4/9/20, 9:02:37:675 EDT] 00000098 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:02:37:677 EDT] 00000098 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application Swarm updated in 0.348 seconds.
-[4/9/20, 9:02:37:677 EDT] 00000093 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
-[4/9/20, 9:02:37:678 EDT] 00000093 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:02:37:728 EDT] 00000098 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:02:48:085 EDT] 00000045 com.ibm.ws.webcontainer.servlet                              E SRVE0271E: Uncaught init() exception created by servlet [ServerBoard] in application [Swarm]: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-[4/9/20, 9:02:48:090 EDT] 00000045 com.ibm.ws.webcontainer.webapp                               E SRVE0315E: An exception occurred: java.lang.Throwable: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5079)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	... 20 more
-
-[4/9/20, 9:03:33:840 EDT] 00000085 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:03:33:855 EDT] 00000085 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
-[4/9/20, 9:03:33:867 EDT] 00000085 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
-[4/9/20, 9:03:33:868 EDT] 00000085 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
-[4/9/20, 9:03:33:932 EDT] 00000086 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:03:34:038 EDT] 00000085 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@1f1774e3 and com.ibm.ws.jaxrs20.metadata.EndpointInfo@65e08bcf, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_20.04.09_09.03.33.0.log
-[4/9/20, 9:03:34:099 EDT] 00000085 com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
-[4/9/20, 9:03:34:207 EDT] 00000085 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
-[4/9/20, 9:03:34:207 EDT] 00000085 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
-[4/9/20, 9:03:34:208 EDT] 00000085 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:03:34:209 EDT] 00000085 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application Swarm updated in 0.342 seconds.
-[4/9/20, 9:03:34:210 EDT] 00000045 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
-[4/9/20, 9:03:34:210 EDT] 00000045 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:03:34:281 EDT] 000000a6 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:03:44:290 EDT] 000000b7 com.ibm.ws.webcontainer.servlet                              E SRVE0271E: Uncaught init() exception created by servlet [ServerBoard] in application [Swarm]: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-[4/9/20, 9:03:44:293 EDT] 000000b7 com.ibm.ws.webcontainer.webapp                               E SRVE0315E: An exception occurred: java.lang.Throwable: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5079)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	... 20 more
-
-[4/9/20, 9:04:24:987 EDT] 00000045 com.ibm.ws.webcontainer.servlet                              E SRVE0271E: Uncaught init() exception created by servlet [ServerBoard] in application [Swarm]: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-[4/9/20, 9:04:24:992 EDT] 00000045 com.ibm.ws.webcontainer.webapp                               E SRVE0315E: An exception occurred: java.lang.Throwable: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5079)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	... 20 more
-
-[4/9/20, 9:06:01:148 EDT] 0000012a com.ibm.ws.webcontainer.servlet                              E SRVE0271E: Uncaught init() exception created by servlet [ServerBoard] in application [Swarm]: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
-	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
-	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:83)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:938)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-[4/9/20, 9:07:46:343 EDT] 00000168 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:07:46:349 EDT] 00000168 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
-[4/9/20, 9:07:46:359 EDT] 00000168 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
-[4/9/20, 9:07:46:359 EDT] 00000168 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
-[4/9/20, 9:07:46:423 EDT] 00000155 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:07:46:527 EDT] 00000168 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@861fb695 and com.ibm.ws.jaxrs20.metadata.EndpointInfo@5fcd07d3, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_20.04.09_09.07.46.0.log
-[4/9/20, 9:07:46:586 EDT] 00000168 com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
-[4/9/20, 9:07:46:696 EDT] 00000168 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
-[4/9/20, 9:07:46:697 EDT] 00000168 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
-[4/9/20, 9:07:46:697 EDT] 00000168 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:07:46:700 EDT] 00000168 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application Swarm updated in 0.341 seconds.
-[4/9/20, 9:07:46:700 EDT] 00000177 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
-[4/9/20, 9:07:46:702 EDT] 00000177 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:07:46:780 EDT] 00000168 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:08:03:482 EDT] 0000017c com.ibm.ws.webcontainer.servlet                              E SRVE0271E: Uncaught init() exception created by servlet [ServerBoard] in application [Swarm]: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-[4/9/20, 9:08:03:489 EDT] 0000017c com.ibm.ws.webcontainer.webapp                               E SRVE0315E: An exception occurred: java.lang.Throwable: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5079)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	... 20 more
-
-[4/9/20, 9:12:46:822 EDT] 0000020e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:12:46:829 EDT] 0000020e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
-[4/9/20, 9:12:46:844 EDT] 0000020e com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
-[4/9/20, 9:12:46:844 EDT] 0000020e bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
-[4/9/20, 9:12:46:888 EDT] 0000017d com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:12:46:998 EDT] 0000020e com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.Exception: Found duplicated servlet mapping url, /*, with endpoint infos com.ibm.ws.jaxrs20.metadata.EndpointInfo@88ce7ccd and com.ibm.ws.jaxrs20.metadata.EndpointInfo@ad6c8af9, throw exception to fail application starting. com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292" at ffdc_20.04.09_09.12.46.0.log
-[4/9/20, 9:12:47:033 EDT] 0000020e com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
-[4/9/20, 9:12:47:114 EDT] 0000020e com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
-[4/9/20, 9:12:47:114 EDT] 0000020e com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
-[4/9/20, 9:12:47:114 EDT] 0000020e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:12:47:116 EDT] 0000020e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application Swarm updated in 0.272 seconds.
-[4/9/20, 9:12:47:116 EDT] 0000017d com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
-[4/9/20, 9:12:47:116 EDT] 0000017d com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:12:47:155 EDT] 000001ae com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:12:54:439 EDT] 00000155 com.ibm.ws.webcontainer.servlet                              E SRVE0271E: Uncaught init() exception created by servlet [ServerBoard] in application [Swarm]: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-[4/9/20, 9:12:54:441 EDT] 00000155 com.ibm.ws.webcontainer.webapp                               E SRVE0315E: An exception occurred: java.lang.Throwable: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5079)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
-	... 20 more
-
-[4/9/20, 9:12:57:780 EDT] 00000155 com.ibm.ws.webcontainer.servlet                              E SRVE0271E: Uncaught init() exception created by servlet [ServerBoard] in application [Swarm]: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
-	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
-	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:83)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:938)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-[4/9/20, 9:12:59:168 EDT] 0000024b com.ibm.ws.webcontainer.servlet                              E SRVE0271E: Uncaught init() exception created by servlet [ServerBoard] in application [Swarm]: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
-	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
-	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:83)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:938)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-[4/9/20, 9:13:04:101 EDT] 000001dd com.ibm.ws.webcontainer.servlet                              E SRVE0271E: Uncaught init() exception created by servlet [ServerBoard] in application [Swarm]: javax.servlet.ServletException: No valid constructor found for ServerBoard
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.createSingletonInstance(LibertyJaxRsServerFactoryBean.java:222)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.onApplicationInit(LibertyJaxRsServerFactoryBean.java:155)
-	at com.ibm.ws.jaxrs20.server.LibertyJaxRsServerFactoryBean.doInit(LibertyJaxRsServerFactoryBean.java:280)
-	at com.ibm.ws.jaxrs20.server.JaxRsWebEndpointImpl.init(JaxRsWebEndpointImpl.java:66)
-	at com.ibm.websphere.jaxrs.server.IBMRestServlet.init(IBMRestServlet.java:64)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:291)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:584)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1010)
-	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:75)
-	at com.ibm.ws.webcontainer40.servlet.CacheServletWrapper40.handleRequest(CacheServletWrapper40.java:83)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:938)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
-	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-[4/9/20, 9:15:46:329 EDT] 000002c5 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:15:46:335 EDT] 000002c5 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
-[4/9/20, 9:15:46:346 EDT] 000002c5 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
-[4/9/20, 9:15:46:346 EDT] 000002c5 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
-[4/9/20, 9:15:46:393 EDT] 000001be com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:15:46:517 EDT] 000002c5 com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
-[4/9/20, 9:15:46:601 EDT] 000002c5 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
-[4/9/20, 9:15:46:602 EDT] 000002c5 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
-[4/9/20, 9:15:46:602 EDT] 000002c5 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:15:46:606 EDT] 000002c5 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application Swarm updated in 0.260 seconds.
-[4/9/20, 9:15:46:609 EDT] 000002be com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
-[4/9/20, 9:15:46:610 EDT] 000002be com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
-[4/9/20, 9:15:46:657 EDT] 000002b9 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
-[4/9/20, 9:16:45:635 EDT] 000002df .apache.cxf.cxf.core.3.2:1.0.39.cl200420200401-1714(id=175)] I Setting the server's publish address to be /
-[4/9/20, 9:16:45:764 EDT] 000002df com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [Swarm] [/Swarm] [ServerBoardApplication]: Initialization successful.
-[4/9/20, 9:16:46:168 EDT] 000002df com.ibm.ws.opentracing.OpentracingUserFeatureAccessService   W CWMOT0010W: OpenTracing cannot track JAX-RS requests because an OpentracingTracerFactory class was not provided or client libraries for tracing backend are not in the class path.
-[4/9/20, 9:16:46:173 EDT] 000002df SystemOut                                                    O Hello World!
-[4/9/20, 9:16:52:161 EDT] 00000288 xf.rt.frontend.jaxrs.3.2:1.0.39.cl200420200401-1714(id=181)] W Both ServerBoard#getBoard and ServerBoardResource#getBoard are equal candidates for handling the current request which can lead to unpredictable results
-[4/9/20, 9:17:30:653 EDT] 0000001a com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Server shutdown requested on Thursday, April 9, 2020 at 9:17 AM. The server LibertySwarmText is shutting down.
-[4/9/20, 9:17:30:660 EDT] 00000317 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
-[4/9/20, 9:17:30:668 EDT] 0000030f com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint-ssl has stopped listening for requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 9445.
-[4/9/20, 9:17:30:673 EDT] 0000030f com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 9081.
-[4/9/20, 9:17:30:673 EDT] 0000030f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/jwt/
-[4/9/20, 9:17:30:674 EDT] 0000030f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/openapi/ui/
-[4/9/20, 9:17:30:674 EDT] 0000030f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/health/
-[4/9/20, 9:17:30:675 EDT] 0000030f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/metrics/
-[4/9/20, 9:17:30:676 EDT] 0000030f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/ibm/api/
-[4/9/20, 9:17:30:676 EDT] 0000030f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/openapi/
-[4/9/20, 9:17:30:677 EDT] 0000030f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9081/Swarm/
-[4/9/20, 9:17:31:683 EDT] 00000317 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
-[4/9/20, 9:17:31:720 EDT] 00000288 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [Swarm] [/Swarm] [ServerBoardApplication]: Destroy successful.
-[4/9/20, 9:17:31:724 EDT] 00000288 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
-[4/9/20, 9:17:31:756 EDT] 00000317 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.metrics.private] [/metrics] [PrivateMetricsRESTProxyServlet]: Destroy successful.
-[4/9/20, 9:17:31:762 EDT] 00000317 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckReadinessServlet]: Destroy successful.
-[4/9/20, 9:17:31:762 EDT] 00000317 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckLivenessServlet]: Destroy successful.
-[4/9/20, 9:17:31:762 EDT] 00000317 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckServlet]: Destroy successful.
-[4/9/20, 9:17:31:769 EDT] 00000317 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.openapi] [/openapi] [OpenAPIServlet]: Destroy successful.
-[4/9/20, 9:17:32:040 EDT] 00000317 .ws.security.mp.jwt.v11.config.impl.MpConfigProxyServiceImpl I CWWKS5777I: The MicroProfile JWT version 1.1 mpConfigProxy deactivated successfully.
-[4/9/20, 9:17:32:043 EDT] 00000317 com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtConfigImpl    I CWWKS5502I: The MicroProfile JWT configuration [defaultMpJwt] was successfully deactivated.
-[4/9/20, 9:17:32:045 EDT] 00000317 com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtServiceImpl   I CWWKS5502I: The MicroProfile JWT configuration [MicroProfileJwtService] was successfully deactivated.
-[4/9/20, 9:17:32:190 EDT] 00000317 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1124I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been deactivated. 
-[4/9/20, 9:17:32:386 EDT] 00000317 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0009I: The security service has stopped.
-[4/9/20, 9:17:32:811 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server LibertySwarmText stopped after 17 minutes, 28.998 seconds.
+[4/9/20, 9:21:02:833 EDT] 0000003e com.ibm.ws.webcontainer.srt                                  W SRVE8115W: WARNING: Cannot set status. Response already committed.
+[4/9/20, 9:21:14:985 EDT] 00000041 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://desktop-r2di832.home:9081/Swarm/
+[4/9/20, 9:21:14:988 EDT] 00000041 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [Swarm] [/Swarm] [ServerBoardApplication]: Destroy successful.
+[4/9/20, 9:21:15:004 EDT] 00000041 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
+[4/9/20, 9:21:15:038 EDT] 00000041 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
+[4/9/20, 9:21:15:039 EDT] 00000041 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
+[4/9/20, 9:21:15:216 EDT] 00000041 com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
+[4/9/20, 9:21:15:382 EDT] 00000041 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
+[4/9/20, 9:21:15:382 EDT] 00000041 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
+[4/9/20, 9:21:15:382 EDT] 00000041 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-r2di832.home:9081/Swarm/
+[4/9/20, 9:21:15:388 EDT] 00000041 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application Swarm updated in 0.350 seconds.
+[4/9/20, 9:21:15:393 EDT] 00000044 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
+[4/9/20, 9:21:15:397 EDT] 0000004c com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
+[4/9/20, 9:21:15:397 EDT] 0000004c com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/9/20, 9:21:15:972 EDT] 0000004d com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\state\plugin-cfg.xml.
+[4/9/20, 9:21:16:859 EDT] 00000041 .apache.cxf.cxf.core.3.2:1.0.39.cl200420200401-1714(id=175)] I Setting the server's publish address to be /
+[4/9/20, 9:21:16:869 EDT] 00000041 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [Swarm] [/Swarm] [ServerBoardApplication]: Initialization successful.
+[4/9/20, 9:21:23:216 EDT] 0000004e SystemOut                                                    O Hello !
+[4/9/20, 9:21:36:169 EDT] 0000004e SystemOut                                                    O Hello !
+[4/9/20, 9:22:29:308 EDT] 0000004e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://desktop-r2di832.home:9081/Swarm/
+[4/9/20, 9:22:29:309 EDT] 0000004e com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [Swarm] [/Swarm] [ServerBoardApplication]: Destroy successful.
+[4/9/20, 9:22:29:320 EDT] 0000004e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
+[4/9/20, 9:22:29:340 EDT] 0000004e com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
+[4/9/20, 9:22:29:341 EDT] 0000004e bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
+[4/9/20, 9:22:29:507 EDT] 0000004e com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
+[4/9/20, 9:22:29:663 EDT] 0000004e com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
+[4/9/20, 9:22:29:664 EDT] 0000004e com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
+[4/9/20, 9:22:29:665 EDT] 0000004e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-r2di832.home:9081/Swarm/
+[4/9/20, 9:22:29:668 EDT] 0000004e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application Swarm updated in 0.328 seconds.
+[4/9/20, 9:22:29:674 EDT] 0000004e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
+[4/9/20, 9:22:29:675 EDT] 0000004e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/9/20, 9:22:29:965 EDT] 00000042 .apache.cxf.cxf.core.3.2:1.0.39.cl200420200401-1714(id=175)] I Setting the server's publish address to be /
+[4/9/20, 9:22:29:977 EDT] 00000042 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [Swarm] [/Swarm] [ServerBoardApplication]: Initialization successful.
+[4/9/20, 9:22:29:999 EDT] 00000042 SystemOut                                                    O Hello !
+[4/9/20, 9:22:32:079 EDT] 0000004e SystemOut                                                    O Hello !
+[4/9/20, 9:23:43:551 EDT] 000000ad SystemOut                                                    O Hello !
+[4/9/20, 9:24:00:285 EDT] 000000b7 SystemOut                                                    O Hello !
+[4/9/20, 9:24:32:546 EDT] 000000ad com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://desktop-r2di832.home:9081/Swarm/
+[4/9/20, 9:24:32:547 EDT] 000000ad com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [Swarm] [/Swarm] [ServerBoardApplication]: Destroy successful.
+[4/9/20, 9:24:32:553 EDT] 000000ad com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
+[4/9/20, 9:24:32:571 EDT] 000000ad com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Swarm.
+[4/9/20, 9:24:32:571 EDT] 000000ad bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Swarm application is using the loose application definition at the C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\dropins\Swarm.war.xml location.
+[4/9/20, 9:24:32:728 EDT] 000000ad com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application Swarm was processed and an OpenAPI document was produced.
+[4/9/20, 9:24:32:848 EDT] 000000ad com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Swarm.
+[4/9/20, 9:24:32:849 EDT] 000000ad com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Swarm has been bound to default_host.
+[4/9/20, 9:24:32:849 EDT] 000000ad com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://desktop-r2di832.home:9081/Swarm/
+[4/9/20, 9:24:32:856 EDT] 000000ad com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application Swarm updated in 0.283 seconds.
+[4/9/20, 9:24:32:856 EDT] 000000dc com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Swarm
+[4/9/20, 9:24:32:860 EDT] 000000dc com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[4/9/20, 9:24:37:124 EDT] 0000001a com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Server shutdown requested on Thursday, April 9, 2020 at 9:24 AM. The server LibertySwarmText is shutting down.
+[4/9/20, 9:24:37:133 EDT] 000000e2 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[4/9/20, 9:24:37:144 EDT] 000000df com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host *  (IPv6) port 9081.
+[4/9/20, 9:24:37:150 EDT] 000000e0 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint-ssl has stopped listening for requests on host *  (IPv6) port 9445.
+[4/9/20, 9:24:37:152 EDT] 000000e0 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): https://desktop-r2di832.home:9445/jwt/
+[4/9/20, 9:24:37:153 EDT] 000000e0 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): https://desktop-r2di832.home:9445/openapi/ui/
+[4/9/20, 9:24:37:155 EDT] 000000e0 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): https://desktop-r2di832.home:9445/metrics/
+[4/9/20, 9:24:37:156 EDT] 000000e0 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): https://desktop-r2di832.home:9445/health/
+[4/9/20, 9:24:37:157 EDT] 000000e0 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): https://desktop-r2di832.home:9445/ibm/api/
+[4/9/20, 9:24:37:158 EDT] 000000e0 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): https://desktop-r2di832.home:9445/openapi/
+[4/9/20, 9:24:37:159 EDT] 000000e0 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): https://desktop-r2di832.home:9445/Swarm/
+[4/9/20, 9:24:38:166 EDT] 000000e2 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[4/9/20, 9:24:38:208 EDT] 000000cc com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Swarm has stopped successfully.
+[4/9/20, 9:24:38:247 EDT] 000000e2 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.metrics.private] [/metrics] [PrivateMetricsRESTProxyServlet]: Destroy successful.
+[4/9/20, 9:24:38:254 EDT] 000000e2 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckReadinessServlet]: Destroy successful.
+[4/9/20, 9:24:38:255 EDT] 000000e2 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckLivenessServlet]: Destroy successful.
+[4/9/20, 9:24:38:255 EDT] 000000e2 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.health.2.0] [/health] [HealthCheckServlet]: Destroy successful.
+[4/9/20, 9:24:38:264 EDT] 000000e2 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.microprofile.openapi] [/openapi] [OpenAPIServlet]: Destroy successful.
+[4/9/20, 9:24:38:619 EDT] 000000e2 .ws.security.mp.jwt.v11.config.impl.MpConfigProxyServiceImpl I CWWKS5777I: The MicroProfile JWT version 1.1 mpConfigProxy deactivated successfully.
+[4/9/20, 9:24:38:623 EDT] 000000e2 com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtConfigImpl    I CWWKS5502I: The MicroProfile JWT configuration [defaultMpJwt] was successfully deactivated.
+[4/9/20, 9:24:38:625 EDT] 000000e2 com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtServiceImpl   I CWWKS5502I: The MicroProfile JWT configuration [MicroProfileJwtService] was successfully deactivated.
+[4/9/20, 9:24:38:821 EDT] 000000e2 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1124I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been deactivated. 
+[4/9/20, 9:24:39:025 EDT] 000000e2 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0009I: The security service has stopped.
+[4/9/20, 9:24:39:475 EDT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server LibertySwarmText stopped after 4 minutes, 5.318 seconds.

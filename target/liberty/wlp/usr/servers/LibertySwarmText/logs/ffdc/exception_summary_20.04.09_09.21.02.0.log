@@ -1,0 +1,6 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0      1     4/9/20, 9:21:02:084 EDT     4/9/20, 9:21:02:084 EDT java.io.IOException org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor 273
+                                                                            - C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\ffdc\ffdc_20.04.09_09.21.02.0.log
+------+------+---------------------------+---------------------------+---------------------------

@@ -8,9 +8,8 @@ import javax.ws.rs.core.MediaType;
 public class TestHello {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public String Hello() {
-		System.out.println("Hello World!");
-		return "Hello world!";
+	public String Hello(String name) {
+		return "Hello " + name + "!";
 		
 	}
 }
