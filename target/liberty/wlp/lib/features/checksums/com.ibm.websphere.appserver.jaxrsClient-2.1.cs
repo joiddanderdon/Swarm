@@ -1,4 +1,4 @@
-#Mon Apr 06 13:01:34 EDT 2020
-lib/com.ibm.ws.cxf.client_1.0.38.jar=1300cb01841655da1efc4cb0bdf9c45f
-lib/com.ibm.ws.jaxrs.2.0.client_1.0.38.jar=7c33a8c6d8b8dbe9c4921a3d0a9aae59
-lib/features/com.ibm.websphere.appserver.jaxrsClient-2.1.mf=62a10847386aaaa6db5ba4e15a201405
+#Thu Apr 09 08:59:43 EDT 2020
+lib/com.ibm.ws.cxf.client_1.0.39.jar=c3e124d315680bd1ddb9a1eb06b7da72
+lib/com.ibm.ws.jaxrs.2.0.client_1.0.39.jar=cbdddc7cf843eeed83fdc380c5ea99c5
+lib/features/com.ibm.websphere.appserver.jaxrsClient-2.1.mf=c6417ad143cbe20fddc814a2905157d7

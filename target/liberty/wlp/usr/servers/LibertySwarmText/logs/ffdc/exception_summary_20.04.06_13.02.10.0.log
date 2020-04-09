@@ -1,6 +1,0 @@
-
- Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
-------+------+---------------------------+---------------------------+---------------------------
-     0      1    4/6/20, 13:02:10:102 EDT    4/6/20, 13:02:10:103 EDT java.lang.Exception com.ibm.ws.jaxrs20.server.component.JaxRsWebModuleInfoBuilder 292
-                                                                            - C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\ffdc\ffdc_20.04.06_13.02.10.0.log
-------+------+---------------------------+---------------------------+---------------------------

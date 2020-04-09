@@ -7,10 +7,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/")
-public class ServerBoardResource {
+public class ServerBoard {
 	private BoardSlot[][] boardSlots;
 	
-	public ServerBoardResource() {
+	public ServerBoard() {
 		int size = 800;
 		boardSlots = new BoardSlot[size][size];
 		for (int i = 0; i < size; i++) {

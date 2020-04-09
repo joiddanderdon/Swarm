@@ -1,16 +1,16 @@
-#Mon Apr 06 13:01:37 EDT 2020
-lib/com.ibm.ws.cdi.internal_1.0.38.jar=b27ec9ce0290ecf0d44ba231fcbc5691
+#Thu Apr 09 08:59:45 EDT 2020
 dev/api/ibm/schema/ibm-managed-bean-bnd_1_0.xsd=3b0b778a121ff7c6c28f9e72afd96488
-lib/com.ibm.ws.org.jboss.jdeparser.1.0.0_1.0.38.jar=d87d1dd504abd48aca29ff4dedaf3b64
-lib/com.ibm.ws.org.jboss.weld3_1.0.38.jar=502dada9979ddda5ddfb67046866ddd0
-dev/api/spec/com.ibm.websphere.javaee.jaxb.2.2_1.0.38.jar=4c43db6567bc48c8ae2797bd21ceed13
-dev/api/spec/com.ibm.websphere.javaee.jaxws.2.2_1.0.38.jar=318400d18ee06db70409d8e72f5f7406
-lib/com.ibm.ws.managedobject_1.0.38.jar=8e191852ca5c65ce5376062e8795764c
-lib/com.ibm.ws.cdi.weld_1.0.38.jar=1ad90094dcbeea8727ff47767909dbce
-lib/com.ibm.ws.cdi.2.0.weld_1.0.38.jar=64b09bd40aab12b063dfd11e51d269b1
-lib/features/com.ibm.websphere.appserver.cdi-2.0.mf=80e60401d92df2df56b97d049a09aff3
+lib/com.ibm.ws.org.jboss.classfilewriter.1.2_1.0.39.jar=c0012812baac0048e7032b2f47319ce6
+lib/com.ibm.ws.cdi.interfaces_1.0.39.jar=efe97358d8be610638d241c52a2f9d54
+dev/api/third-party/com.ibm.websphere.appserver.thirdparty.cdi-2.0_1.0.39.jar=e4ab037771f8b4bdd679e0d65473cbef
+lib/com.ibm.ws.org.jboss.logging_1.0.39.jar=497da2343420bd2d50cc9a0125abf22f
+lib/com.ibm.ws.org.jboss.weld3_1.0.39.jar=760fb55afa87346d25f5b26dfa19fb5f
+lib/features/com.ibm.websphere.appserver.cdi-2.0.mf=17848c7788366809c78b3645866525db
 dev/api/ibm/schema/ibm-managed-bean-bnd_1_1.xsd=788164a7a6ea3fb24bb6106a48a9068b
-lib/com.ibm.ws.org.jboss.classfilewriter.1.2_1.0.38.jar=296fadf0c1d763e22089e3c7ab603796
-lib/com.ibm.ws.cdi.interfaces_1.0.38.jar=82c29ef2fe80e5cfa07cf64068d7f72c
-dev/api/third-party/com.ibm.websphere.appserver.thirdparty.cdi-2.0_1.0.38.jar=a24580aeccbc901677756e58eae02375
-lib/com.ibm.ws.org.jboss.logging_1.0.38.jar=b93cd6e024765ba2356fcd8d93861126
+dev/api/spec/com.ibm.websphere.javaee.jaxb.2.2_1.0.39.jar=9fbc37537cfd303f18a6a8b71a1fffce
+lib/com.ibm.ws.cdi.2.0.weld_1.0.39.jar=f839b0dcd57dfca996eec48441052ff4
+lib/com.ibm.ws.cdi.weld_1.0.39.jar=ea4b1a2163a44c16f35f1d84caab5a3b
+dev/api/spec/com.ibm.websphere.javaee.jaxws.2.2_1.0.39.jar=d491c74abd83a2f19bdd11247e2a8a89
+lib/com.ibm.ws.org.jboss.jdeparser.1.0.0_1.0.39.jar=1777a715dc8a1bd083e86e422dcb244e
+lib/com.ibm.ws.managedobject_1.0.39.jar=847ff679315afde350c9abe1f7c01c38
+lib/com.ibm.ws.cdi.internal_1.0.39.jar=a984bbd99ea1240674752c106caf85ff

@@ -9,7 +9,7 @@ IBM-API-Package: javax.ws.rs; type=spec,
  com.ibm.websphere.jaxrs.providers.json4j; type=ibm-api
 IBM-App-ForceRestart: uninstall,
  install
-IBM-AppliesTo: io.openliberty;productVersion="20.0.0.3"
+IBM-AppliesTo: io.openliberty;productVersion="20.0.0.4"
 IBM-Feature-Version: 2
 IBM-InstallTo: core
 IBM-License-Agreement: wlp/lafiles/LA
@@ -30,5 +30,5 @@ Subsystem-SymbolicName: com.ibm.websphere.appserver.jaxrsClient-2.1; visibility:
 Subsystem-Type: osgi.subsystem.feature
 Subsystem-Vendor: IBM Corp.
 Subsystem-Version: 1.0.0
-Tool: Bnd-4.1.0.201810181252
+Tool: Bnd-4.3.0.201909301554
 WLP-Activation-Type: parallel

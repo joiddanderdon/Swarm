@@ -1,3 +1,3 @@
-#Mon Apr 06 13:01:48 EDT 2020
-lib/com.ibm.ws.microprofile.opentracing.rest.client.1.3_1.0.38.jar=7405e3356d4c6e25e93e1151c4099958
-lib/features/com.ibm.websphere.appserver.mpOpenTracing1.3-mpRestClient1.2.mf=31525b9eff3cce5b4c74a089bff5a4bb
+#Thu Apr 09 08:59:55 EDT 2020
+lib/features/com.ibm.websphere.appserver.mpOpenTracing1.3-mpRestClient1.2.mf=f1f451080035e1bea3f1753c13bba534
+lib/com.ibm.ws.microprofile.opentracing.rest.client.1.3_1.0.39.jar=6fcd37d5f8aba2a84e55d7a5e6bd8558

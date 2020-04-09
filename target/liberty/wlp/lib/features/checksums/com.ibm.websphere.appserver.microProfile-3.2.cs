@@ -1,3 +1,3 @@
-#Mon Apr 06 13:01:43 EDT 2020
-lib/features/com.ibm.websphere.appserver.microProfile-3.2.mf=dffb80bb3e66aec251c631c761df95ec
-lib/com.ibm.ws.require.java8_1.0.38.jar=ba78e4daaa627bd43d5fe922b9bf358c
+#Thu Apr 09 08:59:51 EDT 2020
+lib/com.ibm.ws.require.java8_1.0.39.jar=01ae8254fe7e3262152489eec3c204c9
+lib/features/com.ibm.websphere.appserver.microProfile-3.2.mf=13af23ea7a4498f2e53b8d101c0a6914

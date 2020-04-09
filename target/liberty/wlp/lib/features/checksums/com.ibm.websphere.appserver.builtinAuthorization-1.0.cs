@@ -1,5 +1,5 @@
-#Mon Apr 06 13:01:31 EDT 2020
-lib/com.ibm.ws.security.authorization_1.0.38.jar=e295e61ff9af5d7cfcce12782a33aa0e
-lib/com.ibm.websphere.security_1.1.38.jar=591e51c2751f1ed3e268817e3601c159
-lib/features/com.ibm.websphere.appserver.builtinAuthorization-1.0.mf=fef7770feed7ca9855874e7fbed092c7
-lib/com.ibm.ws.security.authorization.builtin_1.0.38.jar=f551c1327b2e84c25580d8869807a5d4
+#Thu Apr 09 08:59:40 EDT 2020
+lib/com.ibm.ws.security.authorization_1.0.39.jar=fa7acbe92f6505fe18418015e9394eb9
+lib/features/com.ibm.websphere.appserver.builtinAuthorization-1.0.mf=f58f07b856e2adcab4f87dad087a1a40
+lib/com.ibm.websphere.security_1.1.39.jar=712301a62f3e3a7487f1181a5e54b406
+lib/com.ibm.ws.security.authorization.builtin_1.0.39.jar=b29da74c8fb2f321a60e6c7bb68d6a53

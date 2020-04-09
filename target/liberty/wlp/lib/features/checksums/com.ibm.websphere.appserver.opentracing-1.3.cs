@@ -1,12 +1,12 @@
-#Mon Apr 06 13:01:39 EDT 2020
-dev/spi/ibm/com.ibm.websphere.appserver.spi.opentracing.1.3_1.0.38.jar=8418b514dcbfd6226403b8546c9791d2
-lib/com.ibm.ws.microprofile.opentracing.jaeger_1.0.38.jar=6632b09b9aec9e7eb09f4a2f236a0de1
-dev/spi/ibm/javadoc/com.ibm.websphere.appserver.spi.opentracing.1.3_1.0-javadoc.zip=6cf2e5c6cecba3170d0f27b96ac8d972
-lib/com.ibm.ws.io.opentracing.opentracing-util.0.31.0_1.0.38.jar=19cf7a255c8b0e7acf4cf9dfe4542d15
-lib/com.ibm.ws.microprofile.opentracing.jaeger.adapter_1.0.38.jar=e42dea21578adde1efc50d0f82f1865c
-lib/com.ibm.ws.require.java8_1.0.38.jar=ba78e4daaa627bd43d5fe922b9bf358c
-dev/api/third-party/com.ibm.websphere.appserver.thirdparty.opentracing.0.31.0_1.0.38.jar=e69f30914c9b029e030aabc95548c765
-lib/com.ibm.ws.microprofile.opentracing.jaeger.adapter.impl_1.0.38.jar=288116be65ef73e9d1cb4bc01a27c5f7
-lib/com.ibm.ws.opentracing.1.3_1.0.38.jar=dd4ef05385390dd943e19a0d83199583
-lib/features/com.ibm.websphere.appserver.opentracing-1.3.mf=4b862b6f504e328655eae8fa2173292c
-lib/com.ibm.ws.opentracing.1.3.cdi_1.3.38.jar=26aa446da9eb0c89e6d08547795aca7a
+#Thu Apr 09 08:59:47 EDT 2020
+lib/com.ibm.ws.opentracing.1.3_1.0.39.jar=7ceb73be0bd33d1b693991b8e96dad7e
+dev/spi/ibm/com.ibm.websphere.appserver.spi.opentracing.1.3_1.0.39.jar=5d77f20e15de4e645db442e2c0457a1a
+lib/com.ibm.ws.microprofile.opentracing.jaeger.adapter.impl_1.0.39.jar=31f2704a0547e7ba4ca564d04f0d95d4
+lib/com.ibm.ws.microprofile.opentracing.jaeger_1.0.39.jar=2654c0075be4cfa78664bf1161de2c3f
+lib/com.ibm.ws.io.opentracing.opentracing-util.0.31.0_1.0.39.jar=5166551c9ac3da0b502df706b682f9cf
+lib/com.ibm.ws.require.java8_1.0.39.jar=01ae8254fe7e3262152489eec3c204c9
+dev/spi/ibm/javadoc/com.ibm.websphere.appserver.spi.opentracing.1.3_1.0-javadoc.zip=64839b97cef2fdeb601d08e85423d7b5
+lib/com.ibm.ws.microprofile.opentracing.jaeger.adapter_1.0.39.jar=60ff4d6e08627dc4234fcef5d00b5388
+lib/com.ibm.ws.opentracing.1.3.cdi_1.3.39.jar=2eaaa9380cc1cb405904e7bf316aa62c
+dev/api/third-party/com.ibm.websphere.appserver.thirdparty.opentracing.0.31.0_1.0.39.jar=335b304bef39d4e7ff4660591cb33316
+lib/features/com.ibm.websphere.appserver.opentracing-1.3.mf=8d58448050803f337600ca5946f4974f

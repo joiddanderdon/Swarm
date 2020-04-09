@@ -1,5 +1,5 @@
-#Mon Apr 06 13:01:27 EDT 2020
-lib/features/com.ibm.websphere.appserver.httptransport-1.0.mf=c82ec29a78577c2a48e3b03b4df6588b
-dev/spi/ibm/javadoc/com.ibm.websphere.appserver.spi.httptransport_4.1-javadoc.zip=193157d7c45a9119b282dff8bb2ca2b0
-dev/spi/ibm/com.ibm.websphere.appserver.spi.httptransport_4.1.38.jar=077866371ef8c5e380707fe57c509494
-lib/com.ibm.ws.transport.http_1.0.38.jar=02db5a5308a7b3016ceceab70c8793cf
+#Thu Apr 09 08:59:36 EDT 2020
+dev/spi/ibm/com.ibm.websphere.appserver.spi.httptransport_4.1.39.jar=f0e1cfb31a9b1eed6a256759b160280e
+lib/features/com.ibm.websphere.appserver.httptransport-1.0.mf=4f8093a2e303a2a1e93b199feef98df7
+dev/spi/ibm/javadoc/com.ibm.websphere.appserver.spi.httptransport_4.1-javadoc.zip=69273338bcdf1f09c35660b4a620c565
+lib/com.ibm.ws.transport.http_1.0.39.jar=2b544338908c3aae41d070a8ee362f52

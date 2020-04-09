@@ -1,7 +1,7 @@
-#Mon Apr 06 13:01:37 EDT 2020
-lib/com.ibm.ws.security.authentication.tai_1.0.38.jar=be8e8d2322faaffa132670eeac6cfd38
-lib/com.ibm.websphere.security_1.1.38.jar=591e51c2751f1ed3e268817e3601c159
-lib/features/com.ibm.wsspi.appserver.webBundleSecurity-1.0.mf=d15a427733bfe1958af335fbff6c5d5a
-lib/com.ibm.ws.webcontainer.security_1.0.38.jar=06c29df273a1f8f4f9a1c4df48e2db4a
-lib/com.ibm.ws.webcontainer.security.feature_1.0.38.jar=793d8186ea4f5753f527561b6074bd1e
-lib/com.ibm.ws.security.authorization.builtin_1.0.38.jar=f551c1327b2e84c25580d8869807a5d4
+#Thu Apr 09 08:59:45 EDT 2020
+lib/com.ibm.ws.security.authentication.tai_1.0.39.jar=a77732ae3634470fbbdedfd7d13515a4
+lib/com.ibm.ws.webcontainer.security.feature_1.0.39.jar=39caf40108b6b5f11b8b565b3b92e153
+lib/features/com.ibm.wsspi.appserver.webBundleSecurity-1.0.mf=fa5830b4297947f6bc3f84399d519c89
+lib/com.ibm.ws.webcontainer.security_1.0.39.jar=85f2842cd701fb7832c5749d158cbeba
+lib/com.ibm.websphere.security_1.1.39.jar=712301a62f3e3a7487f1181a5e54b406
+lib/com.ibm.ws.security.authorization.builtin_1.0.39.jar=b29da74c8fb2f321a60e6c7bb68d6a53

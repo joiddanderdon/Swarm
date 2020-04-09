@@ -1,3 +1,3 @@
-#Mon Apr 06 13:01:39 EDT 2020
-lib/features/com.ibm.websphere.appserver.org.eclipse.microprofile.health-2.1.mf=b300a09ad41fb7c9d3ad86a903ed8c90
-dev/api/stable/com.ibm.websphere.org.eclipse.microprofile.health.2.1_1.0.38.jar=362c6a00db54fcb51d385749199eb238
+#Thu Apr 09 08:59:47 EDT 2020
+lib/features/com.ibm.websphere.appserver.org.eclipse.microprofile.health-2.1.mf=899e6187f6433267d932db60a05cc608
+dev/api/stable/com.ibm.websphere.org.eclipse.microprofile.health.2.1_1.0.39.jar=ceb10b3ace61424e022ac2bfc1dccd16

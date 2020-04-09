@@ -1,8 +1,8 @@
-#Mon Apr 06 13:01:33 EDT 2020
-lib/com.ibm.ws.security.jaas.common_1.0.38.jar=5c89ada11518e434ec094b5faee347aa
-lib/features/com.ibm.websphere.appserver.builtinAuthentication-1.0.mf=b695877842293612333f3b04490ceda8
-lib/com.ibm.websphere.security_1.1.38.jar=591e51c2751f1ed3e268817e3601c159
-lib/com.ibm.ws.security.authentication.builtin_1.0.38.jar=4bdb83a48887f50acb3213d0dd575f1e
-lib/com.ibm.ws.security.mp.jwt.proxy_1.0.38.jar=e94b7ce2617688163e5ef9fedc9afb08
-lib/com.ibm.ws.security.credentials.wscred_1.0.38.jar=8bb61d6418d08178c9a9f0fc0a0bf04e
-lib/com.ibm.ws.security.authentication_1.0.38.jar=7eafd69dfe30a5d59ea2415aff2b3c4b
+#Thu Apr 09 08:59:42 EDT 2020
+lib/com.ibm.ws.security.jaas.common_1.0.39.jar=e40d01d153431fa0a765086850fa4d01
+lib/com.ibm.ws.security.mp.jwt.proxy_1.0.39.jar=81757234b3b3dfaa5df7911b50dbe18e
+lib/com.ibm.ws.security.credentials.wscred_1.0.39.jar=dc2ed662175df8d2fbc5a19dcbb0e4d2
+lib/features/com.ibm.websphere.appserver.builtinAuthentication-1.0.mf=a586be295e823d3cbbc0d7eef0ae78b2
+lib/com.ibm.ws.security.authentication.builtin_1.0.39.jar=3145ffd876d9ffefbf17413339bb85db
+lib/com.ibm.websphere.security_1.1.39.jar=712301a62f3e3a7487f1181a5e54b406
+lib/com.ibm.ws.security.authentication_1.0.39.jar=13ed66d444e38049a729f0cf46aef581

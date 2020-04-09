@@ -1,3 +1,3 @@
-#Mon Apr 06 13:01:46 EDT 2020
-lib/features/com.ibm.websphere.appserver.mpRestClient1.0-cdi1.2.mf=2952dd25e5c53a18d16faf6eddb35f25
-lib/com.ibm.ws.microprofile.rest.client.cdi_1.0.38.jar=5c38a0a93c858af2841f20cfbd2b1f13
+#Thu Apr 09 08:59:53 EDT 2020
+lib/features/com.ibm.websphere.appserver.mpRestClient1.0-cdi1.2.mf=7f07aab440841aec0b45ca215ba0d610
+lib/com.ibm.ws.microprofile.rest.client.cdi_1.0.39.jar=84be4dfa7d3de87664e92b3e11655434

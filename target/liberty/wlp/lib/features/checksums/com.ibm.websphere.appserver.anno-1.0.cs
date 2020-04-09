@@ -1,5 +1,5 @@
-#Mon Apr 06 13:01:24 EDT 2020
-lib/com.ibm.ws.anno_1.1.38.jar=a806d9719319106fba1ec694c52238da
-lib/features/com.ibm.websphere.appserver.anno-1.0.mf=7012b834bc74b81943abc15332b04b9d
-dev/spi/ibm/com.ibm.websphere.appserver.spi.anno_1.1.38.jar=01ddf69fc07e91ad8917330dc1ecce4c
-dev/spi/ibm/javadoc/com.ibm.websphere.appserver.spi.anno_1.1-javadoc.zip=43f36e83cf7beac1c4df7329610f9e19
+#Thu Apr 09 08:59:33 EDT 2020
+lib/features/com.ibm.websphere.appserver.anno-1.0.mf=7383db6fac3dd5929ccb2a7f2232d950
+lib/com.ibm.ws.anno_1.1.39.jar=602b8b1a02807555e3e79c2deea7e170
+dev/spi/ibm/com.ibm.websphere.appserver.spi.anno_1.1.39.jar=d1c0fd900b21c44120ae6a86557eb452
+dev/spi/ibm/javadoc/com.ibm.websphere.appserver.spi.anno_1.1-javadoc.zip=fd5bedcb285133e68be11e6d8e960454

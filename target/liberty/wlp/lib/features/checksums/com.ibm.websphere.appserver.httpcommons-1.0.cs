@@ -1,5 +1,5 @@
-#Mon Apr 06 13:01:30 EDT 2020
-lib/com.ibm.ws.org.apache.httpcomponents_1.0.38.jar=772fc2aeb6023a37932951837ba79c63
-lib/features/com.ibm.websphere.appserver.httpcommons-1.0.mf=3f33c8ddc6da11021823761b05cd19d5
-lib/com.ibm.ws.org.apache.commons.logging.1.0.3_1.0.38.jar=0f7f0043b46d2a6773b3c8a6dca1e3cc
-lib/com.ibm.ws.org.apache.commons.codec.1.4_1.0.38.jar=f29e5a129793585f1351525c5e78eeff
+#Thu Apr 09 08:59:39 EDT 2020
+lib/features/com.ibm.websphere.appserver.httpcommons-1.0.mf=c46e0c0848d47b7a60b6bfbf7ffcc93c
+lib/com.ibm.ws.org.apache.commons.codec.1.4_1.0.39.jar=47b8387ca2f4f8518e9b3246d5f2c4ce
+lib/com.ibm.ws.org.apache.commons.logging.1.0.3_1.0.39.jar=0d53ce5a211d3aeb4dd785163d77bda8
+lib/com.ibm.ws.org.apache.httpcomponents_1.0.39.jar=bb4281d811367c9ef3b5a643ba711960
