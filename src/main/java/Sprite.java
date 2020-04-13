@@ -3,7 +3,7 @@ public class Sprite {
 	private String color;
 	private int x;
 	private int y;
-	
+	protected String id;
 	
 	
 	public Sprite() {

@@ -3,15 +3,7 @@ public class Player extends Sprite {
 	public String name;
 	public final int MOVESPEED = 3;
 	private long[] aimAt = {0,0};
-	public Player() {
-		this("", 100,100);
-	}
-	public Player(String name) {
-		this(name, 100, 100);
-	}
-	public Player(int x, int y) {
-		this("", x, y);
-	}
+	
 	public Player(String name, int x, int y) {
 		this.name = name;
 		this.setX(x);

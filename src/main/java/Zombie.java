@@ -5,12 +5,14 @@ public class Zombie extends Sprite {
 	private Player currentTarget;
 	private final SecureRandom RNG;
 	private final int RANDOMNESS;
+	private static int idCount = 0;
 	public Zombie() {
 		RNG = new SecureRandom();
 		RANDOMNESS = RNG.nextInt(5) + 1;
 		this.setX(5);
 		this.setY(5);
 		this.speed = RNG.nextInt(4) + 1;
+		this.id = "z" + (++idCount);
 	}
 
 	public int getSpeed() {
