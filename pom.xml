@@ -84,7 +84,7 @@
 	<artifactId>liberty-maven-plugin</artifactId>
 	<version>${version.liberty-maven-plugin}</version>
 	<configuration>
-		<serverName>LibertySwarmText</serverName>
+		<serverName>LibertySwarm</serverName>
                 <bootstrapProperties>
                       <default.http.port>${liberty.var.default.http.port}</default.http.port>
                       <default.https.port>${liberty.var.default.https.port}</default.https.port>

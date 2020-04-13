@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <liberty-plugin-config>
     <installDirectory>C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp</installDirectory>
-    <serverDirectory>C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText</serverDirectory>
+    <serverDirectory>C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarm</serverDirectory>
     <userDirectory>C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr</userDirectory>
-    <serverOutputDirectory>C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText</serverOutputDirectory>
-    <serverName>LibertySwarmText</serverName>
+    <serverOutputDirectory>C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarm</serverOutputDirectory>
+    <serverName>LibertySwarm</serverName>
     <configDirectory>C:\Users\Steve\Documents\git\Swarm\src\main\liberty\config</configDirectory>
     <configFile>C:\Users\Steve\Documents\git\Swarm\src\main\liberty\config\server.xml</configFile>
     <bootstrapProperties>
@@ -25,7 +25,7 @@
     <assemblyArchive>C:\Users\Steve\.m2\repository\io\openliberty\openliberty-kernel\20.0.0.4\openliberty-kernel-20.0.0.4.zip</assemblyArchive>
     <assemblyInstallDirectory>C:\Users\Steve\Documents\git\Swarm\target\liberty</assemblyInstallDirectory>
     <refresh>false</refresh>
-    <installAppsConfigDropins>C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
+    <installAppsConfigDropins>C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarm\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
     <projectType>war</projectType>
     <projectCompileDependency>com.google.code.gson:gson:2.8.0</projectCompileDependency>
     <warSourceDirectory>C:\Users\Steve\Documents\git\Swarm\src\main\webapp</warSourceDirectory>

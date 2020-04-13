@@ -15,7 +15,7 @@ import javax.ws.rs.core.MediaType;
 public class ServerBoard {
 	//We'll need to keep a list of sprites, then in the Tick() method,
 	//run the Stalk method on each Zombie contained within
-	private ArrayList<Sprite> sprites;
+	private static ArrayList<Sprite> sprites;
 	
 	private int tickCount;
 	
