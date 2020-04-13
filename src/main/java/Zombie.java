@@ -1,9 +1,11 @@
 
 import java.security.SecureRandom;
+
 public class Zombie extends Sprite {
 	private int speed;
 	private Player currentTarget;
 	private final SecureRandom RNG;
+	//Not sure how much of a performance hit is taken by keeping the SecureRandom as an instance variable
 	private final int RANDOMNESS;
 	private static int idCount = 0;
 	public Zombie() {

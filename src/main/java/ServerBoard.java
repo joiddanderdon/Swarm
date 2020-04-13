@@ -32,8 +32,21 @@ public class ServerBoard {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getBoard() {
+		//I want to restructure this return
 		
-		return (new Gson()).toJson(this.sprites);
+		String boardString = "" + sprites.size() + "&";
+		for (Sprite s: sprites) {
+			boardString+= s.id;
+			boardString += "-";
+			boardString += s.getX();
+			boardString += "-";
+			boardString += s.getY();
+			boardString += "&";
+			
+		}
+		return boardString;
+		
+		//return (new Gson()).toJson(this.sprites);
 	}
 	
 	public boolean addZombie() {
