@@ -8,15 +8,25 @@ public class Zombie extends Sprite {
 	//Not sure how much of a performance hit is taken by keeping the SecureRandom as an instance variable
 	private final int RANDOMNESS;
 	private static int idCount = 0;
+	
+	//Create Zombie from scratch
 	public Zombie() {
 		RNG = new SecureRandom();
 		RANDOMNESS = RNG.nextInt(5) + 1;
 		this.setX(5);
 		this.setY(5);
 		this.speed = RNG.nextInt(4) + 1;
-		this.id = "z" + (++idCount);
+		this.setId("z" + (++idCount));
 	}
-
+	//Reload from DB
+	public Zombie(String id, int x, int y) {
+		RNG = new SecureRandom();
+		RANDOMNESS = RNG.nextInt(5) + 1;
+		this.setX(x);
+		this.setY(y);
+		this.speed = RNG.nextInt(4) + 1;
+		this.setId(id);
+	}
 	public int getSpeed() {
 		return speed;
 	}

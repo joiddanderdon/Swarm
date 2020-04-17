@@ -21,12 +21,15 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+
 @Path("/")
 public class ServerBoard {
 	private static final String dbConnectionUrl = "jdbc:mysql://localhost:3306/swarm";
 	private static final String dbConnectionUser = "root";
 	private static final String dbConnectionPass = "root";
 	private static final String connectString = dbConnectionUrl + "?user=" + dbConnectionUser + "&password=" + dbConnectionPass;
+	//private static final String connectString = dbConnectionUrl  + "?useSSL=false&" + "?user=" + dbConnectionUser + "&password=" + dbConnectionPass;
 	private static Connection connection;
 	private static Statement statement;
 	private ResultSet resultSet;
@@ -44,33 +47,31 @@ public class ServerBoard {
 	private int tickCount;
 	
 	public ServerBoard() throws SQLException, ClassNotFoundException {
+		sprites = new ArrayList<Sprite>();
 		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection(connectString);
 		statement = connection.createStatement(
 				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 		ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord FROM sprites");
 		
-		//Test by printing to console
-		/*
-		metaData = resultSet.getMetaData();
-		
+		//After instantiating list, load from DB
+
+		// Getting a SQL error during this loop.. before Result Set
 		while (resultSet.next()) {
-			for (int i = 1; i <= metaData.getColumnCount(); i++) {
-				System.out.printf("%-8s\t", resultSet.getObject(i));
+				String zid = (String) resultSet.getObject(1);
+				int zx = Integer.parseInt(resultSet.getObject(2).toString());
+				int zy = Integer.parseInt(resultSet.getObject(3).toString());
+				if ( zid.charAt(0) == 'p' ){
+					sprites.add(new Player(zid, zx, zy));
+				} else {
+					sprites.add(new Zombie(zid, zx, zy));
+				}
 			}
-			System.out.println();
-		}
-		*/
-		//end console print testing
 		
-		
-		
-		sprites = new ArrayList<Sprite>();
-		//After instantiating list, may need to reload from DB.
 		
 		
 		//For testing
-		addZombie();
+		//addZombie();
 		tickCount = 0;
 	}
 	
@@ -81,7 +82,7 @@ public class ServerBoard {
 		//May want to change this to pull directly from DB
 		String boardString = "" + sprites.size() + "&";
 		for (Sprite s: sprites) {
-			boardString+= s.id;
+			boardString+= s.getId();
 			boardString += "-";
 			boardString += s.getX();
 			boardString += "-";
@@ -97,17 +98,27 @@ public class ServerBoard {
 	public boolean addZombie() {
 		Zombie newZom = new Zombie();
 		sprites.add(newZom);
-		/*
 		try {
-			Statement stmt = dbConnect.createStatement();
-			stmt.executeQuery("insert into sprites (id, x_coord, y_coord) values ( "
-					+ newZom.id + "," + newZom.getX() + "," + newZom.getY() );
-		} catch (SQLException e) {
-			System.out.println("Issue adding zombie to DB");
-			e.printStackTrace();
-		}
-		*/
-		return true;
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection(connectString);
+			statement = connection.createStatement(
+					ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			
+			statement.execute("insert into sprites "
+					+ "(id, x_coord, y_coord) values "
+					+ "('"+ newZom.getId() + "'," + newZom.getX() + "," + newZom.getY() + ");");
+			
+			return true;	
+		} catch (MySQLIntegrityConstraintViolationException msicve) {
+			System.out.println("Attempted to add duplicate entry");
+			return addZombie();
+		} catch (SQLException se) {
+			se.printStackTrace();
+			return false;
+		} catch (ClassNotFoundException cnfe) {
+			cnfe.printStackTrace();
+			return false;
+		} 
 	}
 	
 	@PUT

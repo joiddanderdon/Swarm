@@ -3,7 +3,7 @@ public class Sprite {
 	private String color;
 	private int x;
 	private int y;
-	protected String id;
+	private String id;
 	
 	
 	public Sprite() {
@@ -39,5 +39,13 @@ public class Sprite {
 
 	public void setY(int y) {
 		this.y = y;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 }

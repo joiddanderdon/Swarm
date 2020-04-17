@@ -4,7 +4,7 @@ public class Player extends Sprite {
 	private long[] aimAt = {0,0};
 	
 	public Player(String id, int x, int y) {
-		this.id = id;
+		this.setId(id);
 		this.setX(x);
 		this.setY(y);
 	}
@@ -21,7 +21,7 @@ public class Player extends Sprite {
 		this.setY(this.getY() + MOVESPEED);
 	}
 	public String getName() {
-		return this.id;
+		return this.getId();
 	}
 	public void setAim(long x, long y) {
 		this.aimAt[0] = x;
