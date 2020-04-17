@@ -32,7 +32,10 @@ public class ServerBoard {
 	private ResultSet resultSet;
 	private static ResultSetMetaData metaData;
 	
-	
+	//The first 5 lines or so of the constructor connect to the database,
+	//so we now know how to query the database.
+	//Insertions & deletions work similarly, as demonstrated
+	//in the ConnectTest class. 
 	
 	//We'll need to keep a list of sprites, then in the Tick() method,
 	//run the Stalk method on each Zombie contained within
@@ -40,11 +43,15 @@ public class ServerBoard {
 	
 	private int tickCount;
 	
-	public ServerBoard() throws SQLException {
+	public ServerBoard() throws SQLException, ClassNotFoundException {
+		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection(connectString);
 		statement = connection.createStatement(
 				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 		ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord FROM sprites");
+		
+		//Test by printing to console
+		/*
 		metaData = resultSet.getMetaData();
 		
 		while (resultSet.next()) {
@@ -53,6 +60,10 @@ public class ServerBoard {
 			}
 			System.out.println();
 		}
+		*/
+		//end console print testing
+		
+		
 		
 		sprites = new ArrayList<Sprite>();
 		//After instantiating list, may need to reload from DB.

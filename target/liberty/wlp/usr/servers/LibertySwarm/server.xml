@@ -20,11 +20,17 @@
 	
 	<!-- MySQL DB Connectivity -->
 	<library id="driver-library">
-   	 <fileset dir="C:\Program Files (x86)\MySQL\Connector J 8.0" includes="mysql-connector-java-8.0.19.jar"/>
+		<fileset dir="${shared.resource.dir}" includes="*.jar" />
 	</library>
-	<dataSource id="DefaultDataSource" jndiName="jdbc/myDB">
+	
+	<!-- <dataSource id="DefaultDataSource" jndiName="jdbc/myDB"> -->
+	<dataSource 
+		id="swarm"
+		jndiName="jdbc/swarm">
 		<jdbcDriver libraryRef="driver-library"/>
-		<properties serverName="localhost" portNumber="3306"
+		<properties 
+				serverName="localhost" 
+				portNumber="3306"
                 databaseName="swarm"
                 user="root"
                 password="root"/>

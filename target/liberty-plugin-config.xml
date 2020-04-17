@@ -28,6 +28,6 @@
     <installAppsConfigDropins>C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarm\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
     <projectType>war</projectType>
     <projectCompileDependency>com.google.code.gson:gson:2.8.0</projectCompileDependency>
-    <projectCompileDependency>mysql:mysql-connector-java:5.1.36</projectCompileDependency>
+    <projectCompileDependency>mysql:mysql-connector-java:5.1.46</projectCompileDependency>
     <warSourceDirectory>C:\Users\Steve\Documents\git\Swarm\src\main\webapp</warSourceDirectory>
 </liberty-plugin-config>

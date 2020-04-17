@@ -1,0 +1,655 @@
+------Start of DE processing------ = [4/17/20, 11:55:31:759 EDT]
+Exception = java.lang.reflect.InvocationTargetException
+Source = org.apache.cxf.jaxrs.lifecycle.PerRequestResourceProvider
+probeid = 107
+Stack Dump = java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedConstructorAccessor518.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.apache.cxf.jaxrs.lifecycle.PerRequestResourceProvider.createInstance(PerRequestResourceProvider.java:94)
+	at org.apache.cxf.jaxrs.lifecycle.PerRequestResourceProvider.getInstance(PerRequestResourceProvider.java:84)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.getServiceObject(JAXRSInvoker.java:467)
+	at org.apache.cxf.jaxrs.JAXRSInvoker.invoke(JAXRSInvoker.java:108)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor$1.run(ServiceInvokerInterceptor.java:61)
+	at org.apache.cxf.interceptor.ServiceInvokerInterceptor.handleMessage(ServiceInvokerInterceptor.java:99)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:124)
+	at org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:274)
+	at com.ibm.ws.jaxrs20.endpoint.AbstractJaxRsWebEndpoint.invoke(AbstractJaxRsWebEndpoint.java:136)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.handleRequest(IBMRestServlet.java:146)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.doGet(IBMRestServlet.java:112)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:686)
+	at com.ibm.websphere.jaxrs.server.IBMRestServlet.service(IBMRestServlet.java:96)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1230)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:729)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:426)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1226)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:5021)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:314)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:1007)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:279)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:1134)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:415)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:374)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:551)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:484)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:346)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:317)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:167)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:75)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:504)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:574)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:958)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1047)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at jdk.internal.reflect.GeneratedConstructorAccessor524.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:400)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2326)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2079)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at jdk.internal.reflect.GeneratedConstructorAccessor521.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:400)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at ServerBoard.<init>(ServerBoard.java:44)
+	... 41 more
+Caused by: java.lang.NullPointerException
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2999)
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1885)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1814)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1207)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2249)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2280)
+	... 52 more
+
+Dump of callerThis
+Object type = org.apache.cxf.jaxrs.lifecycle.PerRequestResourceProvider
+  c = class java.lang.reflect.Constructor@8d25a66d
+    clazz = "/* Could not access clazz */"
+    slot = "/* Could not access slot */"
+    parameterTypes = "/* Could not access parameterTypes */"
+    exceptionTypes = "/* Could not access exceptionTypes */"
+    modifiers = "/* Could not access modifiers */"
+    signature = "/* Could not access signature */"
+    genericInfo = "/* Could not access genericInfo */"
+    annotations = "/* Could not access annotations */"
+    parameterAnnotations = "/* Could not access parameterAnnotations */"
+    constructorAccessor = "/* Could not access constructorAccessor */"
+    root = "/* Could not access root */"
+    hasRealParameterData = "/* Could not access hasRealParameterData */"
+    parameters = "/* Could not access parameters */"
+    declaredAnnotations = "/* Could not access declaredAnnotations */"
+    override = "/* Could not access override */"
+    reflectionFactory = "/* Could not access reflectionFactory */"
+    securityCheckCache = "/* Could not access securityCheckCache */"
+    printStackWhenAccessFails = "/* Could not access printStackWhenAccessFails */"
+    printStackPropertiesSet = "/* Could not access printStackPropertiesSet */"
+  postConstructMethod = null
+  preDestroyMethod = null
+  params = class java.lang.Class[0]
+  anns = class [Ljava.lang.annotation.Annotation;[0]
+  genericTypes = class java.lang.Class[0]
+  serialVersionUID = 4330447189587368180
+  $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@aec7fe77
+    strings[0] = "TraceComponent[org.apache.cxf.jaxrs.lifecycle.PerRequestResourceProvider,class org.apache.cxf.jaxrs.lifecycle.PerRequestResourceProvider,[],null,null]"
+
+Dump of objectArray[0]
+Object type = org.apache.cxf.message.MessageImpl
+  serialVersionUID = -3020763696429459865
+  exchange = class org.apache.cxf.message.ExchangeImpl@9c33c681
+    serialVersionUID = -3112077559217623594
+    destination = class org.apache.cxf.transport.servlet.ServletDestination@7107566c
+      LOG = class com.ibm.ws.logging.internal.WsLogger@7fcd4609
+      HTTP_REQUEST = "HTTP.REQUEST"
+      HTTP_RESPONSE = "HTTP.RESPONSE"
+      HTTP_CONTEXT = "HTTP.CONTEXT"
+      HTTP_CONFIG = "HTTP.CONFIG"
+      HTTP_CONTEXT_MATCH_STRATEGY = "HTTP_CONTEXT_MATCH_STRATEGY"
+      RESPONSE_HEADERS_COPIED = "http.headers.copied"
+      RESPONSE_COMMITED = "http.response.done"
+      REQUEST_REDIRECTED = "http.request.redirected"
+      CXF_CONTINUATION_MESSAGE = "cxf.continuation.message"
+      CXF_ASYNC_CONTEXT = "cxf.async.context"
+      SERVICE_REDIRECTION = "http.service.redirection"
+      HTTP_BASE_PATH = "http.base.path"
+      SSL_CIPHER_SUITE_ATTRIBUTE = "javax.servlet.request.cipher_suite"
+      SSL_PEER_CERT_CHAIN_ATTRIBUTE = "javax.servlet.request.X509Certificate"
+      DECODE_BASIC_AUTH_WITH_ISO8859 = "decode.basicauth.with.iso8859"
+      tc = class com.ibm.websphere.ras.TraceComponent@b90b7a98
+      bus = class com.ibm.ws.jaxrs20.bus.LibertyApplicationBus@51869c72
+      registry = class org.apache.cxf.transport.http.DestinationRegistryImpl@88a34474
+      path = "/"
+      serverPolicy = null
+      contextMatchStrategy = "stem"
+      fixedParameterOrder = false
+      multiplexWithAddress = false
+      certConstraints = null
+      decodeBasicAuthWithIso8859 = false
+      cproviderFactory = null
+      enableWebSocket = false
+      serverPolicyCalced = false
+      serialVersionUID = -137146086541010707
+      MULTIPLEX_ID_QNAME = class javax.xml.namespace.QName@e7034c32
+      reference = class org.apache.cxf.ws.addressing.EndpointReferenceType@d3777115
+      endpointInfo = class org.apache.cxf.service.model.EndpointInfo@8508f8aa
+      bus = class com.ibm.ws.jaxrs20.bus.LibertyApplicationBus@51869c72
+      incomingObserver = class org.apache.cxf.transport.ChainInitiationObserver@152adc3f
+    oneWay = false
+    synchronous = true
+    inMessage = class org.apache.cxf.message.MessageImpl@144b3c4a
+    outMessage = null
+    inFaultMessage = null
+    outFaultMessage = null
+    session = class org.apache.cxf.transport.http.HTTPSession@10bd93ad
+      request = class com.ibm.ws.jaxrs20.server.JaxRsHttpServletRequestAdapter@5502902a
+      session = null
+    bus = class com.ibm.ws.jaxrs20.bus.LibertyApplicationBus@51869c72
+      busCounter = class java.util.concurrent.atomic.AtomicInteger@b5239661
+      serialVersionUID = 2386792285914827878
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@8340e9a4
+      BUS_PROPERTY_NAME = "bus"
+      BUS_ID_PROPERTY_NAME = "org.apache.cxf.bus.id"
+      extensions = class java.util.concurrent.ConcurrentHashMap@d60c2519
+      missingExtensions = class java.util.concurrent.CopyOnWriteArraySet@7ebb9f9c
+      id = "Swarm-Server-Bus"
+      state = class org.apache.cxf.Bus$BusState@6dd7cb8b
+      features = class java.util.concurrent.CopyOnWriteArrayList@d7eb1173
+      properties = class java.util.concurrent.ConcurrentHashMap@9731ca1
+      extensionManager = class org.apache.cxf.bus.extension.ExtensionManagerImpl@aa15e342
+      in = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@891f7f5c
+      out = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@7b0bc4e1
+      outFault = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@a64d462a
+      inFault = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@ae995095
+    endpoint = class org.apache.cxf.endpoint.EndpointImpl@9d3be803
+      serialVersionUID = -7660560719050162091
+      LOG = class com.ibm.ws.logging.internal.WsLogger@75b6ca0a
+      BUNDLE = class java.util.PropertyResourceBundle@e343f774
+      service = class org.apache.cxf.jaxrs.JAXRSServiceImpl@360b8b56
+      binding = class org.apache.cxf.jaxrs.JAXRSBinding@fcf68036
+      endpointInfo = class org.apache.cxf.service.model.EndpointInfo@8508f8aa
+      executor = null
+      bus = class com.ibm.ws.jaxrs20.bus.LibertyApplicationBus@51869c72
+      inFaultObserver = class org.apache.cxf.interceptor.InFaultChainInitiatorObserver@23680982
+      outFaultObserver = class org.apache.cxf.interceptor.OutFaultChainInitiatorObserver@68618cb0
+      activeFeatures = null
+      cleanupHooks = null
+      serialVersionUID = -1915876045710441978
+      in = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@4ed81001
+      out = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@e53b1bfa
+      outFault = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@667b02dd
+      inFault = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@53254f7f
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+      DEFAULT_CAPACITY = "/* Could not access DEFAULT_CAPACITY */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+      DEFAULT_CONCURRENCY_LEVEL = "/* Could not access DEFAULT_CONCURRENCY_LEVEL */"
+      LOAD_FACTOR = "/* Could not access LOAD_FACTOR */"
+      TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+      UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+      MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+      MIN_TRANSFER_STRIDE = "/* Could not access MIN_TRANSFER_STRIDE */"
+      RESIZE_STAMP_BITS = "/* Could not access RESIZE_STAMP_BITS */"
+      MAX_RESIZERS = "/* Could not access MAX_RESIZERS */"
+      RESIZE_STAMP_SHIFT = "/* Could not access RESIZE_STAMP_SHIFT */"
+      MOVED = "/* Could not access MOVED */"
+      TREEBIN = "/* Could not access TREEBIN */"
+      RESERVED = "/* Could not access RESERVED */"
+      HASH_BITS = "/* Could not access HASH_BITS */"
+      NCPU = "/* Could not access NCPU */"
+      serialPersistentFields = "/* Could not access serialPersistentFields */"
+      table = "/* Could not access table */"
+      nextTable = "/* Could not access nextTable */"
+      baseCount = "/* Could not access baseCount */"
+      sizeCtl = "/* Could not access sizeCtl */"
+      transferIndex = "/* Could not access transferIndex */"
+      cellsBusy = "/* Could not access cellsBusy */"
+      counterCells = "/* Could not access counterCells */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+      entrySet = "/* Could not access entrySet */"
+      U = "/* Could not access U */"
+      SIZECTL = "/* Could not access SIZECTL */"
+      TRANSFERINDEX = "/* Could not access TRANSFERINDEX */"
+      BASECOUNT = "/* Could not access BASECOUNT */"
+      CELLSBUSY = "/* Could not access CELLSBUSY */"
+      CELLVALUE = "/* Could not access CELLVALUE */"
+      ABASE = "/* Could not access ABASE */"
+      ASHIFT = "/* Could not access ASHIFT */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+    service = class org.apache.cxf.jaxrs.JAXRSServiceImpl@360b8b56
+      serialVersionUID = 6765400202555126993
+      classResourceInfos = class java.util.ArrayList@5eaa42a0
+      dataBinding = null
+      executor = null
+      invoker = class com.ibm.ws.jaxrs20.server.LibertyJaxRsInvoker@6dbcb010
+      endpoints = class java.util.HashMap@6c499066
+      address = null
+      createServiceModel = false
+      serviceName = null
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@fa8143e6
+      serialVersionUID = -1915876045710441978
+      in = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@684b6d59
+      out = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@c833943f
+      outFault = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@9598ae83
+      inFault = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@6029fe98
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+      DEFAULT_CAPACITY = "/* Could not access DEFAULT_CAPACITY */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+      DEFAULT_CONCURRENCY_LEVEL = "/* Could not access DEFAULT_CONCURRENCY_LEVEL */"
+      LOAD_FACTOR = "/* Could not access LOAD_FACTOR */"
+      TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+      UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+      MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+      MIN_TRANSFER_STRIDE = "/* Could not access MIN_TRANSFER_STRIDE */"
+      RESIZE_STAMP_BITS = "/* Could not access RESIZE_STAMP_BITS */"
+      MAX_RESIZERS = "/* Could not access MAX_RESIZERS */"
+      RESIZE_STAMP_SHIFT = "/* Could not access RESIZE_STAMP_SHIFT */"
+      MOVED = "/* Could not access MOVED */"
+      TREEBIN = "/* Could not access TREEBIN */"
+      RESERVED = "/* Could not access RESERVED */"
+      HASH_BITS = "/* Could not access HASH_BITS */"
+      NCPU = "/* Could not access NCPU */"
+      serialPersistentFields = "/* Could not access serialPersistentFields */"
+      table = "/* Could not access table */"
+      nextTable = "/* Could not access nextTable */"
+      baseCount = "/* Could not access baseCount */"
+      sizeCtl = "/* Could not access sizeCtl */"
+      transferIndex = "/* Could not access transferIndex */"
+      cellsBusy = "/* Could not access cellsBusy */"
+      counterCells = "/* Could not access counterCells */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+      entrySet = "/* Could not access entrySet */"
+      U = "/* Could not access U */"
+      SIZECTL = "/* Could not access SIZECTL */"
+      TRANSFERINDEX = "/* Could not access TRANSFERINDEX */"
+      BASECOUNT = "/* Could not access BASECOUNT */"
+      CELLSBUSY = "/* Could not access CELLSBUSY */"
+      CELLVALUE = "/* Could not access CELLVALUE */"
+      ABASE = "/* Could not access ABASE */"
+      ASHIFT = "/* Could not access ASHIFT */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+    binding = class org.apache.cxf.jaxrs.JAXRSBinding@fcf68036
+      bindingInfo = class org.apache.cxf.service.model.BindingInfo@ac68d046
+      in = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@c72877c0
+      out = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@c17192ec
+      outFault = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@c0004975
+      inFault = class org.apache.cxf.common.util.ModCountCopyOnWriteArrayList@3786296f
+    bindingOp = null
+    serialVersionUID = "/* Could not access serialVersionUID */"
+    MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+    DEFAULT_CAPACITY = "/* Could not access DEFAULT_CAPACITY */"
+    MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+    DEFAULT_CONCURRENCY_LEVEL = "/* Could not access DEFAULT_CONCURRENCY_LEVEL */"
+    LOAD_FACTOR = "/* Could not access LOAD_FACTOR */"
+    TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+    UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+    MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+    MIN_TRANSFER_STRIDE = "/* Could not access MIN_TRANSFER_STRIDE */"
+    RESIZE_STAMP_BITS = "/* Could not access RESIZE_STAMP_BITS */"
+    MAX_RESIZERS = "/* Could not access MAX_RESIZERS */"
+    RESIZE_STAMP_SHIFT = "/* Could not access RESIZE_STAMP_SHIFT */"
+    MOVED = "/* Could not access MOVED */"
+    TREEBIN = "/* Could not access TREEBIN */"
+    RESERVED = "/* Could not access RESERVED */"
+    HASH_BITS = "/* Could not access HASH_BITS */"
+    NCPU = "/* Could not access NCPU */"
+    serialPersistentFields = "/* Could not access serialPersistentFields */"
+    table = "/* Could not access table */"
+    nextTable = "/* Could not access nextTable */"
+    baseCount = "/* Could not access baseCount */"
+    sizeCtl = "/* Could not access sizeCtl */"
+    transferIndex = "/* Could not access transferIndex */"
+    cellsBusy = "/* Could not access cellsBusy */"
+    counterCells = "/* Could not access counterCells */"
+    keySet = "/* Could not access keySet */"
+    values = "/* Could not access values */"
+    entrySet = "/* Could not access entrySet */"
+    U = "/* Could not access U */"
+    SIZECTL = "/* Could not access SIZECTL */"
+    TRANSFERINDEX = "/* Could not access TRANSFERINDEX */"
+    BASECOUNT = "/* Could not access BASECOUNT */"
+    CELLSBUSY = "/* Could not access CELLSBUSY */"
+    CELLVALUE = "/* Could not access CELLVALUE */"
+    ABASE = "/* Could not access ABASE */"
+    ASHIFT = "/* Could not access ASHIFT */"
+    keySet = "/* Could not access keySet */"
+    values = "/* Could not access values */"
+  id = null
+  interceptorChain = class org.apache.cxf.phase.PhaseInterceptorChain@c24cfac2
+    PREVIOUS_MESSAGE = "org.apache.cxf.phase.PhaseInterceptorChain.PREVIOUS_MESSAGE"
+    LOG = class com.ibm.ws.logging.internal.WsLogger@71938dc9
+      tc = class com.ibm.websphere.ras.TraceComponent@a62c881c
+      ivCachedResourceBundleName = null
+      ivCachedResourceBundle = null
+      ivComponent = null
+      ivOrganization = null
+      ivProduct = null
+      ivMinimumLocalizationLevelIntValue = 625
+      ivTC = class com.ibm.websphere.ras.TraceComponent@8d3c6412
+      loggerRegistrationComponent = class java.lang.ThreadLocal@6c8a6328
+      emptyHandlers = "/* Could not access emptyHandlers */"
+      offValue = "/* Could not access offValue */"
+      SYSTEM_LOGGER_RB_NAME = "/* Could not access SYSTEM_LOGGER_RB_NAME */"
+      SYSTEM_BUNDLE = "/* Could not access SYSTEM_BUNDLE */"
+      NO_RESOURCE_BUNDLE = "/* Could not access NO_RESOURCE_BUNDLE */"
+      config = "/* Could not access config */"
+      manager = "/* Could not access manager */"
+      name = "/* Could not access name */"
+      loggerBundle = "/* Could not access loggerBundle */"
+      anonymous = "/* Could not access anonymous */"
+      catalog = "/* Could not access catalog */"
+      catalogName = "/* Could not access catalogName */"
+      catalogLocale = "/* Could not access catalogLocale */"
+      treeLock = "/* Could not access treeLock */"
+      parent = "/* Could not access parent */"
+      kids = "/* Could not access kids */"
+      callerModuleRef = "/* Could not access callerModuleRef */"
+      isSystemLogger = "/* Could not access isSystemLogger */"
+      GLOBAL_LOGGER_NAME = "global"
+      global = class java.util.logging.Logger@1a830a02
+    CURRENT_MESSAGE = class java.lang.ThreadLocal@e8918ce5
+      threadLocalHashCode = "/* Could not access threadLocalHashCode */"
+      nextHashCode = "/* Could not access nextHashCode */"
+      HASH_INCREMENT = "/* Could not access HASH_INCREMENT */"
+    nameMap = class java.util.HashMap@659392de
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      DEFAULT_INITIAL_CAPACITY = "/* Could not access DEFAULT_INITIAL_CAPACITY */"
+      MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+      DEFAULT_LOAD_FACTOR = "/* Could not access DEFAULT_LOAD_FACTOR */"
+      TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+      UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+      MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+      table = "/* Could not access table */"
+      entrySet = "/* Could not access entrySet */"
+      size = "/* Could not access size */"
+      modCount = "/* Could not access modCount */"
+      threshold = "/* Could not access threshold */"
+      loadFactor = "/* Could not access loadFactor */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+    phases = class org.apache.cxf.phase.Phase[19]
+      Phase[0] = class org.apache.cxf.phase.Phase@53022279
+      Phase[1] = class org.apache.cxf.phase.Phase@1283648a
+      Phase[2] = class org.apache.cxf.phase.Phase@36d8d2af
+      Phase[3] = class org.apache.cxf.phase.Phase@9478d4e7
+      Phase[4] = class org.apache.cxf.phase.Phase@9f28f4e8
+      Phase[5] = class org.apache.cxf.phase.Phase@dccec5b6
+      Phase[6] = class org.apache.cxf.phase.Phase@e03fbfe4
+      Phase[7] = class org.apache.cxf.phase.Phase@bd992430
+      Phase[8] = class org.apache.cxf.phase.Phase@cdd82b05
+      Phase[9] = class org.apache.cxf.phase.Phase@7246d5de
+      Phase[10] = class org.apache.cxf.phase.Phase@e138eb59
+      Phase[11] = class org.apache.cxf.phase.Phase@76d21c9a
+      Phase[12] = class org.apache.cxf.phase.Phase@b2623b67
+      Phase[13] = class org.apache.cxf.phase.Phase@de415872
+      Phase[14] = class org.apache.cxf.phase.Phase@7fa9466b
+      Phase[15] = class org.apache.cxf.phase.Phase@37273ff8
+      Phase[16] = class org.apache.cxf.phase.Phase@f6b5d76c
+      Phase[17] = class org.apache.cxf.phase.Phase@d87f907a
+      Phase[18] = class org.apache.cxf.phase.Phase@f7c4ece3
+    heads = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder[19]
+      InterceptorHolder[0] = null
+      InterceptorHolder[1] = null
+      InterceptorHolder[2] = null
+      InterceptorHolder[3] = null
+      InterceptorHolder[4] = null
+      InterceptorHolder[5] = null
+      InterceptorHolder[6] = null
+      InterceptorHolder[7] = null
+      InterceptorHolder[8] = null
+      InterceptorHolder[9] = null
+      InterceptorHolder[10] = null
+      InterceptorHolder[11] = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder@bfd9b66f
+      InterceptorHolder[12] = null
+      InterceptorHolder[13] = null
+      InterceptorHolder[14] = null
+      InterceptorHolder[15] = null
+      InterceptorHolder[16] = null
+      InterceptorHolder[17] = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder@3a211a2c
+      InterceptorHolder[18] = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder@29639430
+    tails = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder[19]
+      InterceptorHolder[0] = null
+      InterceptorHolder[1] = null
+      InterceptorHolder[2] = null
+      InterceptorHolder[3] = null
+      InterceptorHolder[4] = null
+      InterceptorHolder[5] = null
+      InterceptorHolder[6] = null
+      InterceptorHolder[7] = null
+      InterceptorHolder[8] = null
+      InterceptorHolder[9] = null
+      InterceptorHolder[10] = null
+      InterceptorHolder[11] = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder@ad33c2e
+      InterceptorHolder[12] = null
+      InterceptorHolder[13] = null
+      InterceptorHolder[14] = null
+      InterceptorHolder[15] = null
+      InterceptorHolder[16] = null
+      InterceptorHolder[17] = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder@3a211a2c
+      InterceptorHolder[18] = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder@29639430
+    hasAfters = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false} /* array length = 19 */
+    state = class org.apache.cxf.interceptor.InterceptorChain$State@eb76fd8a
+      PAUSED = class org.apache.cxf.interceptor.InterceptorChain$State@a0c29e25
+      SUSPENDED = class org.apache.cxf.interceptor.InterceptorChain$State@6f78f404
+      EXECUTING = class org.apache.cxf.interceptor.InterceptorChain$State@eb76fd8a
+      COMPLETE = class org.apache.cxf.interceptor.InterceptorChain$State@6ee7efe6
+      ABORTED = class org.apache.cxf.interceptor.InterceptorChain$State@43aa4b77
+      $VALUES = class org.apache.cxf.interceptor.InterceptorChain$State[5]
+      name = "/* Could not access name */"
+      ordinal = "/* Could not access ordinal */"
+    pausedMessage = null
+    faultObserver = class org.apache.cxf.interceptor.OutFaultChainInitiatorObserver@68618cb0
+      LOG = class com.ibm.ws.logging.internal.WsLogger@7e381764
+      bus = class com.ibm.ws.jaxrs20.bus.LibertyApplicationBus@51869c72
+      loader = null
+      $assertionsDisabled = true
+    iterator = class org.apache.cxf.phase.PhaseInterceptorChain$PhaseInterceptorIterator@570dad61
+      heads = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder[19]
+      prev = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder@3a211a2c
+      first = class org.apache.cxf.phase.PhaseInterceptorChain$InterceptorHolder@bfd9b66f
+    isFineLogging = false
+    faultOccurred = false
+    chainReleased = false
+  contents = class java.lang.Object[20]
+    Object[0] = class java.lang.Class@5c6f3f93
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      AllPermissionsPD = "/* Could not access AllPermissionsPD */"
+      SYNTHETIC = "/* Could not access SYNTHETIC */"
+      ANNOTATION = "/* Could not access ANNOTATION */"
+      ENUM = "/* Could not access ENUM */"
+      MEMBER_INVALID_TYPE = "/* Could not access MEMBER_INVALID_TYPE */"
+      EmptyParameters = "/* Could not access EmptyParameters */"
+      vmRef = "/* Could not access vmRef */"
+      module = "/* Could not access module */"
+      protectionDomain = "/* Could not access protectionDomain */"
+      classNameString = "/* Could not access classNameString */"
+      fileNameString = "/* Could not access fileNameString */"
+      annotationVars = "/* Could not access annotationVars */"
+      annotationVarsOffset = "/* Could not access annotationVarsOffset */"
+      classValueMap = "/* Could not access classValueMap */"
+      enumVars = "/* Could not access enumVars */"
+      enumVarsOffset = "/* Could not access enumVarsOffset */"
+      initializationLock = "/* Could not access initializationLock */"
+      methodHandleCache = "/* Could not access methodHandleCache */"
+      classRepoHolder = "/* Could not access classRepoHolder */"
+      annotationCache = "/* Could not access annotationCache */"
+      annotationCacheOffset = "/* Could not access annotationCacheOffset */"
+      reflectCacheEnabled = "/* Could not access reflectCacheEnabled */"
+      reflectCacheDebug = "/* Could not access reflectCacheDebug */"
+      reflectCacheAppOnly = "/* Could not access reflectCacheAppOnly */"
+      cachedInterfaces = "/* Could not access cachedInterfaces */"
+      cachedInterfacesOffset = "/* Could not access cachedInterfacesOffset */"
+      cachedDeclaringClass = "/* Could not access cachedDeclaringClass */"
+      cachedDeclaringClassOffset = "/* Could not access cachedDeclaringClassOffset */"
+      cachedEnclosingClass = "/* Could not access cachedEnclosingClass */"
+      cachedEnclosingClassOffset = "/* Could not access cachedEnclosingClassOffset */"
+      EMPTY_ANNOTATION_ARRAY = "/* Could not access EMPTY_ANNOTATION_ARRAY */"
+      implLookup = "/* Could not access implLookup */"
+      unsafe = "/* Could not access unsafe */"
+      nestHost = "/* Could not access nestHost */"
+      copyMethod = "/* Could not access copyMethod */"
+      copyField = "/* Could not access copyField */"
+      copyConstructor = "/* Could not access copyConstructor */"
+      methodParameterTypesField = "/* Could not access methodParameterTypesField */"
+      constructorParameterTypesField = "/* Could not access constructorParameterTypesField */"
+      NoArgs = "/* Could not access NoArgs */"
+      reflectCache = "/* Could not access reflectCache */"
+      reflectCacheOffset = "/* Could not access reflectCacheOffset */"
+    Object[1] = class org.apache.cxf.transport.http.AbstractHTTPDestination$1@c081faff
+      val$exchange = class org.apache.cxf.message.ExchangeImpl@9c33c681
+      val$req = class com.ibm.ws.jaxrs20.server.JaxRsHttpServletRequestAdapter@5502902a
+      this$0 = class org.apache.cxf.transport.servlet.ServletDestination@7107566c
+      serialVersionUID = -6647880736313517638
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@bcc1013
+      cached = false
+      in = "/* Could not access in */"
+      MAX_SKIP_BUFFER_SIZE = "/* Could not access MAX_SKIP_BUFFER_SIZE */"
+      DEFAULT_BUFFER_SIZE = "/* Could not access DEFAULT_BUFFER_SIZE */"
+      MAX_BUFFER_SIZE = "/* Could not access MAX_BUFFER_SIZE */"
+    Object[2] = class java.lang.Class@8c5eb1b5
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      AllPermissionsPD = "/* Could not access AllPermissionsPD */"
+      SYNTHETIC = "/* Could not access SYNTHETIC */"
+      ANNOTATION = "/* Could not access ANNOTATION */"
+      ENUM = "/* Could not access ENUM */"
+      MEMBER_INVALID_TYPE = "/* Could not access MEMBER_INVALID_TYPE */"
+      EmptyParameters = "/* Could not access EmptyParameters */"
+      vmRef = "/* Could not access vmRef */"
+      module = "/* Could not access module */"
+      protectionDomain = "/* Could not access protectionDomain */"
+      classNameString = "/* Could not access classNameString */"
+      fileNameString = "/* Could not access fileNameString */"
+      annotationVars = "/* Could not access annotationVars */"
+      annotationVarsOffset = "/* Could not access annotationVarsOffset */"
+      classValueMap = "/* Could not access classValueMap */"
+      enumVars = "/* Could not access enumVars */"
+      enumVarsOffset = "/* Could not access enumVarsOffset */"
+      initializationLock = "/* Could not access initializationLock */"
+      methodHandleCache = "/* Could not access methodHandleCache */"
+      classRepoHolder = "/* Could not access classRepoHolder */"
+      annotationCache = "/* Could not access annotationCache */"
+      annotationCacheOffset = "/* Could not access annotationCacheOffset */"
+      reflectCacheEnabled = "/* Could not access reflectCacheEnabled */"
+      reflectCacheDebug = "/* Could not access reflectCacheDebug */"
+      reflectCacheAppOnly = "/* Could not access reflectCacheAppOnly */"
+      cachedInterfaces = "/* Could not access cachedInterfaces */"
+      cachedInterfacesOffset = "/* Could not access cachedInterfacesOffset */"
+      cachedDeclaringClass = "/* Could not access cachedDeclaringClass */"
+      cachedDeclaringClassOffset = "/* Could not access cachedDeclaringClassOffset */"
+      cachedEnclosingClass = "/* Could not access cachedEnclosingClass */"
+      cachedEnclosingClassOffset = "/* Could not access cachedEnclosingClassOffset */"
+      EMPTY_ANNOTATION_ARRAY = "/* Could not access EMPTY_ANNOTATION_ARRAY */"
+      implLookup = "/* Could not access implLookup */"
+      unsafe = "/* Could not access unsafe */"
+      nestHost = "/* Could not access nestHost */"
+      copyMethod = "/* Could not access copyMethod */"
+      copyField = "/* Could not access copyField */"
+      copyConstructor = "/* Could not access copyConstructor */"
+      methodParameterTypesField = "/* Could not access methodParameterTypesField */"
+      constructorParameterTypesField = "/* Could not access constructorParameterTypesField */"
+      NoArgs = "/* Could not access NoArgs */"
+      reflectCache = "/* Could not access reflectCache */"
+      reflectCacheOffset = "/* Could not access reflectCacheOffset */"
+    Object[3] = class org.apache.cxf.transport.http.AbstractHTTPDestination$1@c081faff
+    Object[4] = class java.lang.Class@5641282
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      AllPermissionsPD = "/* Could not access AllPermissionsPD */"
+      SYNTHETIC = "/* Could not access SYNTHETIC */"
+      ANNOTATION = "/* Could not access ANNOTATION */"
+      ENUM = "/* Could not access ENUM */"
+      MEMBER_INVALID_TYPE = "/* Could not access MEMBER_INVALID_TYPE */"
+      EmptyParameters = "/* Could not access EmptyParameters */"
+      vmRef = "/* Could not access vmRef */"
+      module = "/* Could not access module */"
+      protectionDomain = "/* Could not access protectionDomain */"
+      classNameString = "/* Could not access classNameString */"
+      fileNameString = "/* Could not access fileNameString */"
+      annotationVars = "/* Could not access annotationVars */"
+      annotationVarsOffset = "/* Could not access annotationVarsOffset */"
+      classValueMap = "/* Could not access classValueMap */"
+      enumVars = "/* Could not access enumVars */"
+      enumVarsOffset = "/* Could not access enumVarsOffset */"
+      initializationLock = "/* Could not access initializationLock */"
+      methodHandleCache = "/* Could not access methodHandleCache */"
+      classRepoHolder = "/* Could not access classRepoHolder */"
+      annotationCache = "/* Could not access annotationCache */"
+      annotationCacheOffset = "/* Could not access annotationCacheOffset */"
+      reflectCacheEnabled = "/* Could not access reflectCacheEnabled */"
+      reflectCacheDebug = "/* Could not access reflectCacheDebug */"
+      reflectCacheAppOnly = "/* Could not access reflectCacheAppOnly */"
+      cachedInterfaces = "/* Could not access cachedInterfaces */"
+      cachedInterfacesOffset = "/* Could not access cachedInterfacesOffset */"
+      cachedDeclaringClass = "/* Could not access cachedDeclaringClass */"
+      cachedDeclaringClassOffset = "/* Could not access cachedDeclaringClassOffset */"
+      cachedEnclosingClass = "/* Could not access cachedEnclosingClass */"
+      cachedEnclosingClassOffset = "/* Could not access cachedEnclosingClassOffset */"
+      EMPTY_ANNOTATION_ARRAY = "/* Could not access EMPTY_ANNOTATION_ARRAY */"
+      implLookup = "/* Could not access implLookup */"
+      unsafe = "/* Could not access unsafe */"
+      nestHost = "/* Could not access nestHost */"
+      copyMethod = "/* Could not access copyMethod */"
+      copyField = "/* Could not access copyField */"
+      copyConstructor = "/* Could not access copyConstructor */"
+      methodParameterTypesField = "/* Could not access methodParameterTypesField */"
+      constructorParameterTypesField = "/* Could not access constructorParameterTypesField */"
+      NoArgs = "/* Could not access NoArgs */"
+      reflectCache = "/* Could not access reflectCache */"
+      reflectCacheOffset = "/* Could not access reflectCacheOffset */"
+    Object[5] = class java.util.Collections$EmptyList@dbe7b90c
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      modCount = "/* Could not access modCount */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+    Object[6] = null
+    Object[7] = null
+    Object[8] = null
+    Object[9] = null
+    Object[10] = null
+    Object[11] = null
+    Object[12] = null
+    Object[13] = null
+    Object[14] = null
+    Object[15] = null
+    Object[16] = null
+    Object[17] = null
+    Object[18] = null
+    Object[19] = null
+  index = 6
+  NOT_FOUND = class java.lang.Object@c5e66ce3
+  $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@edeaf6b0
+    strings[0] = "TraceComponent[org.apache.cxf.message.MessageImpl,class org.apache.cxf.message.MessageImpl,[],null,null]"
+  serialVersionUID = -4590903451121887
+  $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@96f68d89
+    strings[0] = "TraceComponent[org.apache.cxf.message.StringMapImpl,class org.apache.cxf.message.StringMapImpl,[],null,null]"
+  serialVersionUID = "/* Could not access serialVersionUID */"
+  DEFAULT_INITIAL_CAPACITY = "/* Could not access DEFAULT_INITIAL_CAPACITY */"
+  MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+  DEFAULT_LOAD_FACTOR = "/* Could not access DEFAULT_LOAD_FACTOR */"
+  TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+  UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+  MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+  table = "/* Could not access table */"
+  entrySet = "/* Could not access entrySet */"
+  size = "/* Could not access size */"
+  modCount = "/* Could not access modCount */"
+  threshold = "/* Could not access threshold */"
+  loadFactor = "/* Could not access loadFactor */"
+  keySet = "/* Could not access keySet */"
+  values = "/* Could not access values */"
+

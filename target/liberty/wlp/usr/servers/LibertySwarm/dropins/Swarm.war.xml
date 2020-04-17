@@ -2,6 +2,6 @@
 <archive>
     <dir sourceOnDisk="C:\Users\Steve\Documents\git\Swarm\target\classes" targetInArchive="/WEB-INF/classes"/>
     <file sourceOnDisk="C:\Users\Steve\.m2\repository\com\google\code\gson\gson\2.8.0\gson-2.8.0.jar" targetInArchive="/WEB-INF/lib/gson-2.8.0.jar"/>
-    <file sourceOnDisk="C:\Users\Steve\.m2\repository\mysql\mysql-connector-java\5.1.36\mysql-connector-java-5.1.36.jar" targetInArchive="/WEB-INF/lib/mysql-connector-java-5.1.36.jar"/>
+    <file sourceOnDisk="C:\Users\Steve\.m2\repository\mysql\mysql-connector-java\5.1.46\mysql-connector-java-5.1.46.jar" targetInArchive="/WEB-INF/lib/mysql-connector-java-5.1.46.jar"/>
     <file sourceOnDisk="C:\Users\Steve\Documents\git\Swarm\target\tmp\META-INF\MANIFEST.MF" targetInArchive="/META-INF/MANIFEST.MF"/>
 </archive>
