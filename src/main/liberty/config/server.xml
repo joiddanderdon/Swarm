@@ -19,9 +19,18 @@
     <ssl id="defaultSSLConfig" trustDefaultCerts="true" />
 	
 	<!-- MySQL DB Connectivity -->
-	<dataSource id="DefaultDataSource" jndiName="jdbc/myDB">
+	<library id="driver-library">
+		<fileset dir="${shared.resource.dir}" includes="*.jar" />
+	</library>
+	
+	<!-- <dataSource id="DefaultDataSource" jndiName="jdbc/myDB"> -->
+	<dataSource 
+		id="swarm"
+		jndiName="jdbc/swarm">
 		<jdbcDriver libraryRef="driver-library"/>
-		<properties serverName="localhost" portNumber="3306"
+		<properties 
+				serverName="localhost" 
+				portNumber="3306"
                 databaseName="swarm"
                 user="root"
                 password="root"/>

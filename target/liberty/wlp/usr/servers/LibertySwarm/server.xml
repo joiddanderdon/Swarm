@@ -19,6 +19,9 @@
     <ssl id="defaultSSLConfig" trustDefaultCerts="true" />
 	
 	<!-- MySQL DB Connectivity -->
+	<library id="driver-library">
+   	 <fileset dir="C:\Program Files (x86)\MySQL\Connector J 8.0" includes="mysql-connector-java-8.0.19.jar"/>
+	</library>
 	<dataSource id="DefaultDataSource" jndiName="jdbc/myDB">
 		<jdbcDriver libraryRef="driver-library"/>
 		<properties serverName="localhost" portNumber="3306"
