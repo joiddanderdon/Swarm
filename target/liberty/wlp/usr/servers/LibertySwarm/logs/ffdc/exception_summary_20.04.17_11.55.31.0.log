@@ -1,6 +1,0 @@
-
- Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
-------+------+---------------------------+---------------------------+---------------------------
-     0      2   4/17/20, 11:55:31:756 EDT   4/17/20, 11:57:16:752 EDT java.lang.reflect.InvocationTargetException org.apache.cxf.jaxrs.lifecycle.PerRequestResourceProvider 107
-                                                                            - C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarm\logs\ffdc\ffdc_20.04.17_11.55.31.0.log
-------+------+---------------------------+---------------------------+---------------------------
