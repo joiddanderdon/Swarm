@@ -22,6 +22,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.ResponseBuilder;
 
 import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
@@ -293,7 +295,8 @@ public class ServerBoard {
 	 * @throws SQLException 
 	 */
 	@DELETE
-	public boolean killSprite(@QueryParam("id") String id) throws ClassNotFoundException, SQLException {
+	@Produces("application/json")
+	public Response killSprite(@QueryParam("id") String id) throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection(connectString);
 		statement = connection.createStatement(
@@ -301,8 +304,9 @@ public class ServerBoard {
 		ResultSet resultSet = statement.executeQuery("SELECT id FROM sprites WHERE id = \"" + id + "\"");
 		if (resultSet.next()) { //if resultSet query worked, we found our match - so KILL IT!
 			statement.execute("DELETE FROM sprites WHERE id = \"" + id + "\"");
+			return Response.ok(200, MediaType.APPLICATION_JSON).build();
 		}
-		return false;
+		return Response.status(Response.Status.NOT_FOUND).entity(404).build();
 	}
 	
 }
