@@ -1,5 +1,5 @@
 # Swarm
 
 -Requirements:
-MySQL server with J Connector
+MySQL server with J Connector & 
 Maven
