@@ -3,7 +3,8 @@ import java.security.SecureRandom;
 
 public class Zombie extends Sprite {
 	private int speed;
-	private Player currentTarget;
+	private int targetX;
+	private int targetY;
 	private final SecureRandom RNG;
 	//Not sure how much of a performance hit is taken by keeping the SecureRandom as an instance variable
 	private final int RANDOMNESS;
@@ -15,23 +16,28 @@ public class Zombie extends Sprite {
 		RANDOMNESS = RNG.nextInt(5) + 1;
 		this.setX(5);
 		this.setY(5);
+		this.setTarget(800, 800);
 		this.speed = RNG.nextInt(4) + 1;
 		this.setId("z" + (++idCount));
 	}
 	//Reload from DB
-	public Zombie(String id, int x, int y) {
+	public Zombie(String id, int x, int y, int xTarg, int yTarg) {
 		RNG = new SecureRandom();
 		RANDOMNESS = RNG.nextInt(5) + 1;
 		this.setX(x);
 		this.setY(y);
+		this.setTarget(xTarg, yTarg);
 		this.speed = RNG.nextInt(4) + 1;
 		this.setId(id);
 	}
 	public int getSpeed() {
 		return speed;
 	}
-	public Player getTarget() {
-		return currentTarget;
+	public int getTargetX() {
+		return targetX;
+	}
+	public int getTargetY() {
+		return targetY;
 	}
 	public void setSpeed(int speed) {
 		this.speed = speed;
@@ -39,17 +45,17 @@ public class Zombie extends Sprite {
 	public void stalk() {
 		
 		if (RNG.nextInt(RANDOMNESS) <= 2) {
-			if (currentTarget.getX() < this.getX()) {
+			if (targetX < this.getX()) {
 				this.setX(this.getX() - speed);
 			}
-			else if (currentTarget.getX() > this.getX()) {
+			else if (targetX > this.getX()) {
 				this.setX(this.getX() + speed);
 			}
 			
-			if (currentTarget.getY() < this.getY()) {
+			if (targetY < this.getY()) {
 				this.setY(this.getY() - speed);
 			}
-			else if (currentTarget.getY() > this.getY()) {
+			else if (targetY > this.getY()) {
 				this.setY(this.getY() + speed);
 			}
 		}
@@ -70,8 +76,9 @@ public class Zombie extends Sprite {
 			}
 		}
 	}
-	public void setTarget(Player p) {
-		currentTarget = p;
+	public void setTarget(int x, int y) {
+		targetX = x;
+		targetY = y;
 	}
 	
 }
