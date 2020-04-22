@@ -197,16 +197,7 @@ public class ServerBoard {
 		return getBoard();
 	}
 	/**
-	 * This needs work. For starters, the tickCount static variable does not
-	 * function correctly in this context. Statelessness and all that jazz.
-	 * Not sure how I'm going to trigger this method then.
-	 * 
-	 * Second, it will need to be reworked. The steps necessary should be:
-	 * 1) Pull all the Zombie data from database
-	 * 2) Instantiate each zombie based on DB Data
-	 * 3) Run the stalk algorithm on each, updating x, y, and target parameters
-	 * 4) Save the zombie objects back to database
-	 * 5) Return getBoard()
+	 * JavaDoc to be added.
 	 * @throws ClassNotFoundException 
 	 * @throws SQLException 
 	 * 
