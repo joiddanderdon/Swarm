@@ -1,6 +1,7 @@
 //import com.google.gson.Gson; 
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 //import javax.json.JsonArray;
 
@@ -13,6 +14,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.DriverManager;
 
+import javax.ws.rs.DELETE;
 // JAX RS Modules
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
@@ -63,6 +65,8 @@ public class ServerBoard {
 				if ( zid.charAt(0) == 'p' ){
 					sprites.add(new Player(zid, zx, zy));
 				} else {
+					//Don't have to pay too much attention to the target params here
+					//On the next PUT they'll all update anyway.
 					sprites.add(new Zombie(zid, zx, zy, 5, 5));
 				}
 			}
@@ -255,13 +259,19 @@ public class ServerBoard {
 	 * @return
 	 */
 	private ArrayList<Sprite> setTarget(ArrayList<Sprite> sprites){
+		
+		//Mix up the list, so the zombies randomly change targets.
+		//Not sure if this is a good idea right now, so leaving it commented out.
+		
+		//Collections.shuffle(sprites);
+		
+		
+		
+		
 		for (Sprite s : sprites) {
-			
 			if (s.getClass().equals(Zombie.class)) {
-				//System.out.println(((Zombie) s).getId()); //This works.
 				for (Sprite sP: sprites) {
 					if (sP.getClass().equals(Player.class)) {
-						//System.out.println(((Player) sP).getId());
 						((Zombie) s).setTarget(((Player) sP).getX(), ((Player) sP).getY());
 						((Zombie) s).stalk();
 					}
@@ -273,14 +283,25 @@ public class ServerBoard {
 		return sprites;
 	}
 	/** 
-	 * Next Project
-	 * @param id
-	 * @return
+	 * Kills Player/Zombie with given id
+	 * 
+	 * @param id ID of player or zombie to be destroyed.
+	 * 
+	 * @return true if sprite was successfully destroyed.
+	 * <p>false if sprite not in database
+	 * @throws ClassNotFoundException 
+	 * @throws SQLException 
 	 */
-	public boolean killSprite(String id) {
-		
-		
-		
+	@DELETE
+	public boolean killSprite(@QueryParam("id") String id) throws ClassNotFoundException, SQLException {
+		Class.forName("com.mysql.jdbc.Driver");
+		connection = DriverManager.getConnection(connectString);
+		statement = connection.createStatement(
+				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+		ResultSet resultSet = statement.executeQuery("SELECT id FROM sprites WHERE id = \"" + id + "\"");
+		if (resultSet.next()) { //if resultSet query worked, we found our match - so KILL IT!
+			statement.execute("DELETE FROM sprites WHERE id = \"" + id + "\"");
+		}
 		return false;
 	}
 	
