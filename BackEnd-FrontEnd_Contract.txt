@@ -1,0 +1,17 @@
+Back End Interaction ReadMe
+
+* Let's not worry about shooting or scores for now. If you have them, awesome. Otherwise, back burner.
+
+* On front end, the only variables you really need to keep track of are YOUR player's id (String) and x, y coordinates (int)
+
+* On each frame, send a PUT request to the server with the id,x,y params (x and y being the coordinates where your player just moved to)
+EXAMPLE: PUT -> localhost:9081/Swarm?id=p1040&newX=640&newY=500
+(You can use this to put a new player on the board OR update the position of existing player)
+
+* The server will respond with a list of x and y coordinates for your sprites and all others
+
+* Paint them on the screen, get Player inputs, etc.
+
+* Send killSprite request with the id of the Sprite to be destroyed.
+EXAMPLE: DELETE - > localhost:9081/Swarm?id=p1040
+
