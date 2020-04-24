@@ -39,10 +39,7 @@ public class ServerBoard {
 	private static Statement statement;
 	
 	
-	//The first 5 lines or so of the constructor connect to the database,
-	//so we now know how to query the database.
-	//Insertions & deletions work similarly, as demonstrated
-	//in the ConnectTest class. 
+	
 	
 	//We'll need to keep a list of sprites, then in the Tick() method,
 	//run the Stalk method on each Zombie contained within

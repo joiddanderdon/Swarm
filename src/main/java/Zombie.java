@@ -75,6 +75,12 @@ public class Zombie extends Sprite {
 				break;
 			}
 		}
+		//Keep zombies within board parameter
+		if (this.getX() < 0) this.setX(0);
+		if (this.getY() < 0) this.setY(0);
+		if (this.getX() > 800) this.setX(800);
+		if (this.getY() > 800) this.setY(800);
+		
 	}
 	public void setTarget(int x, int y) {
 		targetX = x;
