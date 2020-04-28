@@ -1,6 +1,11 @@
-
 import java.security.SecureRandom;
-
+/**
+ * A zombie object that will stalk players.
+ * 
+ * @author Steve Cina
+ * @since April 2020
+ *
+ */
 public class Zombie extends Sprite {
 	private int speed;
 	private int targetX;

@@ -26,7 +26,12 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
 import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
-
+/**
+ * Main component of Liberty Swarm Back-End
+ * 
+ * @author Steve Cina
+ * @since April 2020
+ */
 @Path("/")
 public class ServerBoard {
 	private static final int ZOMBIE_RATE = 10; //The lower, the faster.
@@ -48,15 +53,16 @@ public class ServerBoard {
 	
 	public ServerBoard() throws SQLException, ClassNotFoundException {
 		sprites = new ArrayList<Sprite>();
+		
+		//Database connection
 		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection(connectString);
 		statement = connection.createStatement(
 				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 		ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord FROM sprites");
 		
-		//After instantiating list, load from DB
 
-		// Getting a SQL error during this loop.. before Result Set
+		// parse results as a list of sprites, add to the sprites arrayList
 		while (resultSet.next()) {
 				String zid = (String) resultSet.getObject(1);
 				int zx = Integer.parseInt(resultSet.getObject(2).toString());
@@ -71,7 +77,11 @@ public class ServerBoard {
 			}
 	}
 	
-	
+	/**
+	 * This is what is called on the basic non-param GET request.
+	 * 
+	 * @return A String consisting of all the sprites on the board.
+	 */
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public String getBoard() {
@@ -79,36 +89,35 @@ public class ServerBoard {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 		
-		connection = DriverManager.getConnection(connectString);
-		statement = connection.createStatement(
+			connection = DriverManager.getConnection(connectString);
+			statement = connection.createStatement(
 				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 		
-		ResultSet resultSetPlayer = statement.executeQuery("SELECT id, x_coord, y_coord FROM sprites WHERE id LIKE \"p%\"");
+			ResultSet resultSetPlayer = statement.executeQuery("SELECT id, x_coord, y_coord FROM sprites WHERE id LIKE \"p%\"");
 		
-		//Load Players onto list
-		while (resultSetPlayer.next()) {
-			String pid = (String) resultSetPlayer.getObject(1);
-			int px = Integer.parseInt(resultSetPlayer.getObject(2).toString());
-			int py = Integer.parseInt(resultSetPlayer.getObject(3).toString());
-			sprites.add(new Player(pid, px, py));
-		}
-		resultSetPlayer.close();
-		//Load Zombies into list
-		ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y FROM sprites WHERE id LIKE \"z%\"");
-		while (resultSet.next()) {
-				String zid = (String) resultSet.getObject(1);
-				int zx = Integer.parseInt(resultSet.getObject(2).toString());
-				int zy = Integer.parseInt(resultSet.getObject(3).toString());
-				int zxTarg = Integer.parseInt(resultSet.getObject(4).toString());
-				int zyTarg = Integer.parseInt(resultSet.getObject(5).toString());
-				sprites.add(new Zombie(zid, zx, zy, zxTarg, zyTarg));
-				
+			//Load Players onto list
+			while (resultSetPlayer.next()) {
+				String pid = (String) resultSetPlayer.getObject(1);
+				int px = Integer.parseInt(resultSetPlayer.getObject(2).toString());
+				int py = Integer.parseInt(resultSetPlayer.getObject(3).toString());
+				sprites.add(new Player(pid, px, py));
 			}
-		resultSet.close();
+			resultSetPlayer.close();
+			//Load Zombies into list
+			ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y FROM sprites WHERE id LIKE \"z%\"");
+			while (resultSet.next()) {
+					String zid = (String) resultSet.getObject(1);
+					int zx = Integer.parseInt(resultSet.getObject(2).toString());
+					int zy = Integer.parseInt(resultSet.getObject(3).toString());
+					int zxTarg = Integer.parseInt(resultSet.getObject(4).toString());
+					int zyTarg = Integer.parseInt(resultSet.getObject(5).toString());
+					sprites.add(new Zombie(zid, zx, zy, zxTarg, zyTarg));
+					
+				}
+			resultSet.close();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
-
 			e.printStackTrace();
 		}
 		
@@ -130,9 +139,15 @@ public class ServerBoard {
 		
 		
 	}
-	
-	public boolean addZombie() {
+	/**
+	 * Periodically adds a zombie to the board.
+	 * 
+	 * @return true if zombie successfully added
+	 * 		false if zombie not added for ANY reason.
+	 */
+	private boolean addZombie() {
 		Zombie newZom = new Zombie();
+		if (sprites.size() >= 100) return false;
 		sprites.add(newZom);
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -158,6 +173,16 @@ public class ServerBoard {
 		} 
 	}
 	
+	/**
+	 * Update player position on board. Activates the Tick() method.
+	 * 
+	 * @param id The String id of the player to be moved.
+	 * @param finishX The new X coordinate
+	 * @param finishY The new Y coordinate
+	 * @return The output of GetBoard(), after movement has occurred.
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 */
 	@PUT
 	@Produces(MediaType.APPLICATION_JSON)
 	public String updatePlayerPos(@QueryParam("id")   String id, 
@@ -200,7 +225,9 @@ public class ServerBoard {
 		return getBoard();
 	}
 	/**
-	 * JavaDoc to be added.
+	 * Increments the tick counter. After a certain
+	 * number of "ticks", and dependent on the ZOMBIE_RATE
+	 * variable, a zombie is released.
 	 * @throws ClassNotFoundException 
 	 * @throws SQLException 
 	 * 

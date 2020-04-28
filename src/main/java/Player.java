@@ -1,4 +1,10 @@
-
+/**
+ * Sprite object representing a Player.
+ * 
+ * @author Steve Cina
+ * @since April 2020
+ *
+ */
 public class Player extends Sprite {
 	public final int MOVESPEED = 3;
 	private long[] aimAt = {0,0};

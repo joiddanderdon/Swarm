@@ -1,4 +1,11 @@
-public class Sprite {
+/**
+ * Superclass of Player and Zombie
+ * 
+ * @author Steve Cina
+ * @since April 2020
+ *
+ */
+public abstract class Sprite {
 	private boolean isAlive;
 	private String color;
 	private int x;
