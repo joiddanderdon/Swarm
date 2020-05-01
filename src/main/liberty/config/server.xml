@@ -35,4 +35,10 @@
                 user="root"
                 password="root"/>
 	</dataSource>
+
+	<!-- Allow CORS -->
+	<cors domain="/Swarm"
+		allowedOrigins="*"
+		allowedMethods="GET, PUT, DELETE"
+	/>
 </server>
