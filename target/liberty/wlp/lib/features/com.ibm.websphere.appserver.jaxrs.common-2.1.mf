@@ -1,7 +1,7 @@
-Created-By: 11.0.2 (Eclipse OpenJ9)
+Created-By: 11.0.7 (Eclipse OpenJ9)
 IBM-App-ForceRestart: uninstall,
  install
-IBM-AppliesTo: io.openliberty;productVersion="20.0.0.4"
+IBM-AppliesTo: io.openliberty;productVersion="20.0.0.5"
 IBM-Feature-Version: 2
 IBM-InstallTo: core
 IBM-License-Agreement: wlp/lafiles/LA
@@ -33,7 +33,8 @@ Subsystem-Content: wadl2java; type=file; location:="bin/jaxrs/wadl2java",
  com.ibm.ws.org.apache.cxf.cxf.rt.rs.client.3.2; version="[1.0.0,1.0.200)",
  com.ibm.ws.org.apache.cxf.cxf.rt.rs.service.description.3.2; version="[1.0.0,1.0.200)",
  com.ibm.ws.org.apache.cxf.cxf.rt.rs.sse.3.2; version="[1.0.0,1.0.200)",
- com.ibm.ws.org.apache.cxf.cxf.rt.transports.http.hc.3.2; version="[1.0.0,1.0.200)"
+ com.ibm.ws.org.apache.cxf.cxf.rt.transports.http.hc.3.2; version="[1.0.0,1.0.200)",
+ com.ibm.ws.security.authorization.util; version="[1.0.0,1.0.200)"
 Subsystem-Description: %description
 Subsystem-License: https://www.eclipse.org/legal/epl-v10.html
 Subsystem-Localization: OSGI-INF/l10n/com.ibm.websphere.appserver.jaxrs.common-2.1

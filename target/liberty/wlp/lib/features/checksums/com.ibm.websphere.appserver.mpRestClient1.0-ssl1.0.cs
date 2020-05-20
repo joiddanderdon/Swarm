@@ -1,3 +1,3 @@
-#Thu Apr 09 08:59:51 EDT 2020
-lib/com.ibm.ws.microprofile.rest.client.ssl_1.0.39.jar=73edbc2a0939cd9aa7dc74ec69c0a3bc
-lib/features/com.ibm.websphere.appserver.mpRestClient1.0-ssl1.0.mf=e677f166714c76f40020a90bb322335a
+#Tue May 19 13:49:29 EDT 2020
+lib/features/com.ibm.websphere.appserver.mpRestClient1.0-ssl1.0.mf=9232e767e6c26c8d30c51e9d28567553
+lib/com.ibm.ws.microprofile.rest.client.ssl_1.0.40.jar=27e46008b4672612228a5d49739b52e5

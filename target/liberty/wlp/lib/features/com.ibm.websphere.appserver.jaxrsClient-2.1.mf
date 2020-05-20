@@ -1,4 +1,4 @@
-Created-By: 11.0.2 (Eclipse OpenJ9)
+Created-By: 11.0.7 (Eclipse OpenJ9)
 IBM-API-Package: javax.ws.rs; type=spec,
  javax.ws.rs.container; type=spec,
  javax.ws.rs.core; type=spec,
@@ -9,7 +9,7 @@ IBM-API-Package: javax.ws.rs; type=spec,
  com.ibm.websphere.jaxrs.providers.json4j; type=ibm-api
 IBM-App-ForceRestart: uninstall,
  install
-IBM-AppliesTo: io.openliberty;productVersion="20.0.0.4"
+IBM-AppliesTo: io.openliberty;productVersion="20.0.0.5"
 IBM-Feature-Version: 2
 IBM-InstallTo: core
 IBM-License-Agreement: wlp/lafiles/LA

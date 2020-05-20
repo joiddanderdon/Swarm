@@ -1,8 +1,0 @@
-
- Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
-------+------+---------------------------+---------------------------+---------------------------
-     0      1    4/9/20, 12:05:29:785 EDT    4/9/20, 12:05:29:785 EDT java.io.IOException org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor 273
-                                                                            - C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\ffdc\ffdc_20.04.09_12.05.29.0.log
-     1      1    4/9/20, 15:05:47:068 EDT    4/9/20, 15:05:47:068 EDT java.lang.reflect.InvocationTargetException org.apache.cxf.jaxrs.lifecycle.PerRequestResourceProvider 107
-                                                                            - C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarmText\logs\ffdc\ffdc_20.04.09_15.05.47.0.log
-------+------+---------------------------+---------------------------+---------------------------

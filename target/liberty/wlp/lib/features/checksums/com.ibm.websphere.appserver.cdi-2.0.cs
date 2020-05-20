@@ -1,16 +1,16 @@
-#Thu Apr 09 08:59:45 EDT 2020
+#Tue May 19 13:49:22 EDT 2020
 dev/api/ibm/schema/ibm-managed-bean-bnd_1_0.xsd=3b0b778a121ff7c6c28f9e72afd96488
-lib/com.ibm.ws.org.jboss.classfilewriter.1.2_1.0.39.jar=c0012812baac0048e7032b2f47319ce6
-lib/com.ibm.ws.cdi.interfaces_1.0.39.jar=efe97358d8be610638d241c52a2f9d54
-dev/api/third-party/com.ibm.websphere.appserver.thirdparty.cdi-2.0_1.0.39.jar=e4ab037771f8b4bdd679e0d65473cbef
-lib/com.ibm.ws.org.jboss.logging_1.0.39.jar=497da2343420bd2d50cc9a0125abf22f
-lib/com.ibm.ws.org.jboss.weld3_1.0.39.jar=760fb55afa87346d25f5b26dfa19fb5f
-lib/features/com.ibm.websphere.appserver.cdi-2.0.mf=17848c7788366809c78b3645866525db
+lib/com.ibm.ws.managedobject_1.0.40.jar=4070444f05ba9056360ba8ee49a9f0f8
+lib/com.ibm.ws.cdi.2.0.weld_1.0.40.jar=e91ae186d54a26ff82d1de42a5bc862c
+dev/api/spec/com.ibm.websphere.javaee.jaxws.2.2_1.0.40.jar=97110cb2df0969730c61400a637dbc0c
+lib/com.ibm.ws.org.jboss.classfilewriter.1.2_1.0.40.jar=5ddba82501849395a71253fcd801bace
+lib/com.ibm.ws.org.jboss.jdeparser.1.0.0_1.0.40.jar=6d7f8a7b2ca75ece82c306207886147e
+lib/com.ibm.ws.org.jboss.weld3_1.0.40.jar=53393660a9bfb2b44c8c12094bbbfd2d
+lib/com.ibm.ws.cdi.internal_1.0.40.jar=ba4ef57570de1879e743a02fde5b77c6
+lib/com.ibm.ws.org.jboss.logging_1.0.40.jar=d26227363fc48ff94ce1e43790780c52
+lib/features/com.ibm.websphere.appserver.cdi-2.0.mf=9343f917ecc4c17c191e9742d0465402
 dev/api/ibm/schema/ibm-managed-bean-bnd_1_1.xsd=788164a7a6ea3fb24bb6106a48a9068b
-dev/api/spec/com.ibm.websphere.javaee.jaxb.2.2_1.0.39.jar=9fbc37537cfd303f18a6a8b71a1fffce
-lib/com.ibm.ws.cdi.2.0.weld_1.0.39.jar=f839b0dcd57dfca996eec48441052ff4
-lib/com.ibm.ws.cdi.weld_1.0.39.jar=ea4b1a2163a44c16f35f1d84caab5a3b
-dev/api/spec/com.ibm.websphere.javaee.jaxws.2.2_1.0.39.jar=d491c74abd83a2f19bdd11247e2a8a89
-lib/com.ibm.ws.org.jboss.jdeparser.1.0.0_1.0.39.jar=1777a715dc8a1bd083e86e422dcb244e
-lib/com.ibm.ws.managedobject_1.0.39.jar=847ff679315afde350c9abe1f7c01c38
-lib/com.ibm.ws.cdi.internal_1.0.39.jar=a984bbd99ea1240674752c106caf85ff
+dev/api/third-party/com.ibm.websphere.appserver.thirdparty.cdi-2.0_1.0.40.jar=0da8148734c3e5e551de4a11b0f8df0b
+lib/com.ibm.ws.cdi.weld_1.0.40.jar=50c1f5d6324eb133815b04cd68fc1b03
+lib/com.ibm.ws.cdi.interfaces_1.0.40.jar=74909e24c069a22d0b6975da7a2a0153
+dev/api/spec/com.ibm.websphere.javaee.jaxb.2.2_1.0.40.jar=6f17f5e639c1b59ae86f8314c907a661

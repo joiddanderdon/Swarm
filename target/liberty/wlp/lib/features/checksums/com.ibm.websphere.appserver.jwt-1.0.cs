@@ -1,15 +1,15 @@
-#Thu Apr 09 08:59:47 EDT 2020
-lib/com.ibm.json4j_1.0.39.jar=057b1b7bb933abac3fe04a946ca15668
-lib/com.ibm.ws.org.slf4j.api.1.7.7_1.0.39.jar=5aaf3f3b05138d8ff6cfe9d07f8849f5
-lib/com.ibm.ws.com.google.gson.2.2.4_1.0.39.jar=0ed9df38895c4f6573a0a33f7d270ac6
-lib/com.ibm.ws.org.jose4j_1.0.39.jar=2ff42870612723329530d035878ef1d0
-lib/com.ibm.ws.org.apache.commons.codec.1.4_1.0.39.jar=47b8387ca2f4f8518e9b3246d5f2c4ce
-lib/com.ibm.ws.org.apache.httpcomponents_1.0.39.jar=bb4281d811367c9ef3b5a643ba711960
-lib/com.ibm.ws.security.common_1.0.39.jar=5a14f493c56bc22a3238adbd8f7dfa7a
-lib/com.ibm.ws.security.jwt_1.0.39.jar=f7aff7ef695bede4b1d0cfcb310f42c7
-dev/api/ibm/com.ibm.websphere.appserver.api.jwt_1.1.39.jar=66c80ebdfef7a10b414f191580ffbe83
-lib/features/com.ibm.websphere.appserver.jwt-1.0.mf=aac59f2eb18208842caa0ceadd0a4565
-lib/com.ibm.ws.org.slf4j.jdk14.1.7.7_1.0.39.jar=b383e39b629b2753e40d857dc30287dc
-lib/com.ibm.ws.security.common.jsonwebkey_1.0.39.jar=275ff99c6e2e5c93adb216fcec289ebf
-lib/com.ibm.ws.org.apache.commons.logging.1.0.3_1.0.39.jar=0d53ce5a211d3aeb4dd785163d77bda8
-dev/api/ibm/javadoc/com.ibm.websphere.appserver.api.jwt_1.1-javadoc.zip=b6fcf1815f5daa36e1792dcb6c66cc0f
+#Tue May 19 13:49:25 EDT 2020
+lib/com.ibm.ws.org.slf4j.api.1.7.7_1.0.40.jar=8cd702633925b483615526f7d605c046
+lib/com.ibm.ws.com.google.gson.2.2.4_1.0.40.jar=4454746680bf8ba055d16c3a8679e5cd
+lib/com.ibm.json4j_1.0.40.jar=cceadcb4aa75df15c27a6032a8ad30e1
+lib/com.ibm.ws.security.common_1.0.40.jar=de89e36fb9ec2b6fff684315db741adc
+lib/com.ibm.ws.org.apache.commons.codec.1.4_1.0.40.jar=512805a06ac2ef5538ba6d5bef1a84e4
+lib/com.ibm.ws.org.apache.commons.logging.1.0.3_1.0.40.jar=c62a72e6c5eeb6a45a5c8d176b6e04e6
+lib/com.ibm.ws.org.slf4j.jdk14.1.7.7_1.0.40.jar=6293a442a14281b8e808cf90819dc90e
+lib/com.ibm.ws.security.common.jsonwebkey_1.0.40.jar=44f87a1a7da286206e759597fd5c6958
+lib/features/com.ibm.websphere.appserver.jwt-1.0.mf=78d7db0c402038032c448eb60fe43bce
+lib/com.ibm.ws.org.jose4j_1.0.40.jar=7506d46339bf408225d0e73b89398707
+lib/com.ibm.ws.security.jwt_1.0.40.jar=548a0d026743afb5e154748a225e61ef
+lib/com.ibm.ws.org.apache.httpcomponents_1.0.40.jar=f68d8ccfbea77059cd616ddf5058a746
+dev/api/ibm/com.ibm.websphere.appserver.api.jwt_1.1.40.jar=83230fafd5724df37186a7458a89090c
+dev/api/ibm/javadoc/com.ibm.websphere.appserver.api.jwt_1.1-javadoc.zip=1351053eeff006d6898e93317cd3af15

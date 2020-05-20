@@ -1,8 +1,8 @@
-Created-By: 11.0.2 (Eclipse OpenJ9)
+Created-By: 11.0.7 (Eclipse OpenJ9)
 IBM-API-Package: javax.annotation; type=spec,
  javax.annotation.security; type=spec,
  javax.annotation.sql; type=spec
-IBM-AppliesTo: io.openliberty;productVersion="20.0.0.4"
+IBM-AppliesTo: io.openliberty;productVersion="20.0.0.5"
 IBM-Feature-Version: 2
 IBM-InstallTo: core
 IBM-License-Agreement: wlp/lafiles/LA

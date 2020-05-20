@@ -1,8 +1,8 @@
-#Thu Apr 09 08:59:49 EDT 2020
-lib/features/com.ibm.websphere.appserver.mpJwt-1.1.mf=51630904da1fd3e2522b419dd73e4b6d
-dev/api/stable/com.ibm.websphere.org.eclipse.microprofile.jwt.1.0_1.0.39.jar=22d503e26848f04e5ad589c3e3d4da9f
-lib/com.ibm.ws.security.mp.jwt.1.1.config_1.0.39.jar=2cd1da52ba9d59a97d0acbf64b3f3ba5
-lib/com.ibm.ws.security.mp.jwt_1.0.39.jar=281664baa40914ef8c4b4f54761272ad
-lib/com.ibm.ws.org.apache.commons.codec.1.4_1.0.39.jar=47b8387ca2f4f8518e9b3246d5f2c4ce
-lib/com.ibm.ws.org.apache.commons.logging.1.0.3_1.0.39.jar=0d53ce5a211d3aeb4dd785163d77bda8
-lib/com.ibm.ws.security.mp.jwt.cdi_1.0.39.jar=370ddd4ebb6c2b2283f32aadb2b42621
+#Tue May 19 13:49:27 EDT 2020
+lib/features/com.ibm.websphere.appserver.mpJwt-1.1.mf=4311b797a92a98775d2b0b1f469829a8
+dev/api/stable/com.ibm.websphere.org.eclipse.microprofile.jwt.1.0_1.0.40.jar=c12b948cae520feebe9f002ae5821bd2
+lib/com.ibm.ws.org.apache.commons.codec.1.4_1.0.40.jar=512805a06ac2ef5538ba6d5bef1a84e4
+lib/com.ibm.ws.security.mp.jwt.1.1.config_1.0.40.jar=1f70662454a82e142ea1d47b70b34f7a
+lib/com.ibm.ws.security.mp.jwt_1.0.40.jar=6c97dccbe8bb800eb8b6cc7064a22945
+lib/com.ibm.ws.org.apache.commons.logging.1.0.3_1.0.40.jar=c62a72e6c5eeb6a45a5c8d176b6e04e6
+lib/com.ibm.ws.security.mp.jwt.cdi_1.0.40.jar=03fd608c19dad821adcea6c392466ab4

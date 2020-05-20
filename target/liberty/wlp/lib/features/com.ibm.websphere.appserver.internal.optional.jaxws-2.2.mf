@@ -1,7 +1,7 @@
-Created-By: 11.0.2 (Eclipse OpenJ9)
+Created-By: 11.0.7 (Eclipse OpenJ9)
 IBM-App-ForceRestart: uninstall,
  install
-IBM-AppliesTo: io.openliberty;productVersion="20.0.0.4"
+IBM-AppliesTo: io.openliberty;productVersion="20.0.0.5"
 IBM-Feature-Version: 2
 IBM-InstallTo: core
 IBM-License-Agreement: wlp/lafiles/LA

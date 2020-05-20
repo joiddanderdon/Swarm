@@ -1,8 +1,8 @@
-Created-By: 11.0.2 (Eclipse OpenJ9)
+Created-By: 11.0.7 (Eclipse OpenJ9)
 IBM-API-Package: com.ibm.websphere.security.web; type="ibm-api"
 IBM-App-ForceRestart: install,
  uninstall
-IBM-AppliesTo: io.openliberty;productVersion="20.0.0.4"
+IBM-AppliesTo: io.openliberty;productVersion="20.0.0.5"
 IBM-Feature-Version: 2
 IBM-Install-Policy: when-satisfied
 IBM-InstallTo: core

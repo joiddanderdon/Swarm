@@ -19,10 +19,10 @@
     <assemblyArtifact>
         <groupId>io.openliberty</groupId>
         <artifactId>openliberty-kernel</artifactId>
-        <version>20.0.0.4</version>
+        <version>20.0.0.5</version>
         <type>zip</type>
     </assemblyArtifact>
-    <assemblyArchive>C:\Users\Steve\.m2\repository\io\openliberty\openliberty-kernel\20.0.0.4\openliberty-kernel-20.0.0.4.zip</assemblyArchive>
+    <assemblyArchive>C:\Users\Steve\.m2\repository\io\openliberty\openliberty-kernel\20.0.0.5\openliberty-kernel-20.0.0.5.zip</assemblyArchive>
     <assemblyInstallDirectory>C:\Users\Steve\Documents\git\Swarm\target\liberty</assemblyInstallDirectory>
     <refresh>false</refresh>
     <installAppsConfigDropins>C:\Users\Steve\Documents\git\Swarm\target\liberty\wlp\usr\servers\LibertySwarm\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>

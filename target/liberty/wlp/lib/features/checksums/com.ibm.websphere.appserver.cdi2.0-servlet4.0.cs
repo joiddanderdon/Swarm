@@ -1,5 +1,5 @@
-#Thu Apr 09 08:59:54 EDT 2020
-lib/features/com.ibm.websphere.appserver.cdi2.0-servlet4.0.mf=471a08cb49155362178502c2abb5eff5
-lib/com.ibm.ws.cdi.web_1.0.39.jar=6c56ef2097f744d286696ed9b1961e3a
-lib/com.ibm.ws.cdi.2.0.web_1.0.39.jar=51063af71c87ad3286f8d318ec2ab8da
-dev/api/spec/com.ibm.websphere.javaee.jsp.2.3_1.0.39.jar=a08460091decf8c081a973c52a7a8d46
+#Tue May 19 13:49:33 EDT 2020
+lib/features/com.ibm.websphere.appserver.cdi2.0-servlet4.0.mf=2f073a34cc565dd5b9aaf0a45b5f1a5b
+lib/com.ibm.ws.cdi.2.0.web_1.0.40.jar=f173d1fb72fd4d11ff08cab54bf00d84
+dev/api/spec/com.ibm.websphere.javaee.jsp.2.3_1.0.40.jar=bc4d2f0a3c8dabe6362a7c516c49af39
+lib/com.ibm.ws.cdi.web_1.0.40.jar=7660e305e0ea1ea916c8cbc016c38103

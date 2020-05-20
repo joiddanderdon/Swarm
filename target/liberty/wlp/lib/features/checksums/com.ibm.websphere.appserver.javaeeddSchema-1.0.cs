@@ -1,4 +1,4 @@
-#Thu Apr 09 08:59:35 EDT 2020
+#Tue May 19 13:49:12 EDT 2020
 dev/api/ibm/schema/ibm-common-bnd_1_1.xsd=62ecd62d0312dd04f8f1770512a0d43b
 dev/api/ibm/schema/ibm-web-bnd_1_2.xsd=93308fa33620acb4eebd1f8c4c60becf
 dev/api/ibm/schema/ibm-ejb-jar-bnd_1_0.xsd=9a25a42e2b231d766f8af9e7d7621fe5
@@ -14,7 +14,7 @@ dev/api/ibm/schema/ibm-web-ext_1_0.xsd=96d28254e452aaca6171c403d5afa59c
 dev/api/ibm/schema/ibm-web-bnd_1_1.xsd=08ede29218ef237106191fb9c28cd5b6
 dev/api/ibm/schema/ibm-common-bnd_1_0.xsd=157f21cb9146394dc6456045bc0c1947
 dev/api/ibm/schema/ibm-ejb-jar-ext_1_1.xsd=04bfa4f8e528bf4ca52553ee83359eb6
-lib/features/com.ibm.websphere.appserver.javaeeddSchema-1.0.mf=9216b5cc8f2f44e412b3d64224d4f81e
+lib/features/com.ibm.websphere.appserver.javaeeddSchema-1.0.mf=098398386d2a40ef78d8e54c67383470
 dev/api/ibm/schema/ibm-application-bnd_1_0.xsd=49a0f999d5b09868787614c2904104c4
 dev/api/ibm/schema/ibm-application-bnd_1_2.xsd=13bd3df85491adaba3955a2043c93a53
 dev/api/ibm/schema/ibm-ejb-jar-bnd_1_1.xsd=d3316b86921c47fd7e5c9f705accf60e

@@ -1,7 +1,6 @@
-#Thu Apr 09 08:59:41 EDT 2020
-lib/com.ibm.ws.javaee.platform.defaultresource_1.0.39.jar=8c9c6cdfc6ac990c27e4e0a148f2ad78
-lib/com.ibm.ws.concurrent.mp.1.0_1.0.39.jar=d5e3a6e20ced84ee89b4394ae461e51e
-lib/features/com.ibm.websphere.appserver.concurrent.mp-1.0.mf=1db17a1b43e40dc0f6fcae51617005bb
-dev/api/spec/com.ibm.websphere.javaee.concurrent.1.0_1.0.39.jar=c7757ef99a89bad580f3c49cb3af2610
-lib/com.ibm.ws.concurrent_1.0.39.jar=bf58d445efcc600561248bc126f5c2f9
-lib/com.ibm.ws.resource_1.0.39.jar=1c55986a28fb95cc609cffc4a41a5aba
+#Tue May 19 13:49:17 EDT 2020
+lib/com.ibm.ws.javaee.platform.defaultresource_1.0.40.jar=70ce159418427e45801d06bd3f5ef176
+lib/features/com.ibm.websphere.appserver.concurrent.mp-1.0.mf=857f413255af016670411935e8b4831e
+dev/api/spec/com.ibm.websphere.javaee.concurrent.1.0_1.0.40.jar=0c36f57d027e8783a1465ade627825b0
+lib/com.ibm.ws.concurrent_1.0.40.jar=e8cb4f1aee9609200bb3aec285b9d22e
+lib/com.ibm.ws.resource_1.0.40.jar=84b871ad60057931dfcdea26c1c21c36

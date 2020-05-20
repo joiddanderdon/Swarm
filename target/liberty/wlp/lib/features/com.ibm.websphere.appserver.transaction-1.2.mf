@@ -1,4 +1,4 @@
-Created-By: 11.0.2 (Eclipse OpenJ9)
+Created-By: 11.0.7 (Eclipse OpenJ9)
 IBM-API-Package: javax.transaction; type=spec,
  javax.transaction.xa; type=spec,
  com.ibm.wsspi.uow; type=ibm-api,
@@ -10,7 +10,7 @@ IBM-API-Package: javax.transaction; type=spec,
 IBM-API-Service: com.ibm.wsspi.uow.UOWManager,
  javax.transaction.TransactionSynchronizationRegistry,
  javax.transaction.UserTransaction
-IBM-AppliesTo: io.openliberty;productVersion="20.0.0.4"
+IBM-AppliesTo: io.openliberty;productVersion="20.0.0.5"
 IBM-Feature-Version: 2
 IBM-InstallTo: core
 IBM-License-Agreement: wlp/lafiles/LA

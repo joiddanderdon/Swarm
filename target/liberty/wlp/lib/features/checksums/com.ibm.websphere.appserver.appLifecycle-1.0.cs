@@ -1,3 +1,3 @@
-#Thu Apr 09 08:59:34 EDT 2020
-lib/features/com.ibm.websphere.appserver.appLifecycle-1.0.mf=4233772cf2361afcb1dc713842a497a9
-lib/com.ibm.ws.app.manager.lifecycle_1.0.39.jar=f10e04a49ceaa2e88550bb626d7bfc15
+#Tue May 19 13:49:11 EDT 2020
+lib/features/com.ibm.websphere.appserver.appLifecycle-1.0.mf=169e02b315c8783eaa8e7fec037c448f
+lib/com.ibm.ws.app.manager.lifecycle_1.0.40.jar=92c9db15c742977f8168b5c806ac4119

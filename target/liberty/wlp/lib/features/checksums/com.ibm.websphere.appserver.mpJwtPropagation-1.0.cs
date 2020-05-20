@@ -1,5 +1,5 @@
-#Thu Apr 09 08:59:53 EDT 2020
-dev/api/stable/com.ibm.websphere.org.eclipse.microprofile.jwt.1.0_1.0.39.jar=22d503e26848f04e5ad589c3e3d4da9f
-lib/features/com.ibm.websphere.appserver.mpJwtPropagation-1.0.mf=44af43b0ae3629f50d37a5c3ec595da4
-lib/com.ibm.ws.jaxrs.2.0.client_1.0.39.jar=cbdddc7cf843eeed83fdc380c5ea99c5
-lib/com.ibm.ws.security.mp.jwt.propagation_1.0.39.jar=11b59a83eb4ee69af22b0c308dcbc458
+#Tue May 19 13:49:31 EDT 2020
+dev/api/stable/com.ibm.websphere.org.eclipse.microprofile.jwt.1.0_1.0.40.jar=c12b948cae520feebe9f002ae5821bd2
+lib/features/com.ibm.websphere.appserver.mpJwtPropagation-1.0.mf=dde0c9d25c88f05f3cb27840cb8f3ae2
+lib/com.ibm.ws.jaxrs.2.0.client_1.0.40.jar=8157577e0244da414578e595f7770be6
+lib/com.ibm.ws.security.mp.jwt.propagation_1.0.40.jar=a6299ee0bf195a34a56ae6f90d514a7a

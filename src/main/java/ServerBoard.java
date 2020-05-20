@@ -17,6 +17,7 @@ import java.sql.DriverManager;
 import javax.ws.rs.DELETE;
 // JAX RS Modules
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -288,8 +289,8 @@ public class ServerBoard {
 		
 		//Mix up the list, so the zombies randomly change targets.
 		//Not sure if this is a good idea right now, so leaving it commented out.
-		
-		//Collections.shuffle(sprites);
+		//##
+		Collections.shuffle(sprites);
 		
 		
 		
@@ -333,4 +334,37 @@ public class ServerBoard {
 		return Response.status(Response.Status.NOT_FOUND).entity(404).build();
 	}
 	
+	/**
+	 * Post a high score to the database. If player already has a high score
+	 * in the database, this method will update it to reflect the higher of the two.
+	 * @param id The id of the player whose score to update
+	 * @param score The high score that is being posted.
+	 * @return 200 on success.
+	 */
+	@POST
+	@Produces("application/json")
+	public Response postScore(@QueryParam("id") String id, @QueryParam("score") int score) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection(connectString);
+			statement = connection.createStatement(
+					ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			
+			statement.execute("INSERT INTO scores (id, score) VALUES (\""+ id +"\", " + score + ");");
+		} catch (MySQLIntegrityConstraintViolationException e) {
+			String sqlCommand = "UPDATE scores SET score=" + score + " WHERE id = \"" + id + "\"";
+			try {
+				statement.execute(sqlCommand);
+			} catch (SQLException e1) {
+				return Response.status(Response.Status.BAD_REQUEST).entity(400).build();
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return Response.ok(200, MediaType.APPLICATION_JSON).build();
+	}
 }
