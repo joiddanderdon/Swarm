@@ -3,15 +3,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Application;
-import javax.ws.rs.core.Response;
+
 /**
- * Needed for Rest calls.
+ * Return top ten high scores.
  * 
  * @author Steve Cina
  *
