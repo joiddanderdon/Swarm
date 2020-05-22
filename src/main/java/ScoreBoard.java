@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,6 +12,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
 
 import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
@@ -66,14 +68,17 @@ public class ScoreBoard extends Application {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(connectString);
-			statement = connection.createStatement(
-					ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-			
-			statement.execute("INSERT INTO scores (id, score) VALUES (\""+ id +"\", " + score + ");");
+			//statement = connection.createStatement(	ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			PreparedStatement stmt = connection.prepareStatement("INSERT INTO scores (id, score) VALUES (?, ?)");
+			stmt.setString(1, id);
+			stmt.setString(2,  String.valueOf(score));
+			stmt.executeUpdate();
 		} catch (MySQLIntegrityConstraintViolationException e) {
-			String sqlCommand = "UPDATE scores SET score=" + score + " WHERE id = \"" + id + "\"";
 			try {
-				statement.execute(sqlCommand);
+				PreparedStatement sqlCommand = connection.prepareStatement("UPDATE scores SET score=? WHERE id =?");
+				sqlCommand.setString(1, String.valueOf(score));
+				sqlCommand.setString(2, id);
+				sqlCommand.executeUpdate();
 			} catch (SQLException e1) {
 				return Response.status(Response.Status.BAD_REQUEST).entity(400).build();
 			}

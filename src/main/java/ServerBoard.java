@@ -13,6 +13,7 @@ import java.sql.ResultSetMetaData;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 import javax.ws.rs.DELETE;
 // JAX RS Modules
@@ -160,7 +161,6 @@ public class ServerBoard {
 					+ "(id, x_coord, y_coord, target_x, target_y) values "
 					+ "('"+ newZom.getId() + "'," + newZom.getX() + "," + newZom.getY()
 					+ "," + newZom.getTargetX() + "," + newZom.getTargetY() + ");");
-			System.out.println("Zombie added!");
 			return true;	
 		} catch (MySQLIntegrityConstraintViolationException msicve) {
 			//id already in use, just call addZombie to increase the counter and try again until success.
@@ -194,18 +194,21 @@ public class ServerBoard {
 			Player newPlay = new Player(id, finishX, finishY);
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(connectString);
-			statement = connection.createStatement(
-					ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			PreparedStatement statement = connection.prepareStatement("INSERT INTO sprites (id, x_coord, y_coord) values (?, ?, ?)");
+			statement.setString(1, newPlay.getId());
+			statement.setInt(2, newPlay.getX());
+			statement.setInt(3, newPlay.getY());
+			statement.executeUpdate();
 			sprites.add(newPlay);
-			statement.execute("insert into sprites "
-					+ "(id, x_coord, y_coord) values "
-					+ "('"+ newPlay.getId() + "'," + newPlay.getX() + "," + newPlay.getY() + ");");
+			
 		} catch (MySQLIntegrityConstraintViolationException msicve) { //Player already in database, find em and move em
 			try {
-				String sqlCommand = "UPDATE sprites SET x_coord = " + finishX + ", y_coord = " + finishY
-						+ " WHERE id = \"" + id + "\"";
-				statement.execute(sqlCommand);
-				sprites.add(new Player(id, finishX, finishY)); //This might create duplicates in the sprites list?
+				PreparedStatement statement = connection.prepareStatement("UPDATE sprites SET x_coord=?, y_coord=? WHERE id=?");
+				statement.setInt(1, finishX);
+				statement.setInt(2, finishY);
+				statement.setString(3, id);
+				statement.executeUpdate();
+				sprites.add(new Player(id, finishX, finishY)); //This might create duplicates in the sprites list? ##
 				
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -250,12 +253,6 @@ public class ServerBoard {
 		}
 		tickCount++;
 		statement.execute("UPDATE variables SET ticks = " + tickCount + " WHERE idvariables = 1");
-		System.out.println("Current tickCount is " + tickCount);
-		
-		
-		
-		
-		
 		//Update Positions & Targets	
 		sprites = setTarget(sprites);
 		
@@ -288,7 +285,7 @@ public class ServerBoard {
 	private ArrayList<Sprite> setTarget(ArrayList<Sprite> sprites){
 		
 		//Mix up the list, so the zombies randomly change targets.
-		//Not sure if this is a good idea right now, so leaving it commented out.
+		//This call to shuffle is largely untested.
 		//##
 		Collections.shuffle(sprites);
 		
@@ -324,11 +321,14 @@ public class ServerBoard {
 	public Response killSprite(@QueryParam("id") String id) throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection(connectString);
-		statement = connection.createStatement(
-				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-		ResultSet resultSet = statement.executeQuery("SELECT id FROM sprites WHERE id = \"" + id + "\"");
+		PreparedStatement stmt = connection.prepareStatement("SELECT id FROM sprites WHERE id =?");
+		stmt.setString(1, id);
+		ResultSet resultSet = stmt.executeQuery();
+				
 		if (resultSet.next()) { //if resultSet query worked, we found our match - so KILL IT!
-			statement.execute("DELETE FROM sprites WHERE id = \"" + id + "\"");
+			stmt = connection.prepareStatement("DELETE FROM sprites WHERE id =?");
+			stmt.setString(1, id);
+			stmt.executeUpdate();
 			return Response.ok(200, MediaType.APPLICATION_JSON).build();
 		}
 		return Response.status(Response.Status.NOT_FOUND).entity(404).build();
