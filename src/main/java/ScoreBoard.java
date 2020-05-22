@@ -4,9 +4,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Application;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
 /**
  * Return top ten high scores.
@@ -45,5 +51,39 @@ public class ScoreBoard extends Application {
 		}
 		
 		
+	}
+	
+	/**
+	 * Post a high score to the database. If player already has a high score
+	 * in the database, this method will update it to reflect the higher of the two.
+	 * @param id The id of the player whose score to update
+	 * @param score The high score that is being posted.
+	 * @return 200 on success.
+	 */
+	@POST
+	@Produces("application/json")
+	public Response postScore(@QueryParam("id") String id, @QueryParam("score") int score) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection(connectString);
+			statement = connection.createStatement(
+					ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			
+			statement.execute("INSERT INTO scores (id, score) VALUES (\""+ id +"\", " + score + ");");
+		} catch (MySQLIntegrityConstraintViolationException e) {
+			String sqlCommand = "UPDATE scores SET score=" + score + " WHERE id = \"" + id + "\"";
+			try {
+				statement.execute(sqlCommand);
+			} catch (SQLException e1) {
+				return Response.status(Response.Status.BAD_REQUEST).entity(400).build();
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return Response.ok(200, MediaType.APPLICATION_JSON).build();
 	}
 }
