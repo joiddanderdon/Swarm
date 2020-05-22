@@ -37,8 +37,13 @@
 	</dataSource>
 
 	<!-- Allow CORS -->
-	<cors domain="/Swarm*"
+	<cors domain="/Swarm"
 		allowedOrigins="*"
-		allowedMethods="GET, PUT, DELETE, POST"
+		allowedMethods="GET, PUT, DELETE"
 	/>
+	<cors domain="/Swarm/ScoreBoard"
+		allowedOrigins="*"
+		allowedMethods="GET, POST"
+	/>
+		
 </server>
