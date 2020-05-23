@@ -68,24 +68,36 @@ public class ScoreBoard extends Application {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(connectString);
-			//statement = connection.createStatement(	ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			PreparedStatement stmt = connection.prepareStatement("INSERT INTO scores (id, score) VALUES (?, ?)");
 			stmt.setString(1, id);
 			stmt.setString(2,  String.valueOf(score));
 			stmt.executeUpdate();
 		} catch (MySQLIntegrityConstraintViolationException e) {
 			try {
+				
+				//Keep HIGHER of the two scores.
+				PreparedStatement stmt = connection.prepareStatement("SELECT score FROM scores WHERE id=?");
+				stmt.setString(1, id);
+				ResultSet rslt = stmt.executeQuery();
+				while (rslt.next()) {
+					score = Math.max(Integer.parseInt(rslt.getObject(1).toString()), score);
+				}
+				
+				//insert higher of two scores into DB
 				PreparedStatement sqlCommand = connection.prepareStatement("UPDATE scores SET score=? WHERE id =?");
 				sqlCommand.setString(1, String.valueOf(score));
 				sqlCommand.setString(2, id);
 				sqlCommand.executeUpdate();
 			} catch (SQLException e1) {
+				e1.printStackTrace();
 				return Response.status(Response.Status.BAD_REQUEST).entity(400).build();
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
+			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(500).build();
 		} catch (SQLException e) {
 			e.printStackTrace();
+			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(501).build();
 		}
 		
 		
