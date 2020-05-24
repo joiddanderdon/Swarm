@@ -24,12 +24,10 @@ import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExceptio
  */
 @Path("/ScoreBoard")
 public class ScoreBoard extends Application {
-	private static final String dbConnectionUrl = "jdbc:mysql://localhost:3306/swarm?autoReconnect=true&useSSL=false";
-	private static final String dbConnectionUser = "root";
-	private static final String dbConnectionPass = "root";
-	private static final String connectString = dbConnectionUrl + "&user=" + dbConnectionUser + "&password=" + dbConnectionPass;
+	private static final String connectString = DbConfig.Config();
 	private static Connection connection;
 	private static Statement statement;
+	
 	@GET
 	@Produces("application/json")
 	public static String getScoreBoard() {

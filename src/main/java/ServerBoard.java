@@ -37,19 +37,10 @@ import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationExceptio
 @Path("/")
 public class ServerBoard {
 	private static final int ZOMBIE_RATE = 10; //The lower, the faster.
-	private static final String dbConnectionUrl = "jdbc:mysql://localhost:3306/swarm?autoReconnect=true&useSSL=false";
-	private static final String dbConnectionUser = "root";
-	private static final String dbConnectionPass = "root";
-	private static final String connectString = dbConnectionUrl + "&user=" + dbConnectionUser + "&password=" + dbConnectionPass;
-	//private static final String connectString = dbConnectionUrl  + "?useSSL=false&" + "?user=" + dbConnectionUser + "&password=" + dbConnectionPass;
+	private static final String connectString = DbConfig.Config();
 	private static Connection connection;
 	private static Statement statement;
 	
-	
-	
-	
-	//We'll need to keep a list of sprites, then in the Tick() method,
-	//run the Stalk method on each Zombie contained within
 	private static ArrayList<Sprite> sprites;
 	
 	
@@ -90,7 +81,7 @@ public class ServerBoard {
 		sprites = new ArrayList<Sprite>();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-		
+			
 			connection = DriverManager.getConnection(connectString);
 			statement = connection.createStatement(
 				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);

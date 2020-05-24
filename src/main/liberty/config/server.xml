@@ -24,6 +24,7 @@
 	</library>
 	
 	<!-- <dataSource id="DefaultDataSource" jndiName="jdbc/myDB"> -->
+	
 	<dataSource 
 		id="swarm"
 		jndiName="jdbc/swarm">
@@ -32,10 +33,13 @@
 				serverName="localhost" 
 				portNumber="3306"
                 databaseName="swarm"
-                user="root"
-                password="root"/>
+                user="userName"
+                password="password"
+				autoReconnect="true"
+				useSSL="false"
+				/>
 	</dataSource>
-
+	
 	<!-- Allow CORS -->
 	<cors domain="/Swarm"
 		allowedOrigins="*"
