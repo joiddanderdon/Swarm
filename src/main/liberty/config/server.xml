@@ -33,8 +33,8 @@
 				serverName="localhost" 
 				portNumber="3306"
                 databaseName="swarm"
-                user="MariaDB userName"
-                password="MariaDB password"
+                user="userName"
+                password="password"
 				autoReconnect="true"
 				useSSL="false"
 				/>
