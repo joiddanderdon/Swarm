@@ -1,31 +1,21 @@
-//import com.google.gson.Gson; 
-
 import java.util.ArrayList;
 import java.util.Collections;
 
-//import javax.json.JsonArray;
-
-//Databse Connectivity
-
 import java.sql.SQLException;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 import javax.ws.rs.DELETE;
-// JAX RS Modules
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.ResponseBuilder;
 
 import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 /**
@@ -40,22 +30,16 @@ public class ServerBoard {
 	private static final String connectString = DbConfig.Config();
 	private static Connection connection;
 	private static Statement statement;
-	
 	private static ArrayList<Sprite> sprites;
 	
 	
 	public ServerBoard() throws SQLException, ClassNotFoundException {
 		sprites = new ArrayList<Sprite>();
-		
-		//Database connection
 		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection(connectString);
 		statement = connection.createStatement(
 				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 		ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord FROM sprites");
-		
-
-		// parse results as a list of sprites, add to the sprites arrayList
 		while (resultSet.next()) {
 				String zid = (String) resultSet.getObject(1);
 				int zx = Integer.parseInt(resultSet.getObject(2).toString());
@@ -63,8 +47,7 @@ public class ServerBoard {
 				if ( zid.charAt(0) == 'p' ){
 					sprites.add(new Player(zid, zx, zy));
 				} else {
-					//Don't have to pay too much attention to the target params here
-					//On the next PUT they'll all update anyway.
+					//##
 					sprites.add(new Zombie(zid, zx, zy, 5, 5));
 				}
 			}
@@ -96,7 +79,6 @@ public class ServerBoard {
 				sprites.add(new Player(pid, px, py));
 			}
 			resultSetPlayer.close();
-			//Load Zombies into list
 			ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y FROM sprites WHERE id LIKE \"z%\"");
 			while (resultSet.next()) {
 					String zid = (String) resultSet.getObject(1);
@@ -104,8 +86,7 @@ public class ServerBoard {
 					int zy = Integer.parseInt(resultSet.getObject(3).toString());
 					int zxTarg = Integer.parseInt(resultSet.getObject(4).toString());
 					int zyTarg = Integer.parseInt(resultSet.getObject(5).toString());
-					sprites.add(new Zombie(zid, zx, zy, zxTarg, zyTarg));
-					
+					sprites.add(new Zombie(zid, zx, zy, zxTarg, zyTarg));			
 				}
 			resultSet.close();
 		} catch (ClassNotFoundException e) {
@@ -113,11 +94,6 @@ public class ServerBoard {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
 		String boardString = "" + sprites.size() + "&";
 		for (Sprite s: sprites) {
 			boardString+= s.getId();
@@ -154,7 +130,6 @@ public class ServerBoard {
 					+ "," + newZom.getTargetX() + "," + newZom.getTargetY() + ");");
 			return true;	
 		} catch (MySQLIntegrityConstraintViolationException msicve) {
-			//id already in use, just call addZombie to increase the counter and try again until success.
 			return addZombie();
 		} catch (SQLException se) {
 			se.printStackTrace();
@@ -175,7 +150,7 @@ public class ServerBoard {
 	 * @throws ClassNotFoundException
 	 * @throws SQLException
 	 */
-	@PUT
+	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	public String updatePlayerPos(@QueryParam("id")   String id, 
 								  @QueryParam("newX")   int finishX, 
@@ -192,20 +167,18 @@ public class ServerBoard {
 			statement.executeUpdate();
 			sprites.add(newPlay);
 			
-		} catch (MySQLIntegrityConstraintViolationException msicve) { //Player already in database, find em and move em
+		} catch (MySQLIntegrityConstraintViolationException msicve) {
 			try {
 				PreparedStatement statement = connection.prepareStatement("UPDATE sprites SET x_coord=?, y_coord=? WHERE id=?");
 				statement.setInt(1, finishX);
 				statement.setInt(2, finishY);
 				statement.setString(3, id);
 				statement.executeUpdate();
-				sprites.add(new Player(id, finishX, finishY)); //This might create duplicates in the sprites list? ##
-				
+				sprites.add(new Player(id, finishX, finishY));
 			} catch (SQLException e) {
 				e.printStackTrace();
 				return null;
 			}
-			
 		} catch (SQLException se) {
 			se.printStackTrace();
 			return null;
@@ -213,10 +186,7 @@ public class ServerBoard {
 			cnfe.printStackTrace();
 			return null;
 		} 
-		
 		this.Tick(sprites);
-		
-		
 		return getBoard();
 	}
 	/**
@@ -244,13 +214,11 @@ public class ServerBoard {
 		}
 		tickCount++;
 		statement.execute("UPDATE variables SET ticks = " + tickCount + " WHERE idvariables = 1");
-		//Update Positions & Targets	
+		
 		sprites = setTarget(sprites);
 		
-		//Save back to DB
 		for (Sprite s : sprites) {
-			
-			if (s.getClass().equals(Zombie.class)) {//Update Zombie Positions
+			if (s.getClass().equals(Zombie.class)) {
 				statement.execute("UPDATE sprites SET x_coord = " + s.getX() +
 						", y_coord = " + s.getY() + ", target_x = " + ((Zombie) s).getTargetX() + ", target_y = " + ((Zombie) s).getTargetY() +
 						" WHERE id = \"" + s.getId() + "\"");
@@ -260,8 +228,6 @@ public class ServerBoard {
 						", y_coord = " + s.getY() + 
 						" WHERE id = \"" + s.getId() + "\"");
 			}
-			
-			
 		}
 		
 		
@@ -274,27 +240,18 @@ public class ServerBoard {
 	 * @return
 	 */
 	private ArrayList<Sprite> setTarget(ArrayList<Sprite> sprites){
-		
-		//Mix up the list, so the zombies randomly change targets.
-		//This call to shuffle is largely untested.
-		//##
 		Collections.shuffle(sprites);
-		
-		
-		
-		
 		for (Sprite s : sprites) {
 			if (s.getClass().equals(Zombie.class)) {
 				for (Sprite sP: sprites) {
 					if (sP.getClass().equals(Player.class)) {
 						((Zombie) s).setTarget(((Player) sP).getX(), ((Player) sP).getY());
 						((Zombie) s).stalk();
+						break;
 					}
 				}
-				
 			}
 		}
-
 		return sprites;
 	}
 	/** 
@@ -316,7 +273,7 @@ public class ServerBoard {
 		stmt.setString(1, id);
 		ResultSet resultSet = stmt.executeQuery();
 				
-		if (resultSet.next()) { //if resultSet query worked, we found our match - so KILL IT!
+		if (resultSet.next()) {
 			stmt = connection.prepareStatement("DELETE FROM sprites WHERE id =?");
 			stmt.setString(1, id);
 			stmt.executeUpdate();
