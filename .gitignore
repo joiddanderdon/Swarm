@@ -1,2 +1,3 @@
 target
 *server.xml
+src/main/liberty/config/*
