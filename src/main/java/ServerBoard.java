@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
-
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.sql.Connection;
@@ -39,7 +41,7 @@ public class ServerBoard {
 		connection = DriverManager.getConnection(connectString);
 		statement = connection.createStatement(
 				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-		ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord FROM sprites");
+		ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y, speed FROM sprites");
 		while (resultSet.next()) {
 				String zid = (String) resultSet.getObject(1);
 				int zx = Integer.parseInt(resultSet.getObject(2).toString());
@@ -47,8 +49,15 @@ public class ServerBoard {
 				if ( zid.charAt(0) == 'p' ){
 					sprites.add(new Player(zid, zx, zy));
 				} else {
-					//##
-					sprites.add(new Zombie(zid, zx, zy, 5, 5));
+					try {
+						int zTargX = Integer.parseInt(resultSet.getObject(4).toString());
+						int zTargY = Integer.parseInt(resultSet.getObject(5).toString());
+						int zSpeed = Integer.parseInt(resultSet.getObject(6).toString());
+						Zombie zom = new Zombie(zid, zx, zy, zTargX, zTargY, zSpeed);
+						sprites.add(zom);
+					} catch (NullPointerException npe) {
+						System.out.println("Malformed object in database! ID ='" + zid + "'");
+					}
 				}
 			}
 	}
@@ -79,14 +88,19 @@ public class ServerBoard {
 				sprites.add(new Player(pid, px, py));
 			}
 			resultSetPlayer.close();
-			ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y FROM sprites WHERE id LIKE \"z%\"");
+			ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y, speed FROM sprites WHERE id LIKE \"z%\"");
 			while (resultSet.next()) {
 					String zid = (String) resultSet.getObject(1);
 					int zx = Integer.parseInt(resultSet.getObject(2).toString());
 					int zy = Integer.parseInt(resultSet.getObject(3).toString());
-					int zxTarg = Integer.parseInt(resultSet.getObject(4).toString());
-					int zyTarg = Integer.parseInt(resultSet.getObject(5).toString());
-					sprites.add(new Zombie(zid, zx, zy, zxTarg, zyTarg));			
+					try {
+						int zxTarg = Integer.parseInt(resultSet.getObject(4).toString());
+						int zyTarg = Integer.parseInt(resultSet.getObject(5).toString());
+						int zSpeed = Integer.parseInt(resultSet.getObject(6).toString());
+						sprites.add(new Zombie(zid, zx, zy, zxTarg, zyTarg, zSpeed));	
+					} catch (NullPointerException npe) {
+						System.out.println("Malformed object in database! ID ='" + zid + "'");
+					}
 				}
 			resultSet.close();
 		} catch (ClassNotFoundException e) {
@@ -125,9 +139,9 @@ public class ServerBoard {
 					ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			
 			statement.execute("insert into sprites "
-					+ "(id, x_coord, y_coord, target_x, target_y) values "
+					+ "(id, x_coord, y_coord, target_x, target_y, speed) values "
 					+ "('"+ newZom.getId() + "'," + newZom.getX() + "," + newZom.getY()
-					+ "," + newZom.getTargetX() + "," + newZom.getTargetY() + ");");
+					+ "," + newZom.getTargetX() + "," + newZom.getTargetY() + "," + newZom.getSpeed() + ");");
 			return true;	
 		} catch (MySQLIntegrityConstraintViolationException msicve) {
 			return addZombie();
@@ -240,18 +254,40 @@ public class ServerBoard {
 	 * @return
 	 */
 	private ArrayList<Sprite> setTarget(ArrayList<Sprite> sprites){
+		
+		ArrayList<Player> players = new ArrayList<Player>();
+		ArrayList<Zombie> zombies = new ArrayList<Zombie>();
+		for (Sprite s: sprites) {
+			if (s.getClass().equals(Player.class)) players.add((Player) s);
+			if (s.getClass().equals(Zombie.class)) zombies.add((Zombie) s); 
+		}
+		ExecutorService ES = Executors.newCachedThreadPool();
+		for (Zombie z: zombies) {
+			ES.submit(new TargetSetter(z, players));
+		}
+		//ES.shutdown();
+		try {
+			ES.awaitTermination(100, TimeUnit.MICROSECONDS);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		
+		/*
 		Collections.shuffle(sprites);
-		for (Sprite s : sprites) {
-			if (s.getClass().equals(Zombie.class)) {
-				for (Sprite sP: sprites) {
-					if (sP.getClass().equals(Player.class)) {
-						((Zombie) s).setTarget(((Player) sP).getX(), ((Player) sP).getY());
-						((Zombie) s).stalk();
+		
+		for (Sprite z : sprites) {
+			if (z.getClass().equals(Zombie.class)) {
+				for (Sprite p : sprites) {
+					if (p.getClass().equals(Player.class)) {
+						((Zombie) z).setTarget(p.getX(), p.getY());
+						((Zombie) z).stalk();
 						break;
 					}
 				}
 			}
 		}
+		*/
 		return sprites;
 	}
 	/** 

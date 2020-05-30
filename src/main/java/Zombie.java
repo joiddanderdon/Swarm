@@ -10,29 +10,44 @@ public class Zombie extends Sprite {
 	private int speed;
 	private int targetX;
 	private int targetY;
-	private final SecureRandom RNG;
+	private static final SecureRandom RNG = new SecureRandom();
 	//Not sure how much of a performance hit is taken by keeping the SecureRandom as an instance variable
-	private final int RANDOMNESS;
 	private static int idCount = 0;
 	
 	//Create Zombie from scratch
 	public Zombie() {
-		RNG = new SecureRandom();
-		RANDOMNESS = RNG.nextInt(5) + 1;
-		this.setX(5);
-		this.setY(5);
-		this.setTarget(800, 800);
-		this.speed = RNG.nextInt(4) + 1;
-		this.setId("z" + (++idCount));
+		String id = "z" + (++idCount);
+		
+		switch(RNG.nextInt(4)) {
+			case 0:
+				this.setX(0);
+				this.setY(0);
+				this.setTarget(600,600);
+				break;
+			case 1:
+				this.setX(0);
+				this.setY(600);
+				this.setTarget(600, 0);
+				break;
+			case 2:
+				this.setX(600);
+				this.setY(0);
+				this.setTarget(0, 600);
+				break;
+			case 3:
+				this.setX(600);
+				this.setY(600);
+				this.setTarget(0, 0);
+			}
+		this.setId(id);
+		this.speed = RNG.nextInt(10);
 	}
 	//Reload from DB
-	public Zombie(String id, int x, int y, int xTarg, int yTarg) {
-		RNG = new SecureRandom();
-		RANDOMNESS = RNG.nextInt(5) + 1;
+	public Zombie(String id, int x, int y, int xTarg, int yTarg, int speed) {
 		this.setX(x);
 		this.setY(y);
 		this.setTarget(xTarg, yTarg);
-		this.speed = RNG.nextInt(4) + 1;
+		this.speed = speed;
 		this.setId(id);
 	}
 	public int getSpeed() {
@@ -44,42 +59,32 @@ public class Zombie extends Sprite {
 	public int getTargetY() {
 		return targetY;
 	}
-	public void setSpeed(int speed) {
-		this.speed = speed;
-	}
 	public void stalk() {
-		
-		if (RNG.nextInt(RANDOMNESS) <= 2) {
+			if (this.getX()==this.getTargetX() && this.getY()==this.getTargetY()) {
+				if (this.getX() < 300) this.targetX = 600;
+				else this.targetX = 0;
+				
+				if (this.getY() < 300) this.targetY = 600;
+				else this.targetY = 0;
+			}
 			if (targetX < this.getX()) {
-				this.setX(this.getX() - speed);
+				if (this.getX() - speed < this.targetX) this.setX(targetX);
+				else this.setX(this.getX() - speed);
 			}
 			else if (targetX > this.getX()) {
-				this.setX(this.getX() + speed);
+				if (this.getX() + speed > this.targetX) this.setX(targetX); 
+				else this.setX(this.getX() + speed);
 			}
 			
 			if (targetY < this.getY()) {
-				this.setY(this.getY() - speed);
+				if (this.getY() - speed < this.targetY) this.setY(targetY);
+				else this.setY(this.getY() - speed);
 			}
 			else if (targetY > this.getY()) {
-				this.setY(this.getY() + speed);
+				if (this.getY() + speed > this.targetY) this.setY(targetY);
+				else this.setY(this.getY() + speed);
 			}
-		}
-		else {
-			switch (RNG.nextInt(4)) {
-			case 0:
-				this.setX(this.getX()+speed);
-				break;
-			case 1:
-				this.setX(this.getX()-speed);
-				break;
-			case 2:
-				this.setY(this.getY()+speed);
-				break;
-			case 3:
-				this.setY(this.getY()-speed);
-				break;
-			}
-		}
+		
 		//Keep zombies within board parameter
 		if (this.getX() < 0) this.setX(0);
 		if (this.getY() < 0) this.setY(0);
