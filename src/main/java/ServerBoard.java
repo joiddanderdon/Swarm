@@ -57,6 +57,7 @@ public class ServerBoard {
 						sprites.add(zom);
 					} catch (NullPointerException npe) {
 						System.out.println("Malformed object in database! ID ='" + zid + "'");
+						System.out.printf("Object %s removed: %s", zid, killSprite(zid));
 					}
 				}
 			}
@@ -100,6 +101,7 @@ public class ServerBoard {
 						sprites.add(new Zombie(zid, zx, zy, zxTarg, zyTarg, zSpeed));	
 					} catch (NullPointerException npe) {
 						System.out.println("Malformed object in database! ID ='" + zid + "'");
+						System.out.printf("Object %s removed: %s", zid, killSprite(zid));
 					}
 				}
 			resultSet.close();
