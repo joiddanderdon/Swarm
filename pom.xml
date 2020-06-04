@@ -85,6 +85,7 @@
                       <default.http.port>${liberty.var.default.http.port}</default.http.port>
                       <default.https.port>${liberty.var.default.https.port}</default.https.port>
                 </bootstrapProperties>
+				<serverStartTimeout>240</serverStartTimeout>
 	</configuration>
       </plugin>
 
