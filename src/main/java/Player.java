@@ -6,7 +6,7 @@
  *
  */
 public class Player extends Sprite {
-	public final int MOVESPEED = 3;
+	//public final int MOVESPEED = 3;
 	
 	public Player(String id, int x, int y) {
 		this.setId(id);

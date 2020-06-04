@@ -33,7 +33,7 @@
 				serverName="localhost" 
 				portNumber="3306"
                 databaseName="swarm"
-                user="userName"
+                user="username"
                 password="password"
 				autoReconnect="true"
 				useSSL="false"

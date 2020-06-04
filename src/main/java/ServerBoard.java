@@ -35,14 +35,15 @@ public class ServerBoard {
 	private static ArrayList<Sprite> sprites;
 	
 	
-	public ServerBoard() throws SQLException, ClassNotFoundException {
+	public ServerBoard() {
 		sprites = new ArrayList<Sprite>();
-		Class.forName("com.mysql.jdbc.Driver");
-		connection = DriverManager.getConnection(connectString);
-		statement = connection.createStatement(
-				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-		ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y, speed FROM sprites");
-		while (resultSet.next()) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection(connectString);
+			statement = connection.createStatement(
+					ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+			ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y, speed FROM sprites");
+			while (resultSet.next()) {
 				String zid = (String) resultSet.getObject(1);
 				int zx = Integer.parseInt(resultSet.getObject(2).toString());
 				int zy = Integer.parseInt(resultSet.getObject(3).toString());
@@ -61,6 +62,14 @@ public class ServerBoard {
 					}
 				}
 			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
 	}
 	
 	/**
@@ -256,40 +265,17 @@ public class ServerBoard {
 	 * @return
 	 */
 	private ArrayList<Sprite> setTarget(ArrayList<Sprite> sprites){
-		
 		ArrayList<Player> players = new ArrayList<Player>();
 		ArrayList<Zombie> zombies = new ArrayList<Zombie>();
+		ExecutorService ES = Executors.newCachedThreadPool();
 		for (Sprite s: sprites) {
 			if (s.getClass().equals(Player.class)) players.add((Player) s);
-			if (s.getClass().equals(Zombie.class)) zombies.add((Zombie) s); 
+			if (s.getClass().equals(Zombie.class)) zombies.add((Zombie) s);
 		}
-		ExecutorService ES = Executors.newCachedThreadPool();
 		for (Zombie z: zombies) {
 			ES.submit(new TargetSetter(z, players));
 		}
-		//ES.shutdown();
-		try {
-			ES.awaitTermination(100, TimeUnit.MICROSECONDS);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 		
-		
-		/*
-		Collections.shuffle(sprites);
-		
-		for (Sprite z : sprites) {
-			if (z.getClass().equals(Zombie.class)) {
-				for (Sprite p : sprites) {
-					if (p.getClass().equals(Player.class)) {
-						((Zombie) z).setTarget(p.getX(), p.getY());
-						((Zombie) z).stalk();
-						break;
-					}
-				}
-			}
-		}
-		*/
 		return sprites;
 	}
 	/** 
@@ -297,26 +283,30 @@ public class ServerBoard {
 	 * 
 	 * @param id ID of player or zombie to be destroyed.
 	 * 
-	 * @return true if sprite was successfully destroyed.
-	 * <p>false if sprite not in database
-	 * @throws ClassNotFoundException 
-	 * @throws SQLException 
+	 * @return HTTP Response Code [200 || 404]
 	 */
 	@DELETE
 	@Produces("application/json")
-	public Response killSprite(@QueryParam("id") String id) throws ClassNotFoundException, SQLException {
-		Class.forName("com.mysql.jdbc.Driver");
-		connection = DriverManager.getConnection(connectString);
-		PreparedStatement stmt = connection.prepareStatement("SELECT id FROM sprites WHERE id =?");
-		stmt.setString(1, id);
-		ResultSet resultSet = stmt.executeQuery();
-				
-		if (resultSet.next()) {
-			stmt = connection.prepareStatement("DELETE FROM sprites WHERE id =?");
+	public Response killSprite(@QueryParam("id") String id) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection(connectString);
+			PreparedStatement stmt = connection.prepareStatement("SELECT id FROM sprites WHERE id =?");
 			stmt.setString(1, id);
-			stmt.executeUpdate();
-			return Response.ok(200, MediaType.APPLICATION_JSON).build();
+			ResultSet resultSet = stmt.executeQuery();
+					
+			if (resultSet.next()) {
+				stmt = connection.prepareStatement("DELETE FROM sprites WHERE id =?");
+				stmt.setString(1, id);
+				stmt.executeUpdate();
+				return Response.ok(200, MediaType.APPLICATION_JSON).build();
+			}
+		} catch (ClassNotFoundException e) {	
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
+		
 		return Response.status(Response.Status.NOT_FOUND).entity(404).build();
 	}
 	
