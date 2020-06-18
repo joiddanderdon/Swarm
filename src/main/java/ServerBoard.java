@@ -1,14 +1,14 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -19,7 +19,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+
 /**
  * Main component of Liberty Swarm Back-End
  * 
@@ -62,6 +62,7 @@ public class ServerBoard {
 					}
 				}
 			}
+			resultSet.close();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
@@ -121,7 +122,7 @@ public class ServerBoard {
 		}
 		String boardString = "" + sprites.size() + "&";
 		for (Sprite s: sprites) {
-			boardString+= s.getId();
+			boardString += s.getId();
 			boardString += "-";
 			boardString += s.getX();
 			boardString += "-";
@@ -177,7 +178,7 @@ public class ServerBoard {
 	 */
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
-	public String updatePlayerPos(@QueryParam("id")   String id, 
+	public Response updatePlayerPos(@QueryParam("id")   String id, 
 								  @QueryParam("newX")   int finishX, 
 								  @QueryParam("newY")	int finishY) throws ClassNotFoundException, SQLException 
 	{
@@ -202,17 +203,17 @@ public class ServerBoard {
 				sprites.add(new Player(id, finishX, finishY));
 			} catch (SQLException e) {
 				e.printStackTrace();
-				return null;
+				return Response.status(Response.Status.NOT_IMPLEMENTED).entity(591).build();
 			}
 		} catch (SQLException se) {
 			se.printStackTrace();
-			return null;
+			return Response.status(Response.Status.NOT_IMPLEMENTED).entity(592).build();
 		} catch (ClassNotFoundException cnfe) {
 			cnfe.printStackTrace();
-			return null;
+			return Response.status(Response.Status.NOT_IMPLEMENTED).entity(593).build();
 		} 
 		this.Tick(sprites);
-		return getBoard();
+		return Response.ok(200, MediaType.APPLICATION_JSON).build();
 	}
 	/**
 	 * Increments the tick counter. After a certain
