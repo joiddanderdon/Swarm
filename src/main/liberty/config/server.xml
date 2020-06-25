@@ -33,8 +33,8 @@
 				serverName="localhost" 
 				portNumber="3306"
                 databaseName="swarm"
-                user="userName"
-                password="password"
+                user="root"
+                password="root"
 				autoReconnect="true"
 				useSSL="false"
 				/>
@@ -43,7 +43,7 @@
 	<!-- Allow CORS -->
 	<cors domain="/Swarm"
 		allowedOrigins="*"
-		allowedMethods="GET, PUT, DELETE"
+		allowedMethods="GET, POST, DELETE"
 	/>
 	<cors domain="/Swarm/ScoreBoard"
 		allowedOrigins="*"

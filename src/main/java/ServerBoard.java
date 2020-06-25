@@ -29,6 +29,7 @@ import javax.ws.rs.core.Response;
 @Path("/")
 public class ServerBoard {
 	private static final int ZOMBIE_RATE = 10; //The lower, the faster.
+	private static final int MAX_ZOMBIE_CT = 50;
 	private static final String connectString = DbConfig.Config();
 	private static Connection connection;
 	private static Statement statement;
@@ -36,13 +37,15 @@ public class ServerBoard {
 	
 	
 	public ServerBoard() {
+		/*
 		sprites = new ArrayList<Sprite>();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(connectString);
 			statement = connection.createStatement(
-					ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+					ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 			ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y, speed FROM sprites");
+			
 			while (resultSet.next()) {
 				String zid = (String) resultSet.getObject(1);
 				int zx = Integer.parseInt(resultSet.getObject(2).toString());
@@ -68,7 +71,7 @@ public class ServerBoard {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+		*/
 		
 		
 	}
@@ -87,7 +90,7 @@ public class ServerBoard {
 			
 			connection = DriverManager.getConnection(connectString);
 			statement = connection.createStatement(
-				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 		
 			ResultSet resultSetPlayer = statement.executeQuery("SELECT id, x_coord, y_coord FROM sprites WHERE id LIKE \"p%\"");
 		
@@ -99,29 +102,39 @@ public class ServerBoard {
 				sprites.add(new Player(pid, px, py));
 			}
 			resultSetPlayer.close();
-			ResultSet resultSet = statement.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y, speed FROM sprites WHERE id LIKE \"z%\"");
-			while (resultSet.next()) {
-					String zid = (String) resultSet.getObject(1);
-					int zx = Integer.parseInt(resultSet.getObject(2).toString());
-					int zy = Integer.parseInt(resultSet.getObject(3).toString());
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection connection2 = DriverManager.getConnection(connectString);
+			Statement statement2 = connection2.createStatement(
+				ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			ResultSet resultSetZombie = statement2.executeQuery("SELECT id, x_coord, y_coord, target_x, target_y, speed FROM sprites WHERE id LIKE \"z%\"");
+			
+			while (resultSetZombie.next()) {
+					String zid = (String) resultSetZombie.getObject(1);
+					int zx = Integer.parseInt(resultSetZombie.getObject(2).toString());
+					int zy = Integer.parseInt(resultSetZombie.getObject(3).toString());
 					try {
-						int zxTarg = Integer.parseInt(resultSet.getObject(4).toString());
-						int zyTarg = Integer.parseInt(resultSet.getObject(5).toString());
-						int zSpeed = Integer.parseInt(resultSet.getObject(6).toString());
+						int zxTarg = Integer.parseInt(resultSetZombie.getObject(4).toString());
+						int zyTarg = Integer.parseInt(resultSetZombie.getObject(5).toString());
+						int zSpeed = Integer.parseInt(resultSetZombie.getObject(6).toString());
 						sprites.add(new Zombie(zid, zx, zy, zxTarg, zyTarg, zSpeed));	
 					} catch (NullPointerException npe) {
 						System.out.println("Malformed object in database! ID ='" + zid + "'");
 						System.out.printf("Object %s removed: %s", zid, killSprite(zid));
 					}
 				}
-			resultSet.close();
+			resultSetZombie.close();
+			
+			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			return getBoard();
+		} catch (NullPointerException e) {
+			return getBoard();
 		}
 		String boardString = "" + sprites.size() + "&";
-		for (Sprite s: sprites) {
+		for (int i = 0; i < sprites.size(); i++) {
+			Sprite s = sprites.get(i);
 			boardString += s.getId();
 			boardString += "-";
 			boardString += s.getX();
@@ -141,8 +154,9 @@ public class ServerBoard {
 	 * 		false if zombie not added for ANY reason.
 	 */
 	private boolean addZombie() {
+		if (sprites.size() >= MAX_ZOMBIE_CT) return false;
 		Zombie newZom = new Zombie();
-		if (sprites.size() >= 100) return false;
+		
 		sprites.add(newZom);
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -223,39 +237,47 @@ public class ServerBoard {
 	 * @throws SQLException 
 	 * 
 	 */
-	private void Tick(ArrayList<Sprite> sprites) throws ClassNotFoundException, SQLException {
-		Class.forName("com.mysql.jdbc.Driver");
-		connection = DriverManager.getConnection(connectString);
-		statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-		ResultSet resultSet = statement.executeQuery("SELECT ticks FROM variables");
-		int tickCount = 0;
-		while (resultSet.next()) {
-			tickCount = ((Long) resultSet.getObject(1)).intValue();
-		}
-		
-		if (tickCount%ZOMBIE_RATE==0) {
-			addZombie();
-			tickCount = 0;
+	private void Tick(ArrayList<Sprite> sprites) throws ClassNotFoundException {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection(connectString);
+			statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			ResultSet resultSet = statement.executeQuery("SELECT ticks FROM variables");
+			int tickCount = 0;
+			if (resultSet==null) return;
+			while (resultSet.next()) {
+				tickCount = ((Long) resultSet.getObject(1)).intValue();
+			}
 			
-		}
-		tickCount++;
-		statement.execute("UPDATE variables SET ticks = " + tickCount + " WHERE idvariables = 1");
-		
-		sprites = setTarget(sprites);
-		
-		for (Sprite s : sprites) {
-			if (s.getClass().equals(Zombie.class)) {
-				statement.execute("UPDATE sprites SET x_coord = " + s.getX() +
-						", y_coord = " + s.getY() + ", target_x = " + ((Zombie) s).getTargetX() + ", target_y = " + ((Zombie) s).getTargetY() +
-						" WHERE id = \"" + s.getId() + "\"");
+			if (tickCount%ZOMBIE_RATE==0) {
+				addZombie();
+				tickCount = 0;
+				
 			}
-			else {
-				statement.execute("UPDATE sprites SET x_coord = " + s.getX() + 
-						", y_coord = " + s.getY() + 
-						" WHERE id = \"" + s.getId() + "\"");
+			tickCount++;
+			statement.execute("UPDATE variables SET ticks = " + tickCount + " WHERE idvariables = 1");
+			
+			sprites = setTarget(sprites);
+			
+			for (int i = 0; i<sprites.size(); i++) {
+				Sprite s = sprites.get(i);
+			//for (Sprite s : sprites) {
+				if (s.getClass().equals(Zombie.class)) {
+					statement.execute("UPDATE sprites SET x_coord = " + s.getX() +
+							", y_coord = " + s.getY() + ", target_x = " + ((Zombie) s).getTargetX() + ", target_y = " + ((Zombie) s).getTargetY() +
+							" WHERE id = \"" + s.getId() + "\"");
+				}
+				else {
+					statement.execute("UPDATE sprites SET x_coord = " + s.getX() + 
+							", y_coord = " + s.getY() + 
+							" WHERE id = \"" + s.getId() + "\"");
+				}
 			}
+		} catch (NullPointerException e) {
+			return;
+		} catch (SQLException e) {
+			return;
 		}
-		
 		
 		
 	}
